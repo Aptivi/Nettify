@@ -1,0 +1,228 @@
+{
+  "sitemap": {
+    "baseUrl": "https://aptivi.github.io/Nettify/"
+  },
+  "source_base_path": "/github/workspace/DocGen",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Radio.ShoutcastServer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Radio.ShoutcastServer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Radio.ShoutcastServerException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Radio.ShoutcastServerException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Radio.ShoutcastStreamParseException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Radio.ShoutcastStreamParseException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Radio.ShoutcastVersion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Radio.ShoutcastVersion.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Radio.StreamInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Radio.StreamInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Radio.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Radio.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Rss.Instance.RSSArticle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Rss.Instance.RSSArticle.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Rss.Instance.RSSFeed.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Rss.Instance.RSSFeed.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Rss.Instance.RSSFeedType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Rss.Instance.RSSFeedType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Rss.Instance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Rss.Instance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Rss.RSSTools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Rss.RSSTools.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Rss.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Rss.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Weather.UnitMeasurement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Weather.UnitMeasurement.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Weather.WeatherCondition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Weather.WeatherCondition.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Weather.WeatherForecast.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Weather.WeatherForecast.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Weather.WeatherForecastInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Weather.WeatherForecastInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Weather.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Weather.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
