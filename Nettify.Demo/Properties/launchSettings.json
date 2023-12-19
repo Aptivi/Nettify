@@ -1,0 +1,20 @@
+{
+  "profiles": {
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    },
+    "Nettify.Demo - Forecast": {
+      "commandName": "Project",
+      "commandLineArgs": "Forecast"
+    },
+    "Nettify.Demo - RssFeedViewer": {
+      "commandName": "Project",
+      "commandLineArgs": "RssFeedViewer"
+    },
+    "Nettify.Demo - ShoutCastStats": {
+      "commandName": "Project",
+      "commandLineArgs": "ShoutCastStats"
+    }
+  }
+}
