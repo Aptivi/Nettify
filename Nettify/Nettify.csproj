@@ -8,7 +8,7 @@
     <Version>1.1.0</Version>
     <Authors>Aptivi</Authors>
     <Company>Aptivi Corp.</Company>
-    <Description>Text tools</Description>
+    <Description>A collection of tools that provide you Internet accessory tools for your C# and Visual basic applications.</Description>
     <Copyright>Copyright (c) 2023-2024 Aptivi.</Copyright>
     <PackageProjectUrl>https://github.com/Aptivi/Nettify</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Aptivi/Nettify</RepositoryUrl>
