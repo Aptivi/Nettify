@@ -1,4 +1,124 @@
 {
+  "api/Nettify.EnglishDictionary.DictionaryManager.html": {
+    "href": "api/Nettify.EnglishDictionary.DictionaryManager.html",
+    "title": "Class DictionaryManager | Nettify API - Aptivi",
+    "keywords": "Class DictionaryManager Dictionary management module Inheritance object DictionaryManager Namespace: Nettify.EnglishDictionary Assembly: Nettify.dll Syntax public static class DictionaryManager Methods | Edit this page View Source GetWordInfo(string) Gets the word information and puts it into an array of dictionary words Declaration public static DictionaryWord[] GetWordInfo(string Word) Parameters Type Name Description string Word Returns Type Description DictionaryWord[] | Edit this page View Source GetWordInfoAsync(string) Gets the word information and puts it into an array of dictionary words Declaration public static Task<DictionaryWord[]> GetWordInfoAsync(string Word) Parameters Type Name Description string Word Returns Type Description Task<DictionaryWord[]>"
+  },
+  "api/Nettify.EnglishDictionary.DictionaryWord.DefinitionType.html": {
+    "href": "api/Nettify.EnglishDictionary.DictionaryWord.DefinitionType.html",
+    "title": "Class DictionaryWord.DefinitionType | Nettify API - Aptivi",
+    "keywords": "Class DictionaryWord.DefinitionType The definition class Inheritance object DictionaryWord.DefinitionType Namespace: Nettify.EnglishDictionary Assembly: Nettify.dll Syntax public class DictionaryWord.DefinitionType Properties | Edit this page View Source Antonyms List of antonyms based on the definition Declaration [JsonProperty(\"antonyms\")] public string[] Antonyms { get; set; } Property Value Type Description string[] | Edit this page View Source Definition Word definition Declaration [JsonProperty(\"definition\")] public string Definition { get; set; } Property Value Type Description string | Edit this page View Source Example Example in sentence Declaration [JsonProperty(\"example\")] public string Example { get; set; } Property Value Type Description string | Edit this page View Source Synonyms List of synonyms based on the definition Declaration [JsonProperty(\"synonyms\")] public string[] Synonyms { get; set; } Property Value Type Description string[]"
+  },
+  "api/Nettify.EnglishDictionary.DictionaryWord.License.html": {
+    "href": "api/Nettify.EnglishDictionary.DictionaryWord.License.html",
+    "title": "Class DictionaryWord.License | Nettify API - Aptivi",
+    "keywords": "Class DictionaryWord.License The license class Inheritance object DictionaryWord.License Namespace: Nettify.EnglishDictionary Assembly: Nettify.dll Syntax public class DictionaryWord.License Properties | Edit this page View Source Name License name Declaration [JsonProperty(\"name\")] public string Name { get; set; } Property Value Type Description string | Edit this page View Source Url License URL Declaration [JsonProperty(\"url\")] public string Url { get; set; } Property Value Type Description string"
+  },
+  "api/Nettify.EnglishDictionary.DictionaryWord.Meaning.html": {
+    "href": "api/Nettify.EnglishDictionary.DictionaryWord.Meaning.html",
+    "title": "Class DictionaryWord.Meaning | Nettify API - Aptivi",
+    "keywords": "Class DictionaryWord.Meaning Word meaning class Inheritance object DictionaryWord.Meaning Namespace: Nettify.EnglishDictionary Assembly: Nettify.dll Syntax public class DictionaryWord.Meaning Properties | Edit this page View Source Antonyms List of antonyms based on the word meaning Declaration [JsonProperty(\"antonyms\")] public string[] Antonyms { get; set; } Property Value Type Description string[] | Edit this page View Source Definitions List of word definitions. Words usually come with one or more definitions. Declaration [JsonProperty(\"definitions\")] public DictionaryWord.DefinitionType[] Definitions { get; set; } Property Value Type Description DefinitionType[] | Edit this page View Source PartOfSpeech Part of speech, usually noun, verb, adjective, adverb, interjection, etc. Declaration [JsonProperty(\"partOfSpeech\")] public string PartOfSpeech { get; set; } Property Value Type Description string | Edit this page View Source Synonyms List of synonyms based on the word meaning Declaration [JsonProperty(\"synonyms\")] public string[] Synonyms { get; set; } Property Value Type Description string[]"
+  },
+  "api/Nettify.EnglishDictionary.DictionaryWord.Phonetic.html": {
+    "href": "api/Nettify.EnglishDictionary.DictionaryWord.Phonetic.html",
+    "title": "Class DictionaryWord.Phonetic | Nettify API - Aptivi",
+    "keywords": "Class DictionaryWord.Phonetic Phonetic class Inheritance object DictionaryWord.Phonetic Namespace: Nettify.EnglishDictionary Assembly: Nettify.dll Syntax public class DictionaryWord.Phonetic Properties | Edit this page View Source Audio Link to the pronounciation, usually in MP3 format. Use NAudio (Windows) to play it. Declaration [JsonProperty(\"audio\")] public string Audio { get; set; } Property Value Type Description string | Edit this page View Source License License information for the source Declaration [JsonProperty(\"license\")] public DictionaryWord.License License { get; set; } Property Value Type Description DictionaryWord.License | Edit this page View Source SourceUrl From where did we get the audio from? Declaration [JsonProperty(\"sourceUrl\")] public string SourceUrl { get; set; } Property Value Type Description string | Edit this page View Source Text Phonetic representation of the word Declaration [JsonProperty(\"text\")] public string Text { get; set; } Property Value Type Description string"
+  },
+  "api/Nettify.EnglishDictionary.DictionaryWord.html": {
+    "href": "api/Nettify.EnglishDictionary.DictionaryWord.html",
+    "title": "Class DictionaryWord | Nettify API - Aptivi",
+    "keywords": "Class DictionaryWord A dictionary word Inheritance object DictionaryWord Namespace: Nettify.EnglishDictionary Assembly: Nettify.dll Syntax public class DictionaryWord Properties | Edit this page View Source LicenseInfo License information Declaration [JsonProperty(\"license\")] public DictionaryWord.License LicenseInfo { get; set; } Property Value Type Description DictionaryWord.License | Edit this page View Source Meanings Word meanings Declaration [JsonProperty(\"meanings\")] public DictionaryWord.Meaning[] Meanings { get; set; } Property Value Type Description Meaning[] | Edit this page View Source PhoneticWord The base phonetic representation of the word Declaration [JsonProperty(\"phonetic\")] public string PhoneticWord { get; set; } Property Value Type Description string | Edit this page View Source Phonetics The alternative phonetic representations Declaration [JsonProperty(\"phonetics\")] public DictionaryWord.Phonetic[] Phonetics { get; set; } Property Value Type Description Phonetic[] | Edit this page View Source SourceUrls List of where we got the word information from Declaration [JsonProperty(\"sourceUrls\")] public string[] SourceUrls { get; set; } Property Value Type Description string[] | Edit this page View Source Word The actual word Declaration [JsonProperty(\"word\")] public string Word { get; set; } Property Value Type Description string"
+  },
+  "api/Nettify.EnglishDictionary.html": {
+    "href": "api/Nettify.EnglishDictionary.html",
+    "title": "Namespace Nettify.EnglishDictionary | Nettify API - Aptivi",
+    "keywords": "Namespace Nettify.EnglishDictionary Classes DictionaryManager Dictionary management module DictionaryWord A dictionary word DictionaryWord.DefinitionType The definition class DictionaryWord.License The license class DictionaryWord.Meaning Word meaning class DictionaryWord.Phonetic Phonetic class"
+  },
+  "api/Nettify.MailAddress.IspInfo.ClientConfig.html": {
+    "href": "api/Nettify.MailAddress.IspInfo.ClientConfig.html",
+    "title": "Class ClientConfig | Nettify API - Aptivi",
+    "keywords": "Class ClientConfig Client configuration parameters Inheritance object ClientConfig Namespace: Nettify.MailAddress.IspInfo Assembly: Nettify.dll Syntax public class ClientConfig Properties | Edit this page View Source EmailProvider The E-mail provider (ISP) information Declaration public EmailProvider EmailProvider { get; set; } Property Value Type Description EmailProvider | Edit this page View Source Enable The log-in server enablement instructions Declaration public Enable Enable { get; set; } Property Value Type Description Enable | Edit this page View Source OAuth2 The OAuth2 information for the ISP's mail server Declaration public OAuth2 OAuth2 { get; set; } Property Value Type Description OAuth2 | Edit this page View Source WebMail The webmail configuration Declaration public WebMail WebMail { get; set; } Property Value Type Description WebMail"
+  },
+  "api/Nettify.MailAddress.IspInfo.Documentation.html": {
+    "href": "api/Nettify.MailAddress.IspInfo.Documentation.html",
+    "title": "Class Documentation | Nettify API - Aptivi",
+    "keywords": "Class Documentation Documentation information Inheritance object Documentation Namespace: Nettify.MailAddress.IspInfo Assembly: Nettify.dll Syntax public class Documentation Properties | Edit this page View Source Description Documentation description Declaration public string Description { get; set; } Property Value Type Description string | Edit this page View Source Url Documentation URL Declaration public string Url { get; set; } Property Value Type Description string"
+  },
+  "api/Nettify.MailAddress.IspInfo.EmailProvider.html": {
+    "href": "api/Nettify.MailAddress.IspInfo.EmailProvider.html",
+    "title": "Class EmailProvider | Nettify API - Aptivi",
+    "keywords": "Class EmailProvider The E-mail provider (ISP) information Inheritance object EmailProvider Namespace: Nettify.MailAddress.IspInfo Assembly: Nettify.dll Syntax public class EmailProvider Properties | Edit this page View Source DisplayName The full name for the ISP mail server Declaration public string DisplayName { get; set; } Property Value Type Description string | Edit this page View Source DisplayShortName The short name for the ISP mail server Declaration public string DisplayShortName { get; set; } Property Value Type Description string | Edit this page View Source Documentation Documentation information Declaration public List<Documentation> Documentation { get; set; } Property Value Type Description List<Documentation> | Edit this page View Source Domain The list of domains Declaration public List<string> Domain { get; set; } Property Value Type Description List<string> | Edit this page View Source DominatingDomain The dominating domain Declaration public string DominatingDomain { get; set; } Property Value Type Description string | Edit this page View Source IncomingServer List of incoming servers Declaration public List<IncomingServer> IncomingServer { get; set; } Property Value Type Description List<IncomingServer> | Edit this page View Source OutgoingServer Outgoing server Declaration public OutgoingServer OutgoingServer { get; set; } Property Value Type Description OutgoingServer"
+  },
+  "api/Nettify.MailAddress.IspInfo.Enable.html": {
+    "href": "api/Nettify.MailAddress.IspInfo.Enable.html",
+    "title": "Class Enable | Nettify API - Aptivi",
+    "keywords": "Class Enable The log-in server enablement instructions Inheritance object Enable Namespace: Nettify.MailAddress.IspInfo Assembly: Nettify.dll Syntax public class Enable Properties | Edit this page View Source Instruction The instruction Declaration public string Instruction { get; set; } Property Value Type Description string | Edit this page View Source Visiturl The URL to visit to enable login Declaration public string Visiturl { get; set; } Property Value Type Description string"
+  },
+  "api/Nettify.MailAddress.IspInfo.IncomingServer.html": {
+    "href": "api/Nettify.MailAddress.IspInfo.IncomingServer.html",
+    "title": "Class IncomingServer | Nettify API - Aptivi",
+    "keywords": "Class IncomingServer The incoming server information (POP3 or IMAP) Inheritance object IncomingServer Namespace: Nettify.MailAddress.IspInfo Assembly: Nettify.dll Syntax public class IncomingServer Properties | Edit this page View Source Authentication The authentication methods Declaration public List<string> Authentication { get; set; } Property Value Type Description List<string> | Edit this page View Source Hostname The hostname for the server Declaration public string Hostname { get; set; } Property Value Type Description string | Edit this page View Source Pop3 POP3 server properties Declaration public Pop3 Pop3 { get; set; } Property Value Type Description Pop3 | Edit this page View Source Port The port for the server. Usually 995 or 993, depending on the server. Declaration public int Port { get; set; } Property Value Type Description int | Edit this page View Source SocketType The socket type. Usually SSL or STARTTLS Declaration public string SocketType { get; set; } Property Value Type Description string | Edit this page View Source Type The server type. Usually \"imap\" or \"pop3\" Declaration public string Type { get; set; } Property Value Type Description string | Edit this page View Source Username The username indicator. Usually, it's set to %EMAILADDRESS%, which means the E-mail address placeholder. Declaration public string Username { get; set; } Property Value Type Description string"
+  },
+  "api/Nettify.MailAddress.IspInfo.LoginButton.html": {
+    "href": "api/Nettify.MailAddress.IspInfo.LoginButton.html",
+    "title": "Class LoginButton | Nettify API - Aptivi",
+    "keywords": "Class LoginButton The log-in button information Inheritance object LoginButton Namespace: Nettify.MailAddress.IspInfo Assembly: Nettify.dll Syntax public class LoginButton Properties | Edit this page View Source Id The log-in button identification from the source code of the URL Declaration public string Id { get; set; } Property Value Type Description string"
+  },
+  "api/Nettify.MailAddress.IspInfo.LoginPage.html": {
+    "href": "api/Nettify.MailAddress.IspInfo.LoginPage.html",
+    "title": "Class LoginPage | Nettify API - Aptivi",
+    "keywords": "Class LoginPage The webmail login page Inheritance object LoginPage Namespace: Nettify.MailAddress.IspInfo Assembly: Nettify.dll Syntax public class LoginPage Properties | Edit this page View Source Url The webmail login page link Declaration public string Url { get; set; } Property Value Type Description string"
+  },
+  "api/Nettify.MailAddress.IspInfo.LoginPageInfo.html": {
+    "href": "api/Nettify.MailAddress.IspInfo.LoginPageInfo.html",
+    "title": "Class LoginPageInfo | Nettify API - Aptivi",
+    "keywords": "Class LoginPageInfo The login page information for the ISP's webmail Inheritance object LoginPageInfo Namespace: Nettify.MailAddress.IspInfo Assembly: Nettify.dll Syntax public class LoginPageInfo Properties | Edit this page View Source LoginButton The log-in button information Declaration public LoginButton LoginButton { get; set; } Property Value Type Description LoginButton | Edit this page View Source PasswordField The password field information Declaration public PasswordField PasswordField { get; set; } Property Value Type Description PasswordField | Edit this page View Source Url The webmail URL Declaration public string Url { get; set; } Property Value Type Description string | Edit this page View Source Username The username indicator. Usually, it's set to %EMAILADDRESS%, which means the E-mail address placeholder. Declaration public string Username { get; set; } Property Value Type Description string | Edit this page View Source UsernameField The username field information Declaration public UsernameField UsernameField { get; set; } Property Value Type Description UsernameField"
+  },
+  "api/Nettify.MailAddress.IspInfo.OAuth2.html": {
+    "href": "api/Nettify.MailAddress.IspInfo.OAuth2.html",
+    "title": "Class OAuth2 | Nettify API - Aptivi",
+    "keywords": "Class OAuth2 The OAuth2 information for the ISP's mail server Inheritance object OAuth2 Namespace: Nettify.MailAddress.IspInfo Assembly: Nettify.dll Syntax public class OAuth2 Properties | Edit this page View Source AuthURL The authentication URL Declaration public string AuthURL { get; set; } Property Value Type Description string | Edit this page View Source Issuer The authentication issuer Declaration public string Issuer { get; set; } Property Value Type Description string | Edit this page View Source Scope The authentication scope Declaration public string Scope { get; set; } Property Value Type Description string | Edit this page View Source TokenURL The OAuth2 token URL Declaration public string TokenURL { get; set; } Property Value Type Description string"
+  },
+  "api/Nettify.MailAddress.IspInfo.OutgoingServer.html": {
+    "href": "api/Nettify.MailAddress.IspInfo.OutgoingServer.html",
+    "title": "Class OutgoingServer | Nettify API - Aptivi",
+    "keywords": "Class OutgoingServer The outgoing server information (SMTP) Inheritance object OutgoingServer Namespace: Nettify.MailAddress.IspInfo Assembly: Nettify.dll Syntax public class OutgoingServer Properties | Edit this page View Source AuthenticationMethods The authentication methods Declaration public List<string> AuthenticationMethods { get; set; } Property Value Type Description List<string> | Edit this page View Source Hostname The hostname for the SMTP server Declaration public string Hostname { get; set; } Property Value Type Description string | Edit this page View Source Port The port for the SMTP server. Usually 465. Declaration public int Port { get; set; } Property Value Type Description int | Edit this page View Source SocketType The socket type. Usually SSL or STARTTLS Declaration public string SocketType { get; set; } Property Value Type Description string | Edit this page View Source Type The server type. Usually \"smtp\" Declaration public string Type { get; set; } Property Value Type Description string | Edit this page View Source Username The username indicator. Usually, it's set to %EMAILADDRESS%, which means the E-mail address placeholder. Declaration public string Username { get; set; } Property Value Type Description string"
+  },
+  "api/Nettify.MailAddress.IspInfo.PasswordField.html": {
+    "href": "api/Nettify.MailAddress.IspInfo.PasswordField.html",
+    "title": "Class PasswordField | Nettify API - Aptivi",
+    "keywords": "Class PasswordField The password field information Inheritance object PasswordField Namespace: Nettify.MailAddress.IspInfo Assembly: Nettify.dll Syntax public class PasswordField Properties | Edit this page View Source Id The password field identification from the source code of the URL Declaration public string Id { get; set; } Property Value Type Description string"
+  },
+  "api/Nettify.MailAddress.IspInfo.Pop3.html": {
+    "href": "api/Nettify.MailAddress.IspInfo.Pop3.html",
+    "title": "Class Pop3 | Nettify API - Aptivi",
+    "keywords": "Class Pop3 POP3 server properties Inheritance object Pop3 Namespace: Nettify.MailAddress.IspInfo Assembly: Nettify.dll Syntax public class Pop3 Properties | Edit this page View Source LeaveMessagesOnServer Whether or not to leave the messages on the server Declaration public bool LeaveMessagesOnServer { get; set; } Property Value Type Description bool"
+  },
+  "api/Nettify.MailAddress.IspInfo.UsernameField.html": {
+    "href": "api/Nettify.MailAddress.IspInfo.UsernameField.html",
+    "title": "Class UsernameField | Nettify API - Aptivi",
+    "keywords": "Class UsernameField The username field for the webmail Inheritance object UsernameField Namespace: Nettify.MailAddress.IspInfo Assembly: Nettify.dll Syntax public class UsernameField Properties | Edit this page View Source Id The username field identification from the source code of the URL Declaration public string Id { get; set; } Property Value Type Description string"
+  },
+  "api/Nettify.MailAddress.IspInfo.WebMail.html": {
+    "href": "api/Nettify.MailAddress.IspInfo.WebMail.html",
+    "title": "Class WebMail | Nettify API - Aptivi",
+    "keywords": "Class WebMail The webmail configuration Inheritance object WebMail Namespace: Nettify.MailAddress.IspInfo Assembly: Nettify.dll Syntax public class WebMail Properties | Edit this page View Source LoginPage The login page instance Declaration public LoginPage LoginPage { get; set; } Property Value Type Description LoginPage | Edit this page View Source LoginPageInfo The webmail login page form information Declaration public LoginPageInfo LoginPageInfo { get; set; } Property Value Type Description LoginPageInfo"
+  },
+  "api/Nettify.MailAddress.IspInfo.html": {
+    "href": "api/Nettify.MailAddress.IspInfo.html",
+    "title": "Namespace Nettify.MailAddress.IspInfo | Nettify API - Aptivi",
+    "keywords": "Namespace Nettify.MailAddress.IspInfo Classes ClientConfig Client configuration parameters Documentation Documentation information EmailProvider The E-mail provider (ISP) information Enable The log-in server enablement instructions IncomingServer The incoming server information (POP3 or IMAP) LoginButton The log-in button information LoginPage The webmail login page LoginPageInfo The login page information for the ISP's webmail OAuth2 The OAuth2 information for the ISP's mail server OutgoingServer The outgoing server information (SMTP) PasswordField The password field information Pop3 POP3 server properties UsernameField The username field for the webmail WebMail The webmail configuration"
+  },
+  "api/Nettify.MailAddress.IspTools.html": {
+    "href": "api/Nettify.MailAddress.IspTools.html",
+    "title": "Class IspTools | Nettify API - Aptivi",
+    "keywords": "Class IspTools Internet Service Provider server information Inheritance object IspTools Namespace: Nettify.MailAddress Assembly: Nettify.dll Syntax public static class IspTools Methods | Edit this page View Source GetIspConfig(string, bool) Gets the ISP configuration for the specified mail address Declaration public static ClientConfig GetIspConfig(string address, bool staging = false) Parameters Type Name Description string address The mail address to parse. Must include the ISP hostname. bool staging Whether to use the Thunderbird staging server Returns Type Description ClientConfig The ISP client config for specified mail address"
+  },
+  "api/Nettify.MailAddress.html": {
+    "href": "api/Nettify.MailAddress.html",
+    "title": "Namespace Nettify.MailAddress | Nettify API - Aptivi",
+    "keywords": "Namespace Nettify.MailAddress Classes IspTools Internet Service Provider server information"
+  },
   "api/Nettify.Radio.ShoutcastServer.html": {
     "href": "api/Nettify.Radio.ShoutcastServer.html",
     "title": "Class ShoutcastServer | Nettify API - Aptivi",

@@ -15,6 +15,246 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.EnglishDictionary.DictionaryManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.EnglishDictionary.DictionaryManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.EnglishDictionary.DictionaryWord.DefinitionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.EnglishDictionary.DictionaryWord.DefinitionType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.EnglishDictionary.DictionaryWord.License.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.EnglishDictionary.DictionaryWord.License.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.EnglishDictionary.DictionaryWord.Meaning.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.EnglishDictionary.DictionaryWord.Meaning.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.EnglishDictionary.DictionaryWord.Phonetic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.EnglishDictionary.DictionaryWord.Phonetic.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.EnglishDictionary.DictionaryWord.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.EnglishDictionary.DictionaryWord.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.EnglishDictionary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.EnglishDictionary.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.MailAddress.IspInfo.ClientConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.MailAddress.IspInfo.ClientConfig.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.MailAddress.IspInfo.Documentation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.MailAddress.IspInfo.Documentation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.MailAddress.IspInfo.EmailProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.MailAddress.IspInfo.EmailProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.MailAddress.IspInfo.Enable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.MailAddress.IspInfo.Enable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.MailAddress.IspInfo.IncomingServer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.MailAddress.IspInfo.IncomingServer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.MailAddress.IspInfo.LoginButton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.MailAddress.IspInfo.LoginButton.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.MailAddress.IspInfo.LoginPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.MailAddress.IspInfo.LoginPage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.MailAddress.IspInfo.LoginPageInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.MailAddress.IspInfo.LoginPageInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.MailAddress.IspInfo.OAuth2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.MailAddress.IspInfo.OAuth2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.MailAddress.IspInfo.OutgoingServer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.MailAddress.IspInfo.OutgoingServer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.MailAddress.IspInfo.PasswordField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.MailAddress.IspInfo.PasswordField.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.MailAddress.IspInfo.Pop3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.MailAddress.IspInfo.Pop3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.MailAddress.IspInfo.UsernameField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.MailAddress.IspInfo.UsernameField.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.MailAddress.IspInfo.WebMail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.MailAddress.IspInfo.WebMail.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.MailAddress.IspInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.MailAddress.IspInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.MailAddress.IspTools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.MailAddress.IspTools.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.MailAddress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.MailAddress.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Nettify.Radio.ShoutcastServer.yml",
       "output": {
         ".html": {
