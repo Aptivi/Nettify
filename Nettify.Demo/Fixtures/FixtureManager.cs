@@ -27,6 +27,12 @@ namespace Nettify.Demo.Fixtures
     {
         internal static IFixture[] fixtures =
         [
+            // Addresses
+            new Addresstigation(),
+            
+            // Dictionary
+            new Dictionary(),
+            
             // Forecast
             new Forecast(),
 
