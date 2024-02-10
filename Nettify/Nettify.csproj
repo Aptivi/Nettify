@@ -5,6 +5,7 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <Version>1.1.0.1</Version>
     <Authors>Aptivi</Authors>
     <Company>Aptivi Corp.</Company>
