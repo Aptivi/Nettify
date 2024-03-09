@@ -2,7 +2,7 @@
   "sitemap": {
     "baseUrl": "https://aptivi.github.io/Nettify/"
   },
-  "source_base_path": "/github/workspace/DocGen",
+  "source_base_path": "/home/runner/work/Nettify/Nettify/DocGen",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
