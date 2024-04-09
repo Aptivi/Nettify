@@ -18,7 +18,7 @@
 //
 
 using System;
-using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Xml;
 
@@ -27,44 +27,44 @@ namespace Nettify.Rss.Instance
     /// <summary>
     /// RSS feed class instance
     /// </summary>
+    [DebuggerDisplay("{FeedTitle}: {FeedUrl}")]
     public class RSSFeed
     {
-
         private string _FeedUrl;
         private RSSFeedType _FeedType;
         private string _FeedTitle;
         private string _FeedDescription;
-        private List<RSSArticle> _FeedArticles = [];
+        private RSSArticle[] _FeedArticles = [];
 
         /// <summary>
         /// A URL to RSS feed
         /// </summary>
-        public string FeedUrl
-            => _FeedUrl;
+        public string FeedUrl =>
+            _FeedUrl;
 
         /// <summary>
         /// RSS feed type
         /// </summary>
-        public RSSFeedType FeedType
-            => _FeedType;
+        public RSSFeedType FeedType =>
+            _FeedType;
 
         /// <summary>
         /// RSS feed type
         /// </summary>
-        public string FeedTitle
-            => _FeedTitle;
+        public string FeedTitle =>
+            _FeedTitle;
 
         /// <summary>
         /// RSS feed description (Atom feeds not supported and always return an empty string)
         /// </summary>
-        public string FeedDescription
-            => _FeedDescription;
+        public string FeedDescription =>
+            _FeedDescription;
 
         /// <summary>
         /// Feed articles
         /// </summary>
-        public List<RSSArticle> FeedArticles
-            => _FeedArticles;
+        public RSSArticle[] FeedArticles =>
+            _FeedArticles;
 
         /// <summary>
         /// Makes a new instance of an RSS feed class
@@ -176,7 +176,7 @@ namespace Nettify.Rss.Instance
             _FeedUrl = FeedUrl;
             _FeedTitle = FeedTitle.Trim();
             _FeedDescription = FeedDescription.Trim();
-            if (_FeedArticles.Count != 0 & Articles.Count != 0)
+            if (_FeedArticles.Length != 0 & Articles.Length != 0)
             {
                 if (!_FeedArticles[0].Equals(Articles[0]))
                     _FeedArticles = Articles;
@@ -184,6 +184,5 @@ namespace Nettify.Rss.Instance
             else
                 _FeedArticles = Articles;
         }
-
     }
 }

@@ -29,47 +29,47 @@ namespace Nettify.Rss.Searcher
     public class SearcherInstance
     {
         [JsonProperty("score")]
-        private readonly double score;
+        private readonly double score = 0;
         [JsonProperty("lastUpdated")]
-        private readonly double lastUpdated;
+        private readonly double lastUpdated = 0;
         [JsonProperty("estimatedEngagement")]
-        private readonly int estimatedEngagement;
+        private readonly int estimatedEngagement = 0;
         [JsonProperty("description")]
-        private readonly string description;
+        private readonly string description = "";
         [JsonProperty("language")]
-        private readonly string language;
+        private readonly string language = "";
         [JsonProperty("id")]
-        private readonly string id;
+        private readonly string id = "";
         [JsonProperty("title")]
-        private readonly string title;
+        private readonly string title = "";
         [JsonProperty("coverUrl")]
-        private readonly string coverUrl;
+        private readonly string coverUrl = "";
         [JsonProperty("website")]
-        private readonly string website;
+        private readonly string website = "";
         [JsonProperty("topics")]
-        private readonly string[] topics;
+        private readonly string[] topics = [];
         [JsonProperty("subscribers")]
-        private readonly int subscribers;
+        private readonly int subscribers = 0;
         [JsonProperty("feedId")]
-        private readonly string feedId;
+        private readonly string feedId = "";
         [JsonProperty("updated")]
-        private readonly double updated;
+        private readonly double updated = 0;
         [JsonProperty("velocity")]
-        private readonly double velocity;
+        private readonly double velocity = 0;
         [JsonProperty("iconUrl")]
-        private readonly string iconUrl;
+        private readonly string iconUrl = "";
         [JsonProperty("visualUrl")]
-        private readonly string visualUrl;
+        private readonly string visualUrl = "";
         [JsonProperty("partial")]
-        private readonly bool partial;
+        private readonly bool partial = false;
         [JsonProperty("logo")]
-        private readonly string logo;
+        private readonly string logo = "";
         [JsonProperty("relatedLayout")]
-        private readonly string relatedLayout;
+        private readonly string relatedLayout = "";
         [JsonProperty("relatedTarget")]
-        private readonly string relatedTarget;
+        private readonly string relatedTarget = "";
         [JsonProperty("accentColor")]
-        private readonly string accentColor;
+        private readonly string accentColor = "";
 
         /// <summary>
         /// Feed score

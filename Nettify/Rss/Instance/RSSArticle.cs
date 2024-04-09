@@ -18,6 +18,8 @@
 //
 
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Xml;
 
 namespace Nettify.Rss.Instance
@@ -25,37 +27,37 @@ namespace Nettify.Rss.Instance
     /// <summary>
     /// RSS article instance
     /// </summary>
+    [DebuggerDisplay("{ArticleTitle}: {ArticleLink}")]
     public class RSSArticle
     {
-
         private readonly string articleTitle;
         private readonly string articleLink;
         private readonly string articleDescription;
-        private readonly Dictionary<string, XmlNode> articleVariables;
+        private readonly ReadOnlyDictionary<string, XmlNode> articleVariables;
 
         /// <summary>
         /// RSS Article Title
         /// </summary>
-        public string ArticleTitle
-            => articleTitle;
+        public string ArticleTitle =>
+            articleTitle;
 
         /// <summary>
         /// RSS Article Link
         /// </summary>
-        public string ArticleLink
-            => articleLink;
+        public string ArticleLink =>
+            articleLink;
 
         /// <summary>
         /// RSS Article Descirption
         /// </summary>
-        public string ArticleDescription
-            => articleDescription;
+        public string ArticleDescription =>
+            articleDescription;
 
         /// <summary>
         /// RSS Article Parameters
         /// </summary>
-        public Dictionary<string, XmlNode> ArticleVariables
-            => articleVariables;
+        public ReadOnlyDictionary<string, XmlNode> ArticleVariables =>
+            articleVariables;
 
         /// <summary>
         /// Makes a new instance of RSS article
@@ -69,8 +71,7 @@ namespace Nettify.Rss.Instance
             articleTitle = !string.IsNullOrWhiteSpace(ArticleTitle) ? ArticleTitle.Trim() : "";
             articleLink = !string.IsNullOrWhiteSpace(ArticleLink) ? ArticleLink.Trim() : "";
             articleDescription = !string.IsNullOrWhiteSpace(ArticleDescription) ? ArticleDescription.Trim() : "";
-            articleVariables = ArticleVariables;
+            articleVariables = new(ArticleVariables);
         }
-
     }
 }

@@ -38,7 +38,7 @@ namespace Nettify.Rss
         /// </summary>
         /// <param name="FeedNode">Feed XML node</param>
         /// <param name="FeedType">Feed type</param>
-        public static List<RSSArticle> MakeRssArticlesFromFeed(XmlNodeList FeedNode, RSSFeedType FeedType)
+        public static RSSArticle[] MakeRssArticlesFromFeed(XmlNodeList FeedNode, RSSFeedType FeedType)
         {
             var Articles = new List<RSSArticle>();
             switch (FeedType)
@@ -82,7 +82,7 @@ namespace Nettify.Rss
                 default:
                     throw new RSSException("Invalid RSS feed type.");
             }
-            return Articles;
+            return [.. Articles];
         }
 
         /// <summary>
