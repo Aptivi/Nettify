@@ -365,6 +365,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Rss.Searcher.SearcherInstance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Rss.Searcher.SearcherInstance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Rss.Searcher.SearcherTools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Rss.Searcher.SearcherTools.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Rss.Searcher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Rss.Searcher.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Nettify.Rss.yml",
       "output": {
         ".html": {
