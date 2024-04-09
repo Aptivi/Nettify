@@ -17,6 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using System.Diagnostics;
 using System.Xml.Serialization;
 
 namespace Nettify.MailAddress.IspInfo
@@ -26,6 +27,7 @@ namespace Nettify.MailAddress.IspInfo
     /// The username field for the webmail
     /// </summary>
     [XmlRoot(ElementName = "usernameField")]
+    [DebuggerDisplay("Username Element: {Id}")]
     public class UsernameField
     {
         /// <summary>

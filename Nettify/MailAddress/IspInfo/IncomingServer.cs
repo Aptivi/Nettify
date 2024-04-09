@@ -17,7 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-using System.Collections.Generic;
+using System.Diagnostics;
 using System.Xml.Serialization;
 
 namespace Nettify.MailAddress.IspInfo
@@ -27,6 +27,7 @@ namespace Nettify.MailAddress.IspInfo
     /// The incoming server information (POP3 or IMAP)
     /// </summary>
     [XmlRoot(ElementName = "incomingServer")]
+    [DebuggerDisplay("{Hostname,nq}:{Port}, {Type}, {Username}")]
     public class IncomingServer
     {
         /// <summary>
@@ -57,7 +58,7 @@ namespace Nettify.MailAddress.IspInfo
         /// The authentication methods
         /// </summary>
         [XmlElement(ElementName = "authentication")]
-        public List<string> Authentication { get; set; }
+        public string[] Authentication { get; set; }
 
         /// <summary>
         /// The server type. Usually "imap" or "pop3"

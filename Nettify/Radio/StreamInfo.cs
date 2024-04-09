@@ -18,6 +18,7 @@
 //
 
 using System;
+using System.Diagnostics;
 using Newtonsoft.Json.Linq;
 
 namespace Nettify.Radio
@@ -25,6 +26,7 @@ namespace Nettify.Radio
     /// <summary>
     /// Shoutcast stream information
     /// </summary>
+    [DebuggerDisplay("{StreamTitle,nq} is now playing {SongTitle} | L[{CurrentListeners}]")]
     public class StreamInfo
     {
         private readonly int currentListeners;

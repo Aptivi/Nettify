@@ -17,6 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using System.Diagnostics;
 using System.Xml.Serialization;
 
 namespace Nettify.MailAddress.IspInfo
@@ -26,6 +27,7 @@ namespace Nettify.MailAddress.IspInfo
     /// The log-in server enablement instructions
     /// </summary>
     [XmlRoot(ElementName = "enable")]
+    [DebuggerDisplay("{Instruction}: {VisitUrl}")]
     public class Enable
     {
         /// <summary>
@@ -38,7 +40,7 @@ namespace Nettify.MailAddress.IspInfo
         /// The URL to visit to enable login
         /// </summary>
         [XmlAttribute(AttributeName = "visiturl")]
-        public string Visiturl { get; set; }
+        public string VisitUrl { get; set; }
     }
 
 }

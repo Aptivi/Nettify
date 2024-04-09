@@ -18,17 +18,20 @@
 //
 
 using Newtonsoft.Json;
+using System.Diagnostics;
 
 namespace Nettify.EnglishDictionary
 {
     /// <summary>
     /// A dictionary word
     /// </summary>
+    [DebuggerDisplay("{Word} {PhoneticWord}: {Meanings.Length} meanings")]
     public partial class DictionaryWord
     {
         /// <summary>
         /// The definition class
         /// </summary>
+        [DebuggerDisplay("{Definition}: {Synonyms.Length} synonyms, {Antonyms.Length} antonyms")]
         public partial class DefinitionType
         {
             /// <summary>
@@ -59,6 +62,7 @@ namespace Nettify.EnglishDictionary
         /// <summary>
         /// The license class
         /// </summary>
+        [DebuggerDisplay("{Name}: {Url}")]
         public partial class License
         {
             /// <summary>
@@ -77,6 +81,7 @@ namespace Nettify.EnglishDictionary
         /// <summary>
         /// Word meaning class
         /// </summary>
+        [DebuggerDisplay("{PartOfSpeech}: {Definitions.Count} definitions, {Synonyms.Length} synonyms, {Antonyms.Length} antonyms")]
         public partial class Meaning
         {
             /// <summary>
@@ -107,6 +112,7 @@ namespace Nettify.EnglishDictionary
         /// <summary>
         /// Phonetic class
         /// </summary>
+        [DebuggerDisplay("{Text}: {Audio}")]
         public partial class Phonetic
         {
             /// <summary>
@@ -116,7 +122,7 @@ namespace Nettify.EnglishDictionary
             public string Text { get; set; }
 
             /// <summary>
-            /// Link to the pronounciation, usually in MP3 format. Use NAudio (Windows) to play it.
+            /// Link to the pronounciation, usually in MP3 format. Use BassBoom to play it after downloading it.
             /// </summary>
             [JsonProperty("audio")]
             public string Audio { get; set; }

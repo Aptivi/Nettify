@@ -17,6 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using System.Diagnostics;
 using System.Xml.Serialization;
 
 namespace Nettify.MailAddress.IspInfo
@@ -26,6 +27,7 @@ namespace Nettify.MailAddress.IspInfo
     /// The password field information
     /// </summary>
     [XmlRoot(ElementName = "passwordField")]
+    [DebuggerDisplay("Password Element: {Id}")]
     public class PasswordField
     {
         /// <summary>

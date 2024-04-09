@@ -17,6 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using System.Diagnostics;
 using System.Xml.Serialization;
 
 namespace Nettify.MailAddress.IspInfo
@@ -26,6 +27,7 @@ namespace Nettify.MailAddress.IspInfo
     /// The OAuth2 information for the ISP's mail server
     /// </summary>
     [XmlRoot(ElementName = "oAuth2")]
+    [DebuggerDisplay("{Issuer}|{Scope}: {AuthURL}, {TokenURL}")]
     public class OAuth2
     {
         /// <summary>

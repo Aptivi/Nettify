@@ -17,6 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using System.Diagnostics;
 using System.Xml.Serialization;
 
 namespace Nettify.MailAddress.IspInfo
@@ -26,6 +27,7 @@ namespace Nettify.MailAddress.IspInfo
     /// POP3 server properties
     /// </summary>
     [XmlRoot(ElementName = "pop3")]
+    [DebuggerDisplay("POP3 settings: LeaveMessagesOnServer = {LeaveMessagesOnServer}")]
     public class Pop3
     {
         /// <summary>

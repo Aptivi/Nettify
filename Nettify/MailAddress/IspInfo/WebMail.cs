@@ -17,6 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using System.Diagnostics;
 using System.Xml.Serialization;
 
 namespace Nettify.MailAddress.IspInfo
@@ -26,6 +27,7 @@ namespace Nettify.MailAddress.IspInfo
     /// The webmail configuration
     /// </summary>
     [XmlRoot(ElementName = "webMail")]
+    [DebuggerDisplay("Webmail information is{(LoginPageInfo is not null ? \"\" : \" not\"),nq} available")]
     public class WebMail
     {
         /// <summary>

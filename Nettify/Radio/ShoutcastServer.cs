@@ -23,12 +23,14 @@ using Newtonsoft.Json.Linq;
 using HtmlAgilityPack;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace Nettify.Radio
 {
     /// <summary>
     /// A Shoutcast server
     /// </summary>
+    [DebuggerDisplay("{ServerHostFull,nq}: S[T:{TotalStreams}|A:{ActiveStreams}] | L[{CurrentListeners}]")]
     public class ShoutcastServer
     {
         private ShoutcastVersion serverVersion;
@@ -53,53 +55,64 @@ namespace Nettify.Radio
         /// </summary>
         public int ServerPort { get; }
         /// <summary>
-        /// Server IP address with port
-        /// </summary>
-        public string ServerHostFull => ServerHost + ":" + ServerPort;
-        /// <summary>
         /// Whether the Shoutcast server is using HTTPS or not
         /// </summary>
         public bool ServerHttps { get; }
         /// <summary>
+        /// Server IP address with port
+        /// </summary>
+        public string ServerHostFull =>
+            ServerHost + ":" + ServerPort;
+        /// <summary>
         /// Server version (1.x, 2.x)
         /// </summary>
-        public ShoutcastVersion ServerVersion => serverVersion;
+        public ShoutcastVersion ServerVersion =>
+            serverVersion;
         /// <summary>
         /// Total number of streams in the server
         /// </summary>
-        public int TotalStreams => totalStreams;
+        public int TotalStreams =>
+            totalStreams;
         /// <summary>
         /// Active streams in the server
         /// </summary>
-        public int ActiveStreams => activeStreams;
+        public int ActiveStreams =>
+            activeStreams;
         /// <summary>
         /// How many people are listening to the server at this time?
         /// </summary>
-        public int CurrentListeners => currentListeners;
+        public int CurrentListeners =>
+            currentListeners;
         /// <summary>
         /// How many listeners did the server ever get at peak times?
         /// </summary>
-        public int PeakListeners => peakListeners;
+        public int PeakListeners =>
+            peakListeners;
         /// <summary>
         /// How many people can listen to the server?
         /// </summary>
-        public int MaxListeners => maxListeners;
+        public int MaxListeners =>
+            maxListeners;
         /// <summary>
         /// How many unique listeners are there?
         /// </summary>
-        public int UniqueListeners => uniqueListeners;
+        public int UniqueListeners =>
+            uniqueListeners;
         /// <summary>
         /// Average time on any active listener connections in seconds
         /// </summary>
-        public int AverageTime => averageTime;
+        public int AverageTime =>
+            averageTime;
         /// <summary>
         /// Average time on any active listener connections in the time span
         /// </summary>
-        public TimeSpan AverageTimeSpan => TimeSpan.FromSeconds(AverageTime);
+        public TimeSpan AverageTimeSpan =>
+            TimeSpan.FromSeconds(AverageTime);
         /// <summary>
         /// Available streams and their statistics
         /// </summary>
-        public List<StreamInfo> Streams => streams;
+        public StreamInfo[] Streams =>
+            [.. streams];
 
         /// <summary>
         /// Connects to the Shoutcast server and gets the information

@@ -17,11 +17,14 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using System.Diagnostics;
+
 namespace Nettify.Weather
 {
     /// <summary>
     /// Forecast information
     /// </summary>
+    [DebuggerDisplay("{CityName} [{CityID}]: {Weather} @ {Temperature} [{TemperatureMeasurement}]")]
     public partial class WeatherForecastInfo
     {
         /// <summary>

@@ -17,6 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using System.Diagnostics;
 using System.Xml.Serialization;
 
 namespace Nettify.MailAddress.IspInfo
@@ -26,6 +27,7 @@ namespace Nettify.MailAddress.IspInfo
     /// The log-in button information
     /// </summary>
     [XmlRoot(ElementName = "loginButton")]
+    [DebuggerDisplay("Element ID: {Id}")]
     public class LoginButton
     {
         /// <summary>

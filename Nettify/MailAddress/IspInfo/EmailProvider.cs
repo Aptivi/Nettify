@@ -17,7 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-using System.Collections.Generic;
+using System.Diagnostics;
 using System.Xml.Serialization;
 
 namespace Nettify.MailAddress.IspInfo
@@ -27,13 +27,14 @@ namespace Nettify.MailAddress.IspInfo
     /// The E-mail provider (ISP) information
     /// </summary>
     [XmlRoot(ElementName = "emailProvider")]
+    [DebuggerDisplay("{DisplayName}: {Domain.Length} domains with {DominatingDomain} as dominating domain")]
     public class EmailProvider
     {
         /// <summary>
         /// The list of domains
         /// </summary>
         [XmlElement(ElementName = "domain")]
-        public List<string> Domain { get; set; }
+        public string[] Domain { get; set; }
 
         /// <summary>
         /// The full name for the ISP mail server
@@ -51,7 +52,7 @@ namespace Nettify.MailAddress.IspInfo
         /// List of incoming servers
         /// </summary>
         [XmlElement(ElementName = "incomingServer")]
-        public List<IncomingServer> IncomingServer { get; set; }
+        public IncomingServer[] IncomingServer { get; set; }
 
         /// <summary>
         /// Outgoing server
@@ -63,7 +64,7 @@ namespace Nettify.MailAddress.IspInfo
         /// Documentation information
         /// </summary>
         [XmlElement(ElementName = "documentation")]
-        public List<Documentation> Documentation { get; set; }
+        public Documentation[] Documentation { get; set; }
 
         /// <summary>
         /// The dominating domain
