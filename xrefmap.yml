@@ -553,19 +553,19 @@ references:
   isSpec: "True"
   fullName: Nettify.MailAddress.IspInfo.Enable.Instruction
   nameWithType: Enable.Instruction
-- uid: Nettify.MailAddress.IspInfo.Enable.Visiturl
-  name: Visiturl
-  href: api/Nettify.MailAddress.IspInfo.Enable.html#Nettify_MailAddress_IspInfo_Enable_Visiturl
-  commentId: P:Nettify.MailAddress.IspInfo.Enable.Visiturl
-  fullName: Nettify.MailAddress.IspInfo.Enable.Visiturl
-  nameWithType: Enable.Visiturl
-- uid: Nettify.MailAddress.IspInfo.Enable.Visiturl*
-  name: Visiturl
-  href: api/Nettify.MailAddress.IspInfo.Enable.html#Nettify_MailAddress_IspInfo_Enable_Visiturl_
-  commentId: Overload:Nettify.MailAddress.IspInfo.Enable.Visiturl
+- uid: Nettify.MailAddress.IspInfo.Enable.VisitUrl
+  name: VisitUrl
+  href: api/Nettify.MailAddress.IspInfo.Enable.html#Nettify_MailAddress_IspInfo_Enable_VisitUrl
+  commentId: P:Nettify.MailAddress.IspInfo.Enable.VisitUrl
+  fullName: Nettify.MailAddress.IspInfo.Enable.VisitUrl
+  nameWithType: Enable.VisitUrl
+- uid: Nettify.MailAddress.IspInfo.Enable.VisitUrl*
+  name: VisitUrl
+  href: api/Nettify.MailAddress.IspInfo.Enable.html#Nettify_MailAddress_IspInfo_Enable_VisitUrl_
+  commentId: Overload:Nettify.MailAddress.IspInfo.Enable.VisitUrl
   isSpec: "True"
-  fullName: Nettify.MailAddress.IspInfo.Enable.Visiturl
-  nameWithType: Enable.Visiturl
+  fullName: Nettify.MailAddress.IspInfo.Enable.VisitUrl
+  nameWithType: Enable.VisitUrl
 - uid: Nettify.MailAddress.IspInfo.IncomingServer
   name: IncomingServer
   href: api/Nettify.MailAddress.IspInfo.IncomingServer.html
