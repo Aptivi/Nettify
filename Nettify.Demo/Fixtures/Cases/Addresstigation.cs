@@ -44,14 +44,17 @@ namespace Nettify.Demo.Fixtures.Cases
                 Console.WriteLine($"  Socket type: {server.SocketType}");
                 Console.WriteLine($"  Server type: {server.Type}");
                 Console.WriteLine($"  Username: {server.Username}");
-                Console.WriteLine($"  Leave messages on server? {server.Pop3.LeaveMessagesOnServer}");
+                Console.WriteLine($"  Leave messages on server? {(server.Pop3 is not null ? server.Pop3.LeaveMessagesOnServer : "False")}");
                 Console.WriteLine($"  Auth methods: {string.Join(", ", server.Authentication)}");
             }
-            Console.WriteLine($"Outgoing server hostname: {ispMail.OutgoingServer.Hostname}:{ispMail.OutgoingServer.Port}");
-            Console.WriteLine($"Socket type: {ispMail.OutgoingServer.SocketType}");
-            Console.WriteLine($"Server type: {ispMail.OutgoingServer.Type}");
-            Console.WriteLine($"Username: {ispMail.OutgoingServer.Username}");
-            Console.WriteLine($"Auth methods: {string.Join(", ", ispMail.OutgoingServer.AuthenticationMethods)}");
+            if (ispMail.OutgoingServer is not null)
+            {
+                Console.WriteLine($"Outgoing server hostname: {ispMail.OutgoingServer.Hostname}:{ispMail.OutgoingServer.Port}");
+                Console.WriteLine($"Socket type: {ispMail.OutgoingServer.SocketType}");
+                Console.WriteLine($"Server type: {ispMail.OutgoingServer.Type}");
+                Console.WriteLine($"Username: {ispMail.OutgoingServer.Username}");
+                Console.WriteLine($"Auth methods: {string.Join(", ", ispMail.OutgoingServer.AuthenticationMethods)}");
+            }
         }
     }
 }
