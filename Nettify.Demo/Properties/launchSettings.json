@@ -12,6 +12,10 @@
       "commandName": "Project",
       "commandLineArgs": "RssFeedViewer"
     },
+    "Nettify.Demo - RssFeedSearcher": {
+      "commandName": "Project",
+      "commandLineArgs": "RssFeedSearcher"
+    },
     "Nettify.Demo - ShoutCastStats": {
       "commandName": "Project",
       "commandLineArgs": "ShoutCastStats"

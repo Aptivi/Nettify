@@ -38,6 +38,7 @@ namespace Nettify.Demo.Fixtures
 
             // RSS
             new RssFeedViewer(),
+            new RssFeedSearcher(),
 
             // SHOUTcast
             new ShoutCastStats(),
