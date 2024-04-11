@@ -9,11 +9,8 @@ on:
       - main
     
 jobs:
-  build:
-    strategy:
-      matrix:
-        runs-on: [ubuntu-latest, windows-latest, macos-latest]
-    runs-on: ${{ matrix.runs-on }}
+  address:
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
@@ -23,6 +20,17 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '8.0.x'
+    - name: Build Preparation
+      run: ./assets/IspInfo/getispinfo.sh
+
+  build:
+    strategy:
+      matrix:
+        runs-on: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.runs-on }}
+    needs: address
+
+    steps:
     - name: Solution Compilation
       run: dotnet build --configuration Release
     - name: Testing

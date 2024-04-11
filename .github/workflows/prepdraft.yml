@@ -21,6 +21,8 @@ jobs:
         dotnet-version: '8.0.x'
     - name: Setup DocFX
       run: dotnet tool install --global docfx
+    - name: Build Preparation
+      run: ./assets/IspInfo/getispinfo.ps1
     - name: Release Asset Preparation
       run: |
         cd tools ; ./build.cmd ; cd ..
