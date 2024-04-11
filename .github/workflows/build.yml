@@ -10,7 +10,7 @@ on:
     
 jobs:
   address:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
@@ -21,7 +21,14 @@ jobs:
       with:
         dotnet-version: '8.0.x'
     - name: Build Preparation
-      run: ./assets/IspInfo/getispinfo.ps1
+      run: |
+        chmod +x ./assets/IspInfo/getispinfo.sh
+        ./assets/IspInfo/getispinfo.sh
+    - name: Prepare Build Job
+      uses: actions/upload-artifact@v4
+      with:
+        name: isp
+        path: assets/IspInfo/*.xml
 
   build:
     strategy:
@@ -31,6 +38,13 @@ jobs:
     needs: address
 
     steps:
+    - uses: actions/checkout@v4
+      with:
+        ref: ${{ github.ref }}
+    - uses: actions/download-artifact@v4
+      with:
+        name: isp
+        path: assets/IspInfo
     - name: Solution Compilation
       run: dotnet build --configuration Debug
     - name: Testing

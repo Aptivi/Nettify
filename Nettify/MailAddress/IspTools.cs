@@ -21,6 +21,7 @@ using Nettify.MailAddress.IspInfo;
 using System;
 using System.IO;
 using System.Net;
+using System.Reflection;
 using System.Text;
 using System.Xml.Serialization;
 
@@ -35,33 +36,18 @@ namespace Nettify.MailAddress
         /// Gets the ISP configuration for the specified mail address
         /// </summary>
         /// <param name="address">The mail address to parse. Must include the ISP hostname.</param>
-        /// <param name="staging">Whether to use the Thunderbird staging server</param>
         /// <returns>The ISP client config for specified mail address</returns>
-        public static ClientConfig GetIspConfig(string address, bool staging = false)
+        public static ClientConfig GetIspConfig(string address)
         {
-            // Database addresses
-            string databaseAddress = "https://autoconfig.thunderbird.net/v1.1/";
-            string stagingDatabaseAddress = "https://autoconfig-stage.thunderbird.net/v1.1/";
-
             // Get the final database address
             string hostName = new Uri($"mailto:{address}").Host;
-            string finalDatabaseAddress = $"{databaseAddress}{hostName}";
-            if (staging)
-                finalDatabaseAddress = $"{stagingDatabaseAddress}{hostName}";
-
-            // Apparently, the XML documents grabbed from the database don't have this below XML header
-            StringBuilder xmlBuilder = new StringBuilder();
-            xmlBuilder.AppendLine("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
-
-            // Get the XML document for the ISP
-            WebClient client = new WebClient();
-            xmlBuilder.AppendLine(client.DownloadString(finalDatabaseAddress));
-            string xmlContent = xmlBuilder.ToString();
+            var xmlStream = Assembly.GetAssembly(typeof(IspTools)).GetManifestResourceStream($"Nettify.{hostName}.xml");
+            string xmlContent = new StreamReader(xmlStream).ReadToEnd();
 
             // Get the client config
             ClientConfig clientConfig;
-            XmlSerializer xmlSerializer = new XmlSerializer(typeof(ClientConfig), new XmlRootAttribute("clientConfig") { IsNullable = false });
-            StringReader sr = new StringReader(xmlContent);
+            XmlSerializer xmlSerializer = new(typeof(ClientConfig), new XmlRootAttribute("clientConfig") { IsNullable = false });
+            StringReader sr = new(xmlContent);
             clientConfig = (ClientConfig)xmlSerializer.Deserialize(sr);
             return clientConfig;
         }
