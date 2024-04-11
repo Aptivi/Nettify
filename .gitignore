@@ -410,3 +410,6 @@ DocGen/api/
 
 # Vim
 *.swp
+
+# ISP info XML Files
+assets/IspInfo/*.xml
