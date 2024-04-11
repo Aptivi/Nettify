@@ -20,9 +20,7 @@
 using Nettify.MailAddress.IspInfo;
 using System;
 using System.IO;
-using System.Net;
 using System.Reflection;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace Nettify.MailAddress
