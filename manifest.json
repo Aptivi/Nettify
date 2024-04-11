@@ -255,66 +255,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Nettify.Radio.ShoutcastServer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Nettify.Radio.ShoutcastServer.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Nettify.Radio.ShoutcastServerException.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Nettify.Radio.ShoutcastServerException.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Nettify.Radio.ShoutcastStreamParseException.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Nettify.Radio.ShoutcastStreamParseException.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Nettify.Radio.ShoutcastVersion.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Nettify.Radio.ShoutcastVersion.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Nettify.Radio.StreamInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Nettify.Radio.StreamInfo.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Nettify.Radio.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Nettify.Radio.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Nettify.Rss.Instance.RSSArticle.yml",
       "output": {
         ".html": {
