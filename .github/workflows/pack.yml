@@ -17,7 +17,9 @@ jobs:
       with:
         dotnet-version: '8.0.x'
     - name: Build Preparation
-      run: ./assets/IspInfo/getispinfo.sh
+      run: |
+        chmod +x ./assets/IspInfo/getispinfo.sh
+        ./assets/IspInfo/getispinfo.sh
     - name: Solution Compilation
       run: dotnet build --configuration Release
     - name: Package Publication
