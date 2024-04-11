@@ -1009,15 +1009,15 @@ references:
   commentId: T:Nettify.MailAddress.IspTools
   fullName: Nettify.MailAddress.IspTools
   nameWithType: IspTools
-- uid: Nettify.MailAddress.IspTools.GetIspConfig(System.String,System.Boolean)
-  name: GetIspConfig(string, bool)
-  href: api/Nettify.MailAddress.IspTools.html#Nettify_MailAddress_IspTools_GetIspConfig_System_String_System_Boolean_
-  commentId: M:Nettify.MailAddress.IspTools.GetIspConfig(System.String,System.Boolean)
-  name.vb: GetIspConfig(String, Boolean)
-  fullName: Nettify.MailAddress.IspTools.GetIspConfig(string, bool)
-  fullName.vb: Nettify.MailAddress.IspTools.GetIspConfig(String, Boolean)
-  nameWithType: IspTools.GetIspConfig(string, bool)
-  nameWithType.vb: IspTools.GetIspConfig(String, Boolean)
+- uid: Nettify.MailAddress.IspTools.GetIspConfig(System.String)
+  name: GetIspConfig(string)
+  href: api/Nettify.MailAddress.IspTools.html#Nettify_MailAddress_IspTools_GetIspConfig_System_String_
+  commentId: M:Nettify.MailAddress.IspTools.GetIspConfig(System.String)
+  name.vb: GetIspConfig(String)
+  fullName: Nettify.MailAddress.IspTools.GetIspConfig(string)
+  fullName.vb: Nettify.MailAddress.IspTools.GetIspConfig(String)
+  nameWithType: IspTools.GetIspConfig(string)
+  nameWithType.vb: IspTools.GetIspConfig(String)
 - uid: Nettify.MailAddress.IspTools.GetIspConfig*
   name: GetIspConfig
   href: api/Nettify.MailAddress.IspTools.html#Nettify_MailAddress_IspTools_GetIspConfig_

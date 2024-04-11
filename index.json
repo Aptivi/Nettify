@@ -112,7 +112,7 @@
   "api/Nettify.MailAddress.IspTools.html": {
     "href": "api/Nettify.MailAddress.IspTools.html",
     "title": "Class IspTools | Nettify API - Aptivi",
-    "keywords": "Class IspTools Internet Service Provider server information Inheritance object IspTools Namespace: Nettify.MailAddress Assembly: Nettify.dll Syntax public static class IspTools Methods | Edit this page View Source GetIspConfig(string, bool) Gets the ISP configuration for the specified mail address Declaration public static ClientConfig GetIspConfig(string address, bool staging = false) Parameters Type Name Description string address The mail address to parse. Must include the ISP hostname. bool staging Whether to use the Thunderbird staging server Returns Type Description ClientConfig The ISP client config for specified mail address"
+    "keywords": "Class IspTools Internet Service Provider server information Inheritance object IspTools Namespace: Nettify.MailAddress Assembly: Nettify.dll Syntax public static class IspTools Methods | Edit this page View Source GetIspConfig(string) Gets the ISP configuration for the specified mail address Declaration public static ClientConfig GetIspConfig(string address) Parameters Type Name Description string address The mail address to parse. Must include the ISP hostname. Returns Type Description ClientConfig The ISP client config for specified mail address"
   },
   "api/Nettify.MailAddress.html": {
     "href": "api/Nettify.MailAddress.html",
