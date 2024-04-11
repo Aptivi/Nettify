@@ -3,6 +3,7 @@
 # Some variables
 DATABASEADDRESS=https://autoconfig.thunderbird.net/v1.1/
 DBFILE=$(mktemp)
+ROOT=$(dirname "$0")
 GREEN=$(tput setaf 2)
 RED=$(tput setaf 1)
 RESET=$(tput sgr0)
@@ -24,7 +25,7 @@ for ISPIDX in "${!ISPS[@]}"
 do
     ISP=${ISPS[ISPIDX]}
     ISPADDRESS=$DATABASEADDRESS$ISP
-    OUTPUTFILE=$ISP.xml
+    OUTPUTFILE=$ROOT/$ISP.xml
 
     # Download configuration information
     printf "[$((ISPIDX+1)) of $ISPCOUNT] Downloading $GREEN$ISPADDRESS$RESET...\n"

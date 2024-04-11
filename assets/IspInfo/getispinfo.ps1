@@ -6,7 +6,7 @@ Write-Output "Downloading the ISP list..."
 Set-Variable ISPS ((Invoke-WebRequest -Uri $DATABASEADDRESS).links.href | Select-Object -Skip 5)
 
 $ISPS | ForEach-Object -Process {
-    Set-Variable XMLFILE "$PWD\$_.xml"
+    Set-Variable XMLFILE "$PSScriptRoot\$_.xml"
     Write-Output "Saving ISP info $_ to $XMLFILE..."
     Invoke-WebRequest $DATABASEADDRESS$_ -OutFile $XMLFILE
     $a = Get-Content $XMLFILE
