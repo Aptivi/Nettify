@@ -6,7 +6,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <Version>1.2.0</Version>
+    <Version>1.3.0</Version>
     <Authors>Aptivi</Authors>
     <Company>Aptivi Corp.</Company>
     <Description>A collection of tools that provide you Internet accessory tools for your C# and Visual basic applications.</Description>
