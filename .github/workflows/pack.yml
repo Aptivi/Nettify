@@ -21,6 +21,6 @@ jobs:
         chmod +x ./assets/IspInfo/getispinfo.sh
         ./assets/IspInfo/getispinfo.sh
     - name: Solution Compilation
-      run: dotnet build --configuration Release
+      run: make
     - name: Package Publication
       run: dotnet nuget push "Nettify/bin/Release/*.nupkg" --api-key ${{ secrets.NUGET_APIKEY }} --source "nuget.org"
