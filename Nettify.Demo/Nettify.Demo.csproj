@@ -9,4 +9,8 @@
     <ProjectReference Include="..\Nettify\Nettify.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Remove="Microsoft.SourceLink.GitHub" />
+  </ItemGroup>
+
 </Project>
