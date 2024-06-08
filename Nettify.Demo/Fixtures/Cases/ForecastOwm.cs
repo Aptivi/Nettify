@@ -22,27 +22,30 @@ using System;
 
 namespace Nettify.Demo.Fixtures.Cases
 {
-    internal class Forecast : IFixture
+    internal class ForecastOwm : IFixture
     {
-        public string FixtureID => "Forecast";
+        public string FixtureID => "ForecastOwm";
         public void RunFixture()
         {
 			string ApiKey;
-			double latitude, longitude;
+			string StringID;
             WeatherForecastInfo forecastInfo;
+			bool IsNumeric;
 
 			// ID or name
-			Console.Write("Enter city latitude: ");
-            latitude = double.Parse(Console.ReadLine());
-            Console.Write("Enter city longitude: ");
-            longitude = double.Parse(Console.ReadLine());
+			Console.Write("Enter city ID or name: ");
+			StringID = Console.ReadLine();
+			IsNumeric = long.TryParse(StringID, out long FinalID);
 
 			// API key
-			Console.Write("Enter TWC API key: ");
+			Console.Write("Enter API key: ");
 			ApiKey = Console.ReadLine();
 
 			// Get weather info
-			forecastInfo = WeatherForecast.GetWeatherInfo(latitude, longitude, ApiKey, UnitMeasurement.Metric);
+			if (IsNumeric)
+				forecastInfo = WeatherForecastOwm.GetWeatherInfo(FinalID, ApiKey, UnitMeasurement.Metric);
+			else
+				forecastInfo = WeatherForecastOwm.GetWeatherInfo(StringID, ApiKey, UnitMeasurement.Metric);
 
 			// Print the weather information
 			Console.WriteLine("Weather State: " + forecastInfo.Weather);

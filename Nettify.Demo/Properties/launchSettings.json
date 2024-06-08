@@ -16,6 +16,14 @@
             "commandName": "Project",
             "commandLineArgs": "Forecast"
         },
+        "Nettify.Demo - ForecastOwm": {
+            "commandName": "Project",
+            "commandLineArgs": "ForecastOwm"
+        },
+        "Nettify.Demo - ForecastList": {
+            "commandName": "Project",
+            "commandLineArgs": "ForecastList"
+        },
         "Nettify.Demo - RssFeedViewer": {
             "commandName": "Project",
             "commandLineArgs": "RssFeedViewer"

@@ -34,6 +34,8 @@ namespace Nettify.Demo.Fixtures
             new Dictionary(),
             
             // Forecast
+            new ForecastOwm(),
+            new ForecastList(),
             new Forecast(),
 
             // RSS

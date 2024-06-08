@@ -17,6 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -29,40 +30,28 @@ using Newtonsoft.Json.Linq;
 namespace Nettify.Weather
 {
     /// <summary>
-    /// The forecast tools
+    /// The forecast tools (The Weather Channel)
     /// </summary>
     public static class WeatherForecast
     {
         internal static HttpClient WeatherDownloader = new();
 
         /// <summary>
-        /// Gets current weather info from OpenWeatherMap
+        /// Gets current weather info from The Weather Channel
         /// </summary>
-        /// <param name="CityID">City ID</param>
-        /// <param name="APIKey">API key</param>
-        /// <param name="Unit">The preferred unit to use</param>
-        /// <returns>A class containing properties of weather information</returns>
-        public static WeatherForecastInfo GetWeatherInfo(long CityID, string APIKey, UnitMeasurement Unit = UnitMeasurement.Metric)
-        {
-            string WeatherURL = $"http://api.openweathermap.org/data/2.5/weather?id={CityID}&appid={APIKey}";
-            return GetWeatherInfo(WeatherURL, Unit);
-        }
-
-        /// <summary>
-        /// Gets current weather info from OpenWeatherMap
-        /// </summary>
-        /// <param name="CityName">City name</param>
+        /// <param name="latitude">City latitude</param>
+        /// <param name="longitude">City longitude</param>
         /// <param name="APIKey">API Key</param>
         /// <param name="Unit">The preferred unit to use</param>
         /// <returns>A class containing properties of weather information</returns>
-        public static WeatherForecastInfo GetWeatherInfo(string CityName, string APIKey, UnitMeasurement Unit = UnitMeasurement.Metric)
+        public static WeatherForecastInfo GetWeatherInfo(double latitude, double longitude, string APIKey, UnitMeasurement Unit = UnitMeasurement.Metric)
         {
-            string WeatherURL = $"http://api.openweathermap.org/data/2.5/weather?q={CityName}&appid={APIKey}";
-            return GetWeatherInfo(WeatherURL, Unit);
+            string WeatherURL = $"http://api.weather.com/v3/wx/forecast/daily/15day?geocode={latitude},{longitude}&format=json&language=en-US&units={(Unit == UnitMeasurement.Metric ? 'm' : 'e')}&apiKey={APIKey}";
+            return GetWeatherInfo(WeatherURL, Unit == UnitMeasurement.Kelvin ? UnitMeasurement.Imperial : Unit);
         }
 
         /// <summary>
-        /// Gets current weather info from OpenWeatherMap
+        /// Gets current weather info from The Weather Channel
         /// </summary>
         /// <param name="WeatherURL">An URL to the weather API request</param>
         /// <param name="Unit">The preferred unit to use</param>
@@ -74,10 +63,7 @@ namespace Nettify.Weather
             Debug.WriteLine("Weather URL: {0} | Unit: {1}", WeatherURL, Unit);
 
             // Deal with measurements
-            if (Unit == UnitMeasurement.Imperial)
-                WeatherURL += "&units=imperial";
-            else
-                WeatherURL += "&units=metric";
+            Unit = Unit == UnitMeasurement.Kelvin ? UnitMeasurement.Imperial : Unit;
 
             // Download and parse JSON data
             WeatherData = WeatherDownloader.GetStringAsync(WeatherURL).Result;
@@ -86,33 +72,21 @@ namespace Nettify.Weather
         }
 
         /// <summary>
-        /// Gets current weather info from OpenWeatherMap
+        /// Gets current weather info from The Weather Channel
         /// </summary>
-        /// <param name="CityID">City ID</param>
+        /// <param name="latitude">City latitude</param>
+        /// <param name="longitude">City longitude</param>
         /// <param name="APIKey">API key</param>
         /// <param name="Unit">The preferred unit to use</param>
         /// <returns>A class containing properties of weather information</returns>
-        public static async Task<WeatherForecastInfo> GetWeatherInfoAsync(long CityID, string APIKey, UnitMeasurement Unit = UnitMeasurement.Metric)
+        public static async Task<WeatherForecastInfo> GetWeatherInfoAsync(double latitude, double longitude, string APIKey, UnitMeasurement Unit = UnitMeasurement.Metric)
         {
-            string WeatherURL = $"http://api.openweathermap.org/data/2.5/weather?id={CityID}&appid={APIKey}";
+            string WeatherURL = $"http://api.weather.com/v3/wx/forecast/daily/15day?geocode={latitude},{longitude}&format=json&language=en-US&units={(Unit == UnitMeasurement.Metric ? 'm' : 'e')}&apiKey={APIKey}";
             return await GetWeatherInfoAsync(WeatherURL, Unit);
         }
 
         /// <summary>
-        /// Gets current weather info from OpenWeatherMap
-        /// </summary>
-        /// <param name="CityName">City name</param>
-        /// <param name="APIKey">API Key</param>
-        /// <param name="Unit">The preferred unit to use</param>
-        /// <returns>A class containing properties of weather information</returns>
-        public static async Task<WeatherForecastInfo> GetWeatherInfoAsync(string CityName, string APIKey, UnitMeasurement Unit = UnitMeasurement.Metric)
-        {
-            string WeatherURL = $"http://api.openweathermap.org/data/2.5/weather?q={CityName}&appid={APIKey}";
-            return await GetWeatherInfoAsync(WeatherURL, Unit);
-        }
-
-        /// <summary>
-        /// Gets current weather info from OpenWeatherMap
+        /// Gets current weather info from The Weather Channel
         /// </summary>
         /// <param name="WeatherURL">An URL to the weather API request</param>
         /// <param name="Unit">The preferred unit to use</param>
@@ -124,10 +98,7 @@ namespace Nettify.Weather
             Debug.WriteLine("Weather URL: {0} | Unit: {1}", WeatherURL, Unit);
 
             // Deal with measurements
-            if (Unit == UnitMeasurement.Imperial)
-                WeatherURL += "&units=imperial";
-            else
-                WeatherURL += "&units=metric";
+            Unit = Unit == UnitMeasurement.Kelvin ? UnitMeasurement.Imperial : Unit;
 
             // Download and parse JSON data
             WeatherData = await WeatherDownloader.GetStringAsync(WeatherURL);
@@ -140,15 +111,12 @@ namespace Nettify.Weather
             WeatherForecastInfo WeatherInfo = new()
             {
                 // Put needed data to the class
+                // TODO: Handle weather condition translation
                 Weather = (WeatherCondition)WeatherToken.SelectToken("weather").First.SelectToken("id").ToObject(typeof(WeatherCondition)),
-                Temperature = (double)WeatherToken.SelectToken("main").SelectToken("temp").ToObject(typeof(double)),
-                FeelsLike = (double)WeatherToken.SelectToken("main").SelectToken("feels_like").ToObject(typeof(double)),
-                Pressure = (double)WeatherToken.SelectToken("main").SelectToken("pressure").ToObject(typeof(double)),
-                Humidity = (double)WeatherToken.SelectToken("main").SelectToken("humidity").ToObject(typeof(double)),
-                WindSpeed = (double)WeatherToken.SelectToken("wind").SelectToken("speed").ToObject(typeof(double)),
-                WindDirection = (double)WeatherToken.SelectToken("wind").SelectToken("deg").ToObject(typeof(double)),
-                CityID = (long)WeatherToken.SelectToken("id").ToObject(typeof(long)),
-                CityName = (string)WeatherToken.SelectToken("name").ToObject(typeof(string)),
+                Temperature = (double)WeatherToken["daypart"]["temperature"][1].ToObject(typeof(double)),
+                Humidity = (double)WeatherToken["daypart"]["humidity"][1].ToObject(typeof(double)),
+                WindSpeed = (double)WeatherToken["daypart"]["windSpeed"][1].ToObject(typeof(double)),
+                WindDirection = (double)WeatherToken["daypart"]["windDirection"][1].ToObject(typeof(double)),
                 TemperatureMeasurement = Unit
             };
             return WeatherInfo;
@@ -157,9 +125,9 @@ namespace Nettify.Weather
         /// <summary>
         /// Lists all the available cities
         /// </summary>
-        public static Dictionary<long, string> ListAllCities()
+        public static Dictionary<string, (double, double)> ListAllCities(string city, string APIKey)
         {
-            string WeatherCityListURL = $"http://bulk.openweathermap.org/sample/city.list.json.gz";
+            string WeatherCityListURL = $"http://api.weather.com/v3/location/search?language=en-US&query={city}&format=json&apiKey={APIKey}";
             Stream WeatherCityListDataStream;
             Debug.WriteLine("Weather City List URL: {0}", WeatherCityListURL);
 
@@ -171,9 +139,9 @@ namespace Nettify.Weather
         /// <summary>
         /// Lists all the available cities
         /// </summary>
-        public static async Task<Dictionary<long, string>> ListAllCitiesAsync()
+        public static async Task<Dictionary<string, (double, double)>> ListAllCitiesAsync(string city, string APIKey)
         {
-            string WeatherCityListURL = $"http://bulk.openweathermap.org/sample/city.list.json.gz";
+            string WeatherCityListURL = $"http://api.weather.com/v3/location/search?language=en-US&query={city}&format=json&apiKey={APIKey}";
             Stream WeatherCityListDataStream;
             Debug.WriteLine("Weather City List URL: {0}", WeatherCityListURL);
 
@@ -182,37 +150,32 @@ namespace Nettify.Weather
             return FinalizeCityList(WeatherCityListDataStream);
         }
 
-        internal static Dictionary<long, string> FinalizeCityList(Stream WeatherCityListDataStream)
+        internal static Dictionary<string, (double, double)> FinalizeCityList(Stream WeatherCityListDataStream)
         {
-            GZipStream WeatherCityListData;
-            var WeatherCityListUncompressed = new List<byte>();
-            int WeatherCityListReadByte = 0;
-            JToken WeatherCityListToken;
-            var WeatherCityList = new Dictionary<long, string>();
+            // Get the token
+            var reader = new StreamReader(WeatherCityListDataStream);
+            string json = reader.ReadToEnd();
+            var token = JToken.Parse(json);
 
-            // Parse the weather list JSON. Since the output is gzipped, we'll have to uncompress it using stream, since the city list
-            // is large anyways. This saves you from downloading full 45+ MB of text.
-            WeatherCityListData = new GZipStream(WeatherCityListDataStream, CompressionMode.Decompress, false);
-            while (WeatherCityListReadByte != -1)
+            // Get the addresses, the latitudes, and the longitudes
+            var loc = token["location"];
+            var addresses = (JArray)loc["address"];
+            var latitudes = (JArray)loc["latitude"];
+            var longitudes = (JArray)loc["longitude"];
+            Debug.Assert(addresses.Count == latitudes.Count && addresses.Count == longitudes.Count && latitudes.Count == longitudes.Count);
+
+            // Put needed data
+            Dictionary<string, (double, double)> cities = [];
+            for (int i = 0; i < addresses.Count; i++)
             {
-                WeatherCityListReadByte = WeatherCityListData.ReadByte();
-                if (WeatherCityListReadByte != -1)
-                    WeatherCityListUncompressed.Add((byte)WeatherCityListReadByte);
-            }
-
-            WeatherCityListToken = JToken.Parse(Encoding.Default.GetString([.. WeatherCityListUncompressed]));
-
-            // Put needed data to the class
-            foreach (JToken WeatherCityToken in WeatherCityListToken)
-            {
-                long cityId = (long)WeatherCityToken["id"];
-                string cityName = (string)WeatherCityToken["name"];
-                if (!WeatherCityList.ContainsKey(cityId))
-                    WeatherCityList.Add(cityId, cityName);
+                var address = (string)addresses[i];
+                var lat = (double)latitudes[i];
+                var lng = (double)longitudes[i];
+                cities.Add(address, (lat, lng));
             }
 
             // Return list
-            return WeatherCityList;
+            return cities;
         }
     }
 }

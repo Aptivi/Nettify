@@ -24,17 +24,9 @@ namespace Nettify.Weather
     /// <summary>
     /// Forecast information
     /// </summary>
-    [DebuggerDisplay("{CityName} [{CityID}]: {Weather} @ {Temperature} [{TemperatureMeasurement}]")]
+    [DebuggerDisplay("{Weather} @ {Temperature} [{TemperatureMeasurement}]")]
     public partial class WeatherForecastInfo
     {
-        /// <summary>
-        /// City ID
-        /// </summary>
-        public long CityID { get; set; }
-        /// <summary>
-        /// City Name
-        /// </summary>
-        public string CityName { get; set; }
         /// <summary>
         /// Weather condition
         /// </summary>
@@ -47,14 +39,6 @@ namespace Nettify.Weather
         /// Temperature
         /// </summary>
         public double Temperature { get; set; }
-        /// <summary>
-        /// Feels like
-        /// </summary>
-        public double FeelsLike { get; set; }
-        /// <summary>
-        /// Pressure in hPa
-        /// </summary>
-        public double Pressure { get; set; }
         /// <summary>
         /// Humidity in percent
         /// </summary>
