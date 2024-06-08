@@ -2028,24 +2028,15 @@ references:
   commentId: T:Nettify.Weather.WeatherForecast
   fullName: Nettify.Weather.WeatherForecast
   nameWithType: WeatherForecast
-- uid: Nettify.Weather.WeatherForecast.GetWeatherInfo(System.Int64,System.String,Nettify.Weather.UnitMeasurement)
-  name: GetWeatherInfo(long, string, UnitMeasurement)
-  href: api/Nettify.Weather.WeatherForecast.html#Nettify_Weather_WeatherForecast_GetWeatherInfo_System_Int64_System_String_Nettify_Weather_UnitMeasurement_
-  commentId: M:Nettify.Weather.WeatherForecast.GetWeatherInfo(System.Int64,System.String,Nettify.Weather.UnitMeasurement)
-  name.vb: GetWeatherInfo(Long, String, UnitMeasurement)
-  fullName: Nettify.Weather.WeatherForecast.GetWeatherInfo(long, string, Nettify.Weather.UnitMeasurement)
-  fullName.vb: Nettify.Weather.WeatherForecast.GetWeatherInfo(Long, String, Nettify.Weather.UnitMeasurement)
-  nameWithType: WeatherForecast.GetWeatherInfo(long, string, UnitMeasurement)
-  nameWithType.vb: WeatherForecast.GetWeatherInfo(Long, String, UnitMeasurement)
-- uid: Nettify.Weather.WeatherForecast.GetWeatherInfo(System.String,System.String,Nettify.Weather.UnitMeasurement)
-  name: GetWeatherInfo(string, string, UnitMeasurement)
-  href: api/Nettify.Weather.WeatherForecast.html#Nettify_Weather_WeatherForecast_GetWeatherInfo_System_String_System_String_Nettify_Weather_UnitMeasurement_
-  commentId: M:Nettify.Weather.WeatherForecast.GetWeatherInfo(System.String,System.String,Nettify.Weather.UnitMeasurement)
-  name.vb: GetWeatherInfo(String, String, UnitMeasurement)
-  fullName: Nettify.Weather.WeatherForecast.GetWeatherInfo(string, string, Nettify.Weather.UnitMeasurement)
-  fullName.vb: Nettify.Weather.WeatherForecast.GetWeatherInfo(String, String, Nettify.Weather.UnitMeasurement)
-  nameWithType: WeatherForecast.GetWeatherInfo(string, string, UnitMeasurement)
-  nameWithType.vb: WeatherForecast.GetWeatherInfo(String, String, UnitMeasurement)
+- uid: Nettify.Weather.WeatherForecast.GetWeatherInfo(System.Double,System.Double,System.String,Nettify.Weather.UnitMeasurement)
+  name: GetWeatherInfo(double, double, string, UnitMeasurement)
+  href: api/Nettify.Weather.WeatherForecast.html#Nettify_Weather_WeatherForecast_GetWeatherInfo_System_Double_System_Double_System_String_Nettify_Weather_UnitMeasurement_
+  commentId: M:Nettify.Weather.WeatherForecast.GetWeatherInfo(System.Double,System.Double,System.String,Nettify.Weather.UnitMeasurement)
+  name.vb: GetWeatherInfo(Double, Double, String, UnitMeasurement)
+  fullName: Nettify.Weather.WeatherForecast.GetWeatherInfo(double, double, string, Nettify.Weather.UnitMeasurement)
+  fullName.vb: Nettify.Weather.WeatherForecast.GetWeatherInfo(Double, Double, String, Nettify.Weather.UnitMeasurement)
+  nameWithType: WeatherForecast.GetWeatherInfo(double, double, string, UnitMeasurement)
+  nameWithType.vb: WeatherForecast.GetWeatherInfo(Double, Double, String, UnitMeasurement)
 - uid: Nettify.Weather.WeatherForecast.GetWeatherInfo*
   name: GetWeatherInfo
   href: api/Nettify.Weather.WeatherForecast.html#Nettify_Weather_WeatherForecast_GetWeatherInfo_
@@ -2053,24 +2044,15 @@ references:
   isSpec: "True"
   fullName: Nettify.Weather.WeatherForecast.GetWeatherInfo
   nameWithType: WeatherForecast.GetWeatherInfo
-- uid: Nettify.Weather.WeatherForecast.GetWeatherInfoAsync(System.Int64,System.String,Nettify.Weather.UnitMeasurement)
-  name: GetWeatherInfoAsync(long, string, UnitMeasurement)
-  href: api/Nettify.Weather.WeatherForecast.html#Nettify_Weather_WeatherForecast_GetWeatherInfoAsync_System_Int64_System_String_Nettify_Weather_UnitMeasurement_
-  commentId: M:Nettify.Weather.WeatherForecast.GetWeatherInfoAsync(System.Int64,System.String,Nettify.Weather.UnitMeasurement)
-  name.vb: GetWeatherInfoAsync(Long, String, UnitMeasurement)
-  fullName: Nettify.Weather.WeatherForecast.GetWeatherInfoAsync(long, string, Nettify.Weather.UnitMeasurement)
-  fullName.vb: Nettify.Weather.WeatherForecast.GetWeatherInfoAsync(Long, String, Nettify.Weather.UnitMeasurement)
-  nameWithType: WeatherForecast.GetWeatherInfoAsync(long, string, UnitMeasurement)
-  nameWithType.vb: WeatherForecast.GetWeatherInfoAsync(Long, String, UnitMeasurement)
-- uid: Nettify.Weather.WeatherForecast.GetWeatherInfoAsync(System.String,System.String,Nettify.Weather.UnitMeasurement)
-  name: GetWeatherInfoAsync(string, string, UnitMeasurement)
-  href: api/Nettify.Weather.WeatherForecast.html#Nettify_Weather_WeatherForecast_GetWeatherInfoAsync_System_String_System_String_Nettify_Weather_UnitMeasurement_
-  commentId: M:Nettify.Weather.WeatherForecast.GetWeatherInfoAsync(System.String,System.String,Nettify.Weather.UnitMeasurement)
-  name.vb: GetWeatherInfoAsync(String, String, UnitMeasurement)
-  fullName: Nettify.Weather.WeatherForecast.GetWeatherInfoAsync(string, string, Nettify.Weather.UnitMeasurement)
-  fullName.vb: Nettify.Weather.WeatherForecast.GetWeatherInfoAsync(String, String, Nettify.Weather.UnitMeasurement)
-  nameWithType: WeatherForecast.GetWeatherInfoAsync(string, string, UnitMeasurement)
-  nameWithType.vb: WeatherForecast.GetWeatherInfoAsync(String, String, UnitMeasurement)
+- uid: Nettify.Weather.WeatherForecast.GetWeatherInfoAsync(System.Double,System.Double,System.String,Nettify.Weather.UnitMeasurement)
+  name: GetWeatherInfoAsync(double, double, string, UnitMeasurement)
+  href: api/Nettify.Weather.WeatherForecast.html#Nettify_Weather_WeatherForecast_GetWeatherInfoAsync_System_Double_System_Double_System_String_Nettify_Weather_UnitMeasurement_
+  commentId: M:Nettify.Weather.WeatherForecast.GetWeatherInfoAsync(System.Double,System.Double,System.String,Nettify.Weather.UnitMeasurement)
+  name.vb: GetWeatherInfoAsync(Double, Double, String, UnitMeasurement)
+  fullName: Nettify.Weather.WeatherForecast.GetWeatherInfoAsync(double, double, string, Nettify.Weather.UnitMeasurement)
+  fullName.vb: Nettify.Weather.WeatherForecast.GetWeatherInfoAsync(Double, Double, String, Nettify.Weather.UnitMeasurement)
+  nameWithType: WeatherForecast.GetWeatherInfoAsync(double, double, string, UnitMeasurement)
+  nameWithType.vb: WeatherForecast.GetWeatherInfoAsync(Double, Double, String, UnitMeasurement)
 - uid: Nettify.Weather.WeatherForecast.GetWeatherInfoAsync*
   name: GetWeatherInfoAsync
   href: api/Nettify.Weather.WeatherForecast.html#Nettify_Weather_WeatherForecast_GetWeatherInfoAsync_
@@ -2078,12 +2060,15 @@ references:
   isSpec: "True"
   fullName: Nettify.Weather.WeatherForecast.GetWeatherInfoAsync
   nameWithType: WeatherForecast.GetWeatherInfoAsync
-- uid: Nettify.Weather.WeatherForecast.ListAllCities
-  name: ListAllCities()
-  href: api/Nettify.Weather.WeatherForecast.html#Nettify_Weather_WeatherForecast_ListAllCities
-  commentId: M:Nettify.Weather.WeatherForecast.ListAllCities
-  fullName: Nettify.Weather.WeatherForecast.ListAllCities()
-  nameWithType: WeatherForecast.ListAllCities()
+- uid: Nettify.Weather.WeatherForecast.ListAllCities(System.String,System.String)
+  name: ListAllCities(string, string)
+  href: api/Nettify.Weather.WeatherForecast.html#Nettify_Weather_WeatherForecast_ListAllCities_System_String_System_String_
+  commentId: M:Nettify.Weather.WeatherForecast.ListAllCities(System.String,System.String)
+  name.vb: ListAllCities(String, String)
+  fullName: Nettify.Weather.WeatherForecast.ListAllCities(string, string)
+  fullName.vb: Nettify.Weather.WeatherForecast.ListAllCities(String, String)
+  nameWithType: WeatherForecast.ListAllCities(string, string)
+  nameWithType.vb: WeatherForecast.ListAllCities(String, String)
 - uid: Nettify.Weather.WeatherForecast.ListAllCities*
   name: ListAllCities
   href: api/Nettify.Weather.WeatherForecast.html#Nettify_Weather_WeatherForecast_ListAllCities_
@@ -2091,12 +2076,15 @@ references:
   isSpec: "True"
   fullName: Nettify.Weather.WeatherForecast.ListAllCities
   nameWithType: WeatherForecast.ListAllCities
-- uid: Nettify.Weather.WeatherForecast.ListAllCitiesAsync
-  name: ListAllCitiesAsync()
-  href: api/Nettify.Weather.WeatherForecast.html#Nettify_Weather_WeatherForecast_ListAllCitiesAsync
-  commentId: M:Nettify.Weather.WeatherForecast.ListAllCitiesAsync
-  fullName: Nettify.Weather.WeatherForecast.ListAllCitiesAsync()
-  nameWithType: WeatherForecast.ListAllCitiesAsync()
+- uid: Nettify.Weather.WeatherForecast.ListAllCitiesAsync(System.String,System.String)
+  name: ListAllCitiesAsync(string, string)
+  href: api/Nettify.Weather.WeatherForecast.html#Nettify_Weather_WeatherForecast_ListAllCitiesAsync_System_String_System_String_
+  commentId: M:Nettify.Weather.WeatherForecast.ListAllCitiesAsync(System.String,System.String)
+  name.vb: ListAllCitiesAsync(String, String)
+  fullName: Nettify.Weather.WeatherForecast.ListAllCitiesAsync(string, string)
+  fullName.vb: Nettify.Weather.WeatherForecast.ListAllCitiesAsync(String, String)
+  nameWithType: WeatherForecast.ListAllCitiesAsync(string, string)
+  nameWithType.vb: WeatherForecast.ListAllCitiesAsync(String, String)
 - uid: Nettify.Weather.WeatherForecast.ListAllCitiesAsync*
   name: ListAllCitiesAsync
   href: api/Nettify.Weather.WeatherForecast.html#Nettify_Weather_WeatherForecast_ListAllCitiesAsync_
@@ -2110,45 +2098,6 @@ references:
   commentId: T:Nettify.Weather.WeatherForecastInfo
   fullName: Nettify.Weather.WeatherForecastInfo
   nameWithType: WeatherForecastInfo
-- uid: Nettify.Weather.WeatherForecastInfo.CityID
-  name: CityID
-  href: api/Nettify.Weather.WeatherForecastInfo.html#Nettify_Weather_WeatherForecastInfo_CityID
-  commentId: P:Nettify.Weather.WeatherForecastInfo.CityID
-  fullName: Nettify.Weather.WeatherForecastInfo.CityID
-  nameWithType: WeatherForecastInfo.CityID
-- uid: Nettify.Weather.WeatherForecastInfo.CityID*
-  name: CityID
-  href: api/Nettify.Weather.WeatherForecastInfo.html#Nettify_Weather_WeatherForecastInfo_CityID_
-  commentId: Overload:Nettify.Weather.WeatherForecastInfo.CityID
-  isSpec: "True"
-  fullName: Nettify.Weather.WeatherForecastInfo.CityID
-  nameWithType: WeatherForecastInfo.CityID
-- uid: Nettify.Weather.WeatherForecastInfo.CityName
-  name: CityName
-  href: api/Nettify.Weather.WeatherForecastInfo.html#Nettify_Weather_WeatherForecastInfo_CityName
-  commentId: P:Nettify.Weather.WeatherForecastInfo.CityName
-  fullName: Nettify.Weather.WeatherForecastInfo.CityName
-  nameWithType: WeatherForecastInfo.CityName
-- uid: Nettify.Weather.WeatherForecastInfo.CityName*
-  name: CityName
-  href: api/Nettify.Weather.WeatherForecastInfo.html#Nettify_Weather_WeatherForecastInfo_CityName_
-  commentId: Overload:Nettify.Weather.WeatherForecastInfo.CityName
-  isSpec: "True"
-  fullName: Nettify.Weather.WeatherForecastInfo.CityName
-  nameWithType: WeatherForecastInfo.CityName
-- uid: Nettify.Weather.WeatherForecastInfo.FeelsLike
-  name: FeelsLike
-  href: api/Nettify.Weather.WeatherForecastInfo.html#Nettify_Weather_WeatherForecastInfo_FeelsLike
-  commentId: P:Nettify.Weather.WeatherForecastInfo.FeelsLike
-  fullName: Nettify.Weather.WeatherForecastInfo.FeelsLike
-  nameWithType: WeatherForecastInfo.FeelsLike
-- uid: Nettify.Weather.WeatherForecastInfo.FeelsLike*
-  name: FeelsLike
-  href: api/Nettify.Weather.WeatherForecastInfo.html#Nettify_Weather_WeatherForecastInfo_FeelsLike_
-  commentId: Overload:Nettify.Weather.WeatherForecastInfo.FeelsLike
-  isSpec: "True"
-  fullName: Nettify.Weather.WeatherForecastInfo.FeelsLike
-  nameWithType: WeatherForecastInfo.FeelsLike
 - uid: Nettify.Weather.WeatherForecastInfo.Humidity
   name: Humidity
   href: api/Nettify.Weather.WeatherForecastInfo.html#Nettify_Weather_WeatherForecastInfo_Humidity
@@ -2162,19 +2111,6 @@ references:
   isSpec: "True"
   fullName: Nettify.Weather.WeatherForecastInfo.Humidity
   nameWithType: WeatherForecastInfo.Humidity
-- uid: Nettify.Weather.WeatherForecastInfo.Pressure
-  name: Pressure
-  href: api/Nettify.Weather.WeatherForecastInfo.html#Nettify_Weather_WeatherForecastInfo_Pressure
-  commentId: P:Nettify.Weather.WeatherForecastInfo.Pressure
-  fullName: Nettify.Weather.WeatherForecastInfo.Pressure
-  nameWithType: WeatherForecastInfo.Pressure
-- uid: Nettify.Weather.WeatherForecastInfo.Pressure*
-  name: Pressure
-  href: api/Nettify.Weather.WeatherForecastInfo.html#Nettify_Weather_WeatherForecastInfo_Pressure_
-  commentId: Overload:Nettify.Weather.WeatherForecastInfo.Pressure
-  isSpec: "True"
-  fullName: Nettify.Weather.WeatherForecastInfo.Pressure
-  nameWithType: WeatherForecastInfo.Pressure
 - uid: Nettify.Weather.WeatherForecastInfo.Temperature
   name: Temperature
   href: api/Nettify.Weather.WeatherForecastInfo.html#Nettify_Weather_WeatherForecastInfo_Temperature
@@ -2240,3 +2176,85 @@ references:
   isSpec: "True"
   fullName: Nettify.Weather.WeatherForecastInfo.WindSpeed
   nameWithType: WeatherForecastInfo.WindSpeed
+- uid: Nettify.Weather.WeatherForecastOwm
+  name: WeatherForecastOwm
+  href: api/Nettify.Weather.WeatherForecastOwm.html
+  commentId: T:Nettify.Weather.WeatherForecastOwm
+  fullName: Nettify.Weather.WeatherForecastOwm
+  nameWithType: WeatherForecastOwm
+- uid: Nettify.Weather.WeatherForecastOwm.GetWeatherInfo(System.Int64,System.String,Nettify.Weather.UnitMeasurement)
+  name: GetWeatherInfo(long, string, UnitMeasurement)
+  href: api/Nettify.Weather.WeatherForecastOwm.html#Nettify_Weather_WeatherForecastOwm_GetWeatherInfo_System_Int64_System_String_Nettify_Weather_UnitMeasurement_
+  commentId: M:Nettify.Weather.WeatherForecastOwm.GetWeatherInfo(System.Int64,System.String,Nettify.Weather.UnitMeasurement)
+  name.vb: GetWeatherInfo(Long, String, UnitMeasurement)
+  fullName: Nettify.Weather.WeatherForecastOwm.GetWeatherInfo(long, string, Nettify.Weather.UnitMeasurement)
+  fullName.vb: Nettify.Weather.WeatherForecastOwm.GetWeatherInfo(Long, String, Nettify.Weather.UnitMeasurement)
+  nameWithType: WeatherForecastOwm.GetWeatherInfo(long, string, UnitMeasurement)
+  nameWithType.vb: WeatherForecastOwm.GetWeatherInfo(Long, String, UnitMeasurement)
+- uid: Nettify.Weather.WeatherForecastOwm.GetWeatherInfo(System.String,System.String,Nettify.Weather.UnitMeasurement)
+  name: GetWeatherInfo(string, string, UnitMeasurement)
+  href: api/Nettify.Weather.WeatherForecastOwm.html#Nettify_Weather_WeatherForecastOwm_GetWeatherInfo_System_String_System_String_Nettify_Weather_UnitMeasurement_
+  commentId: M:Nettify.Weather.WeatherForecastOwm.GetWeatherInfo(System.String,System.String,Nettify.Weather.UnitMeasurement)
+  name.vb: GetWeatherInfo(String, String, UnitMeasurement)
+  fullName: Nettify.Weather.WeatherForecastOwm.GetWeatherInfo(string, string, Nettify.Weather.UnitMeasurement)
+  fullName.vb: Nettify.Weather.WeatherForecastOwm.GetWeatherInfo(String, String, Nettify.Weather.UnitMeasurement)
+  nameWithType: WeatherForecastOwm.GetWeatherInfo(string, string, UnitMeasurement)
+  nameWithType.vb: WeatherForecastOwm.GetWeatherInfo(String, String, UnitMeasurement)
+- uid: Nettify.Weather.WeatherForecastOwm.GetWeatherInfo*
+  name: GetWeatherInfo
+  href: api/Nettify.Weather.WeatherForecastOwm.html#Nettify_Weather_WeatherForecastOwm_GetWeatherInfo_
+  commentId: Overload:Nettify.Weather.WeatherForecastOwm.GetWeatherInfo
+  isSpec: "True"
+  fullName: Nettify.Weather.WeatherForecastOwm.GetWeatherInfo
+  nameWithType: WeatherForecastOwm.GetWeatherInfo
+- uid: Nettify.Weather.WeatherForecastOwm.GetWeatherInfoAsync(System.Int64,System.String,Nettify.Weather.UnitMeasurement)
+  name: GetWeatherInfoAsync(long, string, UnitMeasurement)
+  href: api/Nettify.Weather.WeatherForecastOwm.html#Nettify_Weather_WeatherForecastOwm_GetWeatherInfoAsync_System_Int64_System_String_Nettify_Weather_UnitMeasurement_
+  commentId: M:Nettify.Weather.WeatherForecastOwm.GetWeatherInfoAsync(System.Int64,System.String,Nettify.Weather.UnitMeasurement)
+  name.vb: GetWeatherInfoAsync(Long, String, UnitMeasurement)
+  fullName: Nettify.Weather.WeatherForecastOwm.GetWeatherInfoAsync(long, string, Nettify.Weather.UnitMeasurement)
+  fullName.vb: Nettify.Weather.WeatherForecastOwm.GetWeatherInfoAsync(Long, String, Nettify.Weather.UnitMeasurement)
+  nameWithType: WeatherForecastOwm.GetWeatherInfoAsync(long, string, UnitMeasurement)
+  nameWithType.vb: WeatherForecastOwm.GetWeatherInfoAsync(Long, String, UnitMeasurement)
+- uid: Nettify.Weather.WeatherForecastOwm.GetWeatherInfoAsync(System.String,System.String,Nettify.Weather.UnitMeasurement)
+  name: GetWeatherInfoAsync(string, string, UnitMeasurement)
+  href: api/Nettify.Weather.WeatherForecastOwm.html#Nettify_Weather_WeatherForecastOwm_GetWeatherInfoAsync_System_String_System_String_Nettify_Weather_UnitMeasurement_
+  commentId: M:Nettify.Weather.WeatherForecastOwm.GetWeatherInfoAsync(System.String,System.String,Nettify.Weather.UnitMeasurement)
+  name.vb: GetWeatherInfoAsync(String, String, UnitMeasurement)
+  fullName: Nettify.Weather.WeatherForecastOwm.GetWeatherInfoAsync(string, string, Nettify.Weather.UnitMeasurement)
+  fullName.vb: Nettify.Weather.WeatherForecastOwm.GetWeatherInfoAsync(String, String, Nettify.Weather.UnitMeasurement)
+  nameWithType: WeatherForecastOwm.GetWeatherInfoAsync(string, string, UnitMeasurement)
+  nameWithType.vb: WeatherForecastOwm.GetWeatherInfoAsync(String, String, UnitMeasurement)
+- uid: Nettify.Weather.WeatherForecastOwm.GetWeatherInfoAsync*
+  name: GetWeatherInfoAsync
+  href: api/Nettify.Weather.WeatherForecastOwm.html#Nettify_Weather_WeatherForecastOwm_GetWeatherInfoAsync_
+  commentId: Overload:Nettify.Weather.WeatherForecastOwm.GetWeatherInfoAsync
+  isSpec: "True"
+  fullName: Nettify.Weather.WeatherForecastOwm.GetWeatherInfoAsync
+  nameWithType: WeatherForecastOwm.GetWeatherInfoAsync
+- uid: Nettify.Weather.WeatherForecastOwm.ListAllCities
+  name: ListAllCities()
+  href: api/Nettify.Weather.WeatherForecastOwm.html#Nettify_Weather_WeatherForecastOwm_ListAllCities
+  commentId: M:Nettify.Weather.WeatherForecastOwm.ListAllCities
+  fullName: Nettify.Weather.WeatherForecastOwm.ListAllCities()
+  nameWithType: WeatherForecastOwm.ListAllCities()
+- uid: Nettify.Weather.WeatherForecastOwm.ListAllCities*
+  name: ListAllCities
+  href: api/Nettify.Weather.WeatherForecastOwm.html#Nettify_Weather_WeatherForecastOwm_ListAllCities_
+  commentId: Overload:Nettify.Weather.WeatherForecastOwm.ListAllCities
+  isSpec: "True"
+  fullName: Nettify.Weather.WeatherForecastOwm.ListAllCities
+  nameWithType: WeatherForecastOwm.ListAllCities
+- uid: Nettify.Weather.WeatherForecastOwm.ListAllCitiesAsync
+  name: ListAllCitiesAsync()
+  href: api/Nettify.Weather.WeatherForecastOwm.html#Nettify_Weather_WeatherForecastOwm_ListAllCitiesAsync
+  commentId: M:Nettify.Weather.WeatherForecastOwm.ListAllCitiesAsync
+  fullName: Nettify.Weather.WeatherForecastOwm.ListAllCitiesAsync()
+  nameWithType: WeatherForecastOwm.ListAllCitiesAsync()
+- uid: Nettify.Weather.WeatherForecastOwm.ListAllCitiesAsync*
+  name: ListAllCitiesAsync
+  href: api/Nettify.Weather.WeatherForecastOwm.html#Nettify_Weather_WeatherForecastOwm_ListAllCitiesAsync_
+  commentId: Overload:Nettify.Weather.WeatherForecastOwm.ListAllCitiesAsync
+  isSpec: "True"
+  fullName: Nettify.Weather.WeatherForecastOwm.ListAllCitiesAsync
+  nameWithType: WeatherForecastOwm.ListAllCitiesAsync
