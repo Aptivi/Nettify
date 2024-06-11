@@ -17,6 +17,8 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using Newtonsoft.Json.Linq;
+using System;
 using System.Diagnostics;
 
 namespace Nettify.Weather
@@ -30,27 +32,47 @@ namespace Nettify.Weather
         /// <summary>
         /// Weather condition
         /// </summary>
-        public WeatherCondition Weather { get; set; }
+        public WeatherCondition Weather { get; }
         /// <summary>
         /// Temperature measurement
         /// </summary>
-        public UnitMeasurement TemperatureMeasurement { get; set; }
+        public UnitMeasurement TemperatureMeasurement { get; }
         /// <summary>
         /// Temperature
         /// </summary>
-        public double Temperature { get; set; }
+        public double Temperature { get; }
         /// <summary>
         /// Humidity in percent
         /// </summary>
-        public double Humidity { get; set; }
+        public double Humidity { get; }
         /// <summary>
         /// Wind speed. Imperial: mph, Metric/Kelvin: m.s
         /// </summary>
-        public double WindSpeed { get; set; }
+        public double WindSpeed { get; }
         /// <summary>
         /// Wind direction in degrees
         /// </summary>
-        public double WindDirection { get; set; }
+        public double WindDirection { get; }
+        /// <summary>
+        /// Weather token
+        /// </summary>
+        public JToken WeatherToken { get; }
+        /// <summary>
+        /// Whether the server type is OWM or TWC
+        /// </summary>
+        public WeatherServerType ServerType { get; }
+
+        internal WeatherForecastInfo(WeatherCondition weather, UnitMeasurement temperatureMeasurement, double temperature, double humidity, double windSpeed, double windDirection, JToken weatherToken, WeatherServerType serverType)
+        {
+            Weather = weather;
+            TemperatureMeasurement = temperatureMeasurement;
+            Temperature = temperature;
+            Humidity = humidity;
+            WindSpeed = windSpeed;
+            WindDirection = windDirection;
+            WeatherToken = weatherToken ?? throw new ArgumentNullException(nameof(weatherToken));
+            ServerType = serverType;
+        }
     }
 
     /// <summary>
@@ -308,5 +330,20 @@ namespace Nettify.Weather
         /// Mostly Cloudy (Overcast, 85-100%)
         /// </summary>
         MostlyCloudy
+    }
+
+    /// <summary>
+    /// Weather server type
+    /// </summary>
+    public enum WeatherServerType
+    {
+        /// <summary>
+        /// OpenWeatherMap
+        /// </summary>
+        OpenWeatherMap,
+        /// <summary>
+        /// The Weather Channel
+        /// </summary>
+        TheWeatherChannel,
     }
 }

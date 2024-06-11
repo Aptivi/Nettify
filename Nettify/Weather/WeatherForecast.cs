@@ -58,16 +58,17 @@ namespace Nettify.Weather
         /// <returns>A class containing properties of weather information</returns>
         internal static WeatherForecastInfo GetWeatherInfo(string WeatherURL, UnitMeasurement Unit = UnitMeasurement.Metric)
         {
-            string WeatherData;
-            JToken WeatherToken;
             Debug.WriteLine("Weather URL: {0} | Unit: {1}", WeatherURL, Unit);
 
             // Deal with measurements
             Unit = Unit == UnitMeasurement.Kelvin ? UnitMeasurement.Imperial : Unit;
 
             // Download and parse JSON data
-            WeatherData = WeatherDownloader.GetStringAsync(WeatherURL).Result;
-            WeatherToken = JToken.Parse(WeatherData);
+            WeatherDownloader.DefaultRequestHeaders.Add("Accept-Encoding", "gzip");
+            var stream = WeatherDownloader.GetStreamAsync(WeatherURL).Result;
+            WeatherDownloader.DefaultRequestHeaders.Remove("Accept-Encoding");
+            string uncompressed = Uncompress(stream);
+            JToken WeatherToken = JToken.Parse(uncompressed);
             return FinalizeInstallation(WeatherToken, Unit);
         }
 
@@ -93,32 +94,166 @@ namespace Nettify.Weather
         /// <returns>A class containing properties of weather information</returns>
         internal static async Task<WeatherForecastInfo> GetWeatherInfoAsync(string WeatherURL, UnitMeasurement Unit = UnitMeasurement.Metric)
         {
-            string WeatherData;
-            JToken WeatherToken;
             Debug.WriteLine("Weather URL: {0} | Unit: {1}", WeatherURL, Unit);
 
             // Deal with measurements
             Unit = Unit == UnitMeasurement.Kelvin ? UnitMeasurement.Imperial : Unit;
 
             // Download and parse JSON data
-            WeatherData = await WeatherDownloader.GetStringAsync(WeatherURL);
-            WeatherToken = JToken.Parse(WeatherData);
+            WeatherDownloader.DefaultRequestHeaders.Add("Accept-Encoding", "gzip");
+            var stream = await WeatherDownloader.GetStreamAsync(WeatherURL);
+            WeatherDownloader.DefaultRequestHeaders.Remove("Accept-Encoding");
+            string uncompressed = Uncompress(stream);
+            JToken WeatherToken = JToken.Parse(uncompressed);
             return FinalizeInstallation(WeatherToken, Unit);
         }
 
         internal static WeatherForecastInfo FinalizeInstallation(JToken WeatherToken, UnitMeasurement Unit = UnitMeasurement.Metric)
         {
-            WeatherForecastInfo WeatherInfo = new()
+            // Get the adjusted data
+            T Adjust<T>(string dayPartData)
             {
-                // Put needed data to the class
-                // TODO: Handle weather condition translation
-                Weather = (WeatherCondition)WeatherToken.SelectToken("weather").First.SelectToken("id").ToObject(typeof(WeatherCondition)),
-                Temperature = (double)WeatherToken["daypart"]["temperature"][1].ToObject(typeof(double)),
-                Humidity = (double)WeatherToken["daypart"]["humidity"][1].ToObject(typeof(double)),
-                WindSpeed = (double)WeatherToken["daypart"]["windSpeed"][1].ToObject(typeof(double)),
-                WindDirection = (double)WeatherToken["daypart"]["windDirection"][1].ToObject(typeof(double)),
-                TemperatureMeasurement = Unit
-            };
+                var dayPartArray = WeatherToken["daypart"][0][dayPartData];
+                var adjusted = dayPartArray[0];
+                if (adjusted.Type == JTokenType.Null)
+                    adjusted = dayPartArray[1];
+                return (T)adjusted.ToObject(typeof(T));
+            }
+
+            // Now, get the necessary variables to get the weather condition info
+            long iconCode = Adjust<int>("iconCode");
+            WeatherCondition cond = WeatherCondition.Clear;
+            switch (iconCode)
+            {
+                case 0:
+                    // Tornado
+                    cond = WeatherCondition.Tornado;
+                    break;
+                case 3:
+                    // Strong storms
+                    cond = WeatherCondition.HeavyThunderstorm;
+                    break;
+                case 4:
+                    // Thunderstorms
+                    cond = WeatherCondition.Thunderstorm;
+                    break;
+                case 5:
+                case 7:
+                    // Rain / Snow (5) - Wintry Mix (7)
+                    cond = WeatherCondition.RainAndSnow;
+                    break;
+                case 6:
+                    // Rain / Sleet
+                    cond = WeatherCondition.Sleet;
+                    break;
+                case 8:
+                    // Freezing Drizzle
+                    cond = WeatherCondition.HeavyDrizzle;
+                    break;
+                case 9:
+                    // Drizzle
+                    cond = WeatherCondition.Drizzle;
+                    break;
+                case 10:
+                    // Freezing Rain
+                    cond = WeatherCondition.FreezingRain;
+                    break;
+                case 11:
+                    // Showers
+                    cond = WeatherCondition.ShowerRain;
+                    break;
+                case 12:
+                    // Rain
+                    cond = WeatherCondition.LightRain;
+                    break;
+                case 13:
+                    // Flurries
+                    cond = WeatherCondition.LightSnow;
+                    break;
+                case 15:
+                case 16:
+                    // Blowing/Drifting Snow (15) - Snow (16)
+                    cond = WeatherCondition.Snow;
+                    break;
+                case 17:
+                    // Hail
+                    cond = WeatherCondition.LightShowerSleet;
+                    break;
+                case 18:
+                    // Sleet
+                    cond = WeatherCondition.Sleet;
+                    break;
+                case 19:
+                    // Sandstorm
+                    cond = WeatherCondition.Sand;
+                    break;
+                case 20:
+                    // Foggy
+                    cond = WeatherCondition.Fog;
+                    break;
+                case 21:
+                    // Haze
+                    cond = WeatherCondition.Haze;
+                    break;
+                case 22:
+                    // Smoke
+                    cond = WeatherCondition.Smoke;
+                    break;
+                case 27:
+                case 28:
+                    // Mostly Cloudy (27, 28)
+                    cond = WeatherCondition.MostlyCloudy;
+                    break;
+                case 29:
+                case 30:
+                    // Partly Cloudy (29, 30)
+                    cond = WeatherCondition.PartlyCloudy;
+                    break;
+                case 26:
+                case 33:
+                case 34:
+                    // Cloudy (26) - Fair (33, 34)
+                    cond = WeatherCondition.FewClouds;
+                    break;
+                case 35:
+                    // Mixed rain and hail
+                    cond = WeatherCondition.ModerateRain;
+                    break;
+                case 37:
+                case 38:
+                case 47:
+                    // Isolated thunderstorms (37) - Scattered thunderstorms (38, 47)
+                    cond = WeatherCondition.RaggedThunderstorm;
+                    break;
+                case 39:
+                case 45:
+                    // Scattered showers (39, 45)
+                    cond = WeatherCondition.RaggedShowerRain;
+                    break;
+                case 40:
+                    // Heavy rain
+                    cond = WeatherCondition.HeavyRain;
+                    break;
+                case 14:
+                case 41:
+                case 46:
+                    // Snow showers (14) - Scattered snow showers (41, 46)
+                    cond = WeatherCondition.ShowerSnow;
+                    break;
+                case 42:
+                case 43:
+                    // Heavy snow (42) - Blizzard (43)
+                    cond = WeatherCondition.HeavySnow;
+                    break;
+            }
+
+            // Finally, create the forecast info instance
+            var temperature = Adjust<double>("temperature");
+            var humidity = Adjust<double>("qpf");
+            var windSpeed = Adjust<double>("windSpeed");
+            var windDirection = Adjust<double>("windDirection");
+            var temperatureMeasurement = Unit;
+            WeatherForecastInfo WeatherInfo = new(cond, temperatureMeasurement, temperature, humidity, windSpeed, windDirection, WeatherToken, WeatherServerType.TheWeatherChannel);
             return WeatherInfo;
         }
 
@@ -132,7 +267,9 @@ namespace Nettify.Weather
             Debug.WriteLine("Weather City List URL: {0}", WeatherCityListURL);
 
             // Open the stream to the city list URL
+            WeatherDownloader.DefaultRequestHeaders.Add("Accept-Encoding", "gzip");
             WeatherCityListDataStream = WeatherDownloader.GetStreamAsync(WeatherCityListURL).Result;
+            WeatherDownloader.DefaultRequestHeaders.Remove("Accept-Encoding");
             return FinalizeCityList(WeatherCityListDataStream);
         }
 
@@ -146,16 +283,16 @@ namespace Nettify.Weather
             Debug.WriteLine("Weather City List URL: {0}", WeatherCityListURL);
 
             // Open the stream to the city list URL
+            WeatherDownloader.DefaultRequestHeaders.Add("Accept-Encoding", "gzip");
             WeatherCityListDataStream = await WeatherDownloader.GetStreamAsync(WeatherCityListURL);
+            WeatherDownloader.DefaultRequestHeaders.Remove("Accept-Encoding");
             return FinalizeCityList(WeatherCityListDataStream);
         }
 
         internal static Dictionary<string, (double, double)> FinalizeCityList(Stream WeatherCityListDataStream)
         {
-            // Get the token
-            var reader = new StreamReader(WeatherCityListDataStream);
-            string json = reader.ReadToEnd();
-            var token = JToken.Parse(json);
+            string uncompressed = Uncompress(WeatherCityListDataStream);
+            JToken token = JToken.Parse(uncompressed);
 
             // Get the addresses, the latitudes, and the longitudes
             var loc = token["location"];
@@ -176,6 +313,25 @@ namespace Nettify.Weather
 
             // Return list
             return cities;
+        }
+
+        internal static string Uncompress(Stream compressedDataStream)
+        {
+            GZipStream compressedData;
+            var compressedUncompressed = new List<byte>();
+            int compressedReadByte = 0;
+
+            // Parse the weather list JSON. Since the output is gzipped, we'll have to uncompress it using stream, since the city list
+            // is large anyways. This saves you from downloading full 45+ MB of text.
+            compressedData = new GZipStream(compressedDataStream, CompressionMode.Decompress, false);
+            while (compressedReadByte != -1)
+            {
+                compressedReadByte = compressedData.ReadByte();
+                if (compressedReadByte != -1)
+                    compressedUncompressed.Add((byte)compressedReadByte);
+            }
+
+            return Encoding.Default.GetString([.. compressedUncompressed]);
         }
     }
 }

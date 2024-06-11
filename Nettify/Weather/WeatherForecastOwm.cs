@@ -137,16 +137,13 @@ namespace Nettify.Weather
 
         internal static WeatherForecastInfo FinalizeInstallation(JToken WeatherToken, UnitMeasurement Unit = UnitMeasurement.Metric)
         {
-            WeatherForecastInfo WeatherInfo = new()
-            {
-                // Put needed data to the class
-                Weather = (WeatherCondition)WeatherToken.SelectToken("weather").First.SelectToken("id").ToObject(typeof(WeatherCondition)),
-                Temperature = (double)WeatherToken.SelectToken("main").SelectToken("temp").ToObject(typeof(double)),
-                Humidity = (double)WeatherToken.SelectToken("main").SelectToken("humidity").ToObject(typeof(double)),
-                WindSpeed = (double)WeatherToken.SelectToken("wind").SelectToken("speed").ToObject(typeof(double)),
-                WindDirection = (double)WeatherToken.SelectToken("wind").SelectToken("deg").ToObject(typeof(double)),
-                TemperatureMeasurement = Unit
-            };
+            var weather = (WeatherCondition)WeatherToken.SelectToken("weather").First.SelectToken("id").ToObject(typeof(WeatherCondition));
+            var temperature = (double)WeatherToken.SelectToken("main").SelectToken("temp").ToObject(typeof(double));
+            var humidity = (double)WeatherToken.SelectToken("main").SelectToken("humidity").ToObject(typeof(double));
+            var windSpeed = (double)WeatherToken.SelectToken("wind").SelectToken("speed").ToObject(typeof(double));
+            var windDirection = (double)WeatherToken.SelectToken("wind").SelectToken("deg").ToObject(typeof(double));
+            var temperatureMeasurement = Unit;
+            WeatherForecastInfo WeatherInfo = new(weather, temperatureMeasurement, temperature, humidity, windSpeed, windDirection, WeatherToken, WeatherServerType.OpenWeatherMap);
             return WeatherInfo;
         }
 
@@ -180,26 +177,12 @@ namespace Nettify.Weather
 
         internal static Dictionary<long, string> FinalizeCityList(Stream WeatherCityListDataStream)
         {
-            GZipStream WeatherCityListData;
-            var WeatherCityListUncompressed = new List<byte>();
-            int WeatherCityListReadByte = 0;
-            JToken WeatherCityListToken;
             var WeatherCityList = new Dictionary<long, string>();
-
-            // Parse the weather list JSON. Since the output is gzipped, we'll have to uncompress it using stream, since the city list
-            // is large anyways. This saves you from downloading full 45+ MB of text.
-            WeatherCityListData = new GZipStream(WeatherCityListDataStream, CompressionMode.Decompress, false);
-            while (WeatherCityListReadByte != -1)
-            {
-                WeatherCityListReadByte = WeatherCityListData.ReadByte();
-                if (WeatherCityListReadByte != -1)
-                    WeatherCityListUncompressed.Add((byte)WeatherCityListReadByte);
-            }
-
-            WeatherCityListToken = JToken.Parse(Encoding.Default.GetString([.. WeatherCityListUncompressed]));
+            string uncompressed = WeatherForecast.Uncompress(WeatherCityListDataStream);
+            JToken WeatherToken = JToken.Parse(uncompressed);
 
             // Put needed data to the class
-            foreach (JToken WeatherCityToken in WeatherCityListToken)
+            foreach (JToken WeatherCityToken in WeatherToken)
             {
                 long cityId = (long)WeatherCityToken["id"];
                 string cityName = (string)WeatherCityToken["name"];
