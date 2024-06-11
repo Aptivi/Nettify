@@ -2111,6 +2111,19 @@ references:
   isSpec: "True"
   fullName: Nettify.Weather.WeatherForecastInfo.Humidity
   nameWithType: WeatherForecastInfo.Humidity
+- uid: Nettify.Weather.WeatherForecastInfo.ServerType
+  name: ServerType
+  href: api/Nettify.Weather.WeatherForecastInfo.html#Nettify_Weather_WeatherForecastInfo_ServerType
+  commentId: P:Nettify.Weather.WeatherForecastInfo.ServerType
+  fullName: Nettify.Weather.WeatherForecastInfo.ServerType
+  nameWithType: WeatherForecastInfo.ServerType
+- uid: Nettify.Weather.WeatherForecastInfo.ServerType*
+  name: ServerType
+  href: api/Nettify.Weather.WeatherForecastInfo.html#Nettify_Weather_WeatherForecastInfo_ServerType_
+  commentId: Overload:Nettify.Weather.WeatherForecastInfo.ServerType
+  isSpec: "True"
+  fullName: Nettify.Weather.WeatherForecastInfo.ServerType
+  nameWithType: WeatherForecastInfo.ServerType
 - uid: Nettify.Weather.WeatherForecastInfo.Temperature
   name: Temperature
   href: api/Nettify.Weather.WeatherForecastInfo.html#Nettify_Weather_WeatherForecastInfo_Temperature
@@ -2150,6 +2163,19 @@ references:
   isSpec: "True"
   fullName: Nettify.Weather.WeatherForecastInfo.Weather
   nameWithType: WeatherForecastInfo.Weather
+- uid: Nettify.Weather.WeatherForecastInfo.WeatherToken
+  name: WeatherToken
+  href: api/Nettify.Weather.WeatherForecastInfo.html#Nettify_Weather_WeatherForecastInfo_WeatherToken
+  commentId: P:Nettify.Weather.WeatherForecastInfo.WeatherToken
+  fullName: Nettify.Weather.WeatherForecastInfo.WeatherToken
+  nameWithType: WeatherForecastInfo.WeatherToken
+- uid: Nettify.Weather.WeatherForecastInfo.WeatherToken*
+  name: WeatherToken
+  href: api/Nettify.Weather.WeatherForecastInfo.html#Nettify_Weather_WeatherForecastInfo_WeatherToken_
+  commentId: Overload:Nettify.Weather.WeatherForecastInfo.WeatherToken
+  isSpec: "True"
+  fullName: Nettify.Weather.WeatherForecastInfo.WeatherToken
+  nameWithType: WeatherForecastInfo.WeatherToken
 - uid: Nettify.Weather.WeatherForecastInfo.WindDirection
   name: WindDirection
   href: api/Nettify.Weather.WeatherForecastInfo.html#Nettify_Weather_WeatherForecastInfo_WindDirection
@@ -2258,3 +2284,21 @@ references:
   isSpec: "True"
   fullName: Nettify.Weather.WeatherForecastOwm.ListAllCitiesAsync
   nameWithType: WeatherForecastOwm.ListAllCitiesAsync
+- uid: Nettify.Weather.WeatherServerType
+  name: WeatherServerType
+  href: api/Nettify.Weather.WeatherServerType.html
+  commentId: T:Nettify.Weather.WeatherServerType
+  fullName: Nettify.Weather.WeatherServerType
+  nameWithType: WeatherServerType
+- uid: Nettify.Weather.WeatherServerType.OpenWeatherMap
+  name: OpenWeatherMap
+  href: api/Nettify.Weather.WeatherServerType.html#Nettify_Weather_WeatherServerType_OpenWeatherMap
+  commentId: F:Nettify.Weather.WeatherServerType.OpenWeatherMap
+  fullName: Nettify.Weather.WeatherServerType.OpenWeatherMap
+  nameWithType: WeatherServerType.OpenWeatherMap
+- uid: Nettify.Weather.WeatherServerType.TheWeatherChannel
+  name: TheWeatherChannel
+  href: api/Nettify.Weather.WeatherServerType.html#Nettify_Weather_WeatherServerType_TheWeatherChannel
+  commentId: F:Nettify.Weather.WeatherServerType.TheWeatherChannel
+  fullName: Nettify.Weather.WeatherServerType.TheWeatherChannel
+  nameWithType: WeatherServerType.TheWeatherChannel
