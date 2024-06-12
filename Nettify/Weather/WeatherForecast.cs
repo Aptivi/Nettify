@@ -46,7 +46,7 @@ namespace Nettify.Weather
         /// <returns>A class containing properties of weather information</returns>
         public static WeatherForecastInfo GetWeatherInfo(double latitude, double longitude, string APIKey, UnitMeasurement Unit = UnitMeasurement.Metric)
         {
-            string WeatherURL = $"http://api.weather.com/v3/wx/forecast/daily/15day?geocode={latitude},{longitude}&format=json&language=en-US&units={(Unit == UnitMeasurement.Metric ? 'm' : 'e')}&apiKey={APIKey}";
+            string WeatherURL = $"https://api.weather.com/v3/wx/forecast/daily/15day?geocode={latitude},{longitude}&format=json&language=en-US&units={(Unit == UnitMeasurement.Metric ? 'm' : 'e')}&apiKey={APIKey}";
             return GetWeatherInfo(WeatherURL, Unit == UnitMeasurement.Kelvin ? UnitMeasurement.Imperial : Unit);
         }
 
@@ -82,7 +82,7 @@ namespace Nettify.Weather
         /// <returns>A class containing properties of weather information</returns>
         public static async Task<WeatherForecastInfo> GetWeatherInfoAsync(double latitude, double longitude, string APIKey, UnitMeasurement Unit = UnitMeasurement.Metric)
         {
-            string WeatherURL = $"http://api.weather.com/v3/wx/forecast/daily/15day?geocode={latitude},{longitude}&format=json&language=en-US&units={(Unit == UnitMeasurement.Metric ? 'm' : 'e')}&apiKey={APIKey}";
+            string WeatherURL = $"https://api.weather.com/v3/wx/forecast/daily/15day?geocode={latitude},{longitude}&format=json&language=en-US&units={(Unit == UnitMeasurement.Metric ? 'm' : 'e')}&apiKey={APIKey}";
             return await GetWeatherInfoAsync(WeatherURL, Unit);
         }
 
@@ -262,7 +262,7 @@ namespace Nettify.Weather
         /// </summary>
         public static Dictionary<string, (double, double)> ListAllCities(string city, string APIKey)
         {
-            string WeatherCityListURL = $"http://api.weather.com/v3/location/search?language=en-US&query={city}&format=json&apiKey={APIKey}";
+            string WeatherCityListURL = $"https://api.weather.com/v3/location/search?language=en-US&query={city}&format=json&apiKey={APIKey}";
             Stream WeatherCityListDataStream;
             Debug.WriteLine("Weather City List URL: {0}", WeatherCityListURL);
 
@@ -278,7 +278,7 @@ namespace Nettify.Weather
         /// </summary>
         public static async Task<Dictionary<string, (double, double)>> ListAllCitiesAsync(string city, string APIKey)
         {
-            string WeatherCityListURL = $"http://api.weather.com/v3/location/search?language=en-US&query={city}&format=json&apiKey={APIKey}";
+            string WeatherCityListURL = $"https://api.weather.com/v3/location/search?language=en-US&query={city}&format=json&apiKey={APIKey}";
             Stream WeatherCityListDataStream;
             Debug.WriteLine("Weather City List URL: {0}", WeatherCityListURL);
 

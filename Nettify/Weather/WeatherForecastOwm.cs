@@ -44,7 +44,7 @@ namespace Nettify.Weather
         /// <returns>A class containing properties of weather information</returns>
         public static WeatherForecastInfo GetWeatherInfo(long CityID, string APIKey, UnitMeasurement Unit = UnitMeasurement.Metric)
         {
-            string WeatherURL = $"http://api.openweathermap.org/data/2.5/weather?id={CityID}&appid={APIKey}";
+            string WeatherURL = $"https://api.openweathermap.org/data/2.5/weather?id={CityID}&appid={APIKey}";
             return GetWeatherInfo(WeatherURL, Unit);
         }
 
@@ -57,7 +57,7 @@ namespace Nettify.Weather
         /// <returns>A class containing properties of weather information</returns>
         public static WeatherForecastInfo GetWeatherInfo(string CityName, string APIKey, UnitMeasurement Unit = UnitMeasurement.Metric)
         {
-            string WeatherURL = $"http://api.openweathermap.org/data/2.5/weather?q={CityName}&appid={APIKey}";
+            string WeatherURL = $"https://api.openweathermap.org/data/2.5/weather?q={CityName}&appid={APIKey}";
             return GetWeatherInfo(WeatherURL, Unit);
         }
 
@@ -94,7 +94,7 @@ namespace Nettify.Weather
         /// <returns>A class containing properties of weather information</returns>
         public static async Task<WeatherForecastInfo> GetWeatherInfoAsync(long CityID, string APIKey, UnitMeasurement Unit = UnitMeasurement.Metric)
         {
-            string WeatherURL = $"http://api.openweathermap.org/data/2.5/weather?id={CityID}&appid={APIKey}";
+            string WeatherURL = $"https://api.openweathermap.org/data/2.5/weather?id={CityID}&appid={APIKey}";
             return await GetWeatherInfoAsync(WeatherURL, Unit);
         }
 
@@ -107,7 +107,7 @@ namespace Nettify.Weather
         /// <returns>A class containing properties of weather information</returns>
         public static async Task<WeatherForecastInfo> GetWeatherInfoAsync(string CityName, string APIKey, UnitMeasurement Unit = UnitMeasurement.Metric)
         {
-            string WeatherURL = $"http://api.openweathermap.org/data/2.5/weather?q={CityName}&appid={APIKey}";
+            string WeatherURL = $"https://api.openweathermap.org/data/2.5/weather?q={CityName}&appid={APIKey}";
             return await GetWeatherInfoAsync(WeatherURL, Unit);
         }
 
@@ -152,7 +152,7 @@ namespace Nettify.Weather
         /// </summary>
         public static Dictionary<long, string> ListAllCities()
         {
-            string WeatherCityListURL = $"http://bulk.openweathermap.org/sample/city.list.json.gz";
+            string WeatherCityListURL = $"https://bulk.openweathermap.org/sample/city.list.json.gz";
             Stream WeatherCityListDataStream;
             Debug.WriteLine("Weather City List URL: {0}", WeatherCityListURL);
 
@@ -166,7 +166,7 @@ namespace Nettify.Weather
         /// </summary>
         public static async Task<Dictionary<long, string>> ListAllCitiesAsync()
         {
-            string WeatherCityListURL = $"http://bulk.openweathermap.org/sample/city.list.json.gz";
+            string WeatherCityListURL = $"https://bulk.openweathermap.org/sample/city.list.json.gz";
             Stream WeatherCityListDataStream;
             Debug.WriteLine("Weather City List URL: {0}", WeatherCityListURL);
 
