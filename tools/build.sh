@@ -13,6 +13,14 @@ if [ ! $? == 0 ]; then
 	exit 1
 fi
 
+# Download ISP info
+echo Downloading ISP info...
+bash ../assets/IspInfo/getispinfo.sh
+if [ ! $? == 0 ]; then
+	echo Download failed.
+	exit 1
+fi
+
 # Download packages
 echo Downloading packages...
 "$dotnetpath" msbuild "../Nettify.sln" -t:restore -p:Configuration=$releaseconf
