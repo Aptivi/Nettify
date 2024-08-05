@@ -412,4 +412,4 @@ DocGen/api/
 *.swp
 
 # ISP info XML Files
-assets/IspInfo/*.xml
+Nettify/assets/IspInfo/*.xml

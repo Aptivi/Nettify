@@ -15,7 +15,7 @@ fi
 
 # Download ISP info
 echo Downloading ISP info...
-bash ../assets/IspInfo/getispinfo.sh
+bash ../Nettify/assets/IspInfo/getispinfo.sh
 if [ ! $? == 0 ]; then
 	echo Download failed.
 	exit 1

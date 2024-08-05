@@ -19,7 +19,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="..\assets\IspInfo\*.xml" />
+    <Content Remove="assets\IspInfo\*.xml" />
   </ItemGroup>
   
   <ItemGroup>

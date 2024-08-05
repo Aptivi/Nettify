@@ -1,6 +1,5 @@
 # Some variables
 Set-Variable DATABASEADDRESS "https://autoconfig.thunderbird.net/v1.1/"
-Set-Variable DBFILE $TMP\ISPLIST
 
 Write-Output "Downloading the ISP list..."
 Set-Variable ISPS ((Invoke-WebRequest -Uri $DATABASEADDRESS).links.href | Select-Object -Skip 5)
