@@ -39,7 +39,7 @@ namespace Nettify.MailAddress
         {
             // Get the final database address
             string hostName = new Uri($"mailto:{address}").Host;
-            var xmlStream = Assembly.GetAssembly(typeof(IspTools)).GetManifestResourceStream($"Nettify.{hostName}.xml");
+            var xmlStream = Assembly.GetAssembly(typeof(IspTools)).GetManifestResourceStream($"Nettify.assets.IspInfo.{hostName}.xml");
             string xmlContent = new StreamReader(xmlStream).ReadToEnd();
 
             // Get the client config
