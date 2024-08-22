@@ -23,7 +23,7 @@ fi
 
 # Download packages
 echo Downloading packages...
-"$dotnetpath" restore "../Nettify.sln" --configuration $releaseconf
+"$dotnetpath" restore "../Nettify.sln" -p:Configuration=$releaseconf
 if [ ! $? == 0 ]; then
 	echo Download failed.
 	exit 1
@@ -31,7 +31,7 @@ fi
 
 # Build Nettify
 echo Building Nettify...
-"$dotnetpath" build "../Nettify.sln" --configuration $releaseconf
+"$dotnetpath" build "../Nettify.sln" -p:Configuration=$releaseconf
 if [ ! $? == 0 ]; then
 	echo Build failed.
 	exit 1

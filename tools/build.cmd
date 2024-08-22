@@ -13,14 +13,14 @@ goto :finished
 
 :download
 echo Downloading packages...
-"%ProgramFiles%\dotnet\dotnet.exe" restore "..\Nettify.sln" --configuration %releaseconfig%
+"%ProgramFiles%\dotnet\dotnet.exe" restore "..\Nettify.sln" -p:Configuration=%releaseconfig%
 if %errorlevel% == 0 goto :build
 echo There was an error trying to download packages (%errorlevel%).
 goto :finished
 
 :build
 echo Building Nettify...
-"%ProgramFiles%\dotnet\dotnet.exe" build "..\Nettify.sln" --configuration %releaseconfig%
+"%ProgramFiles%\dotnet\dotnet.exe" build "..\Nettify.sln" -p:Configuration=%releaseconfig%
 if %errorlevel% == 0 goto :success
 echo There was an error trying to build (%errorlevel%).
 goto :finished
