@@ -1,0 +1,14 @@
+We've made another small patch release that updates the ISP database and fixes two email addresses.
+
+### Changes
+
+This release contains a variety of changes, including, but not limited to:
+
+- `[*]` Updated the ISP database
+- `[*]` Fixed two mail addresses: olc.protection.outlook.com and mail.protection.outlook.com
+
+Review the commit history if you want to get a deep insight about the changes.
+
+### Feedback?
+
+If you have issues with this version, report to us by [making a new issue ticket](https://github.com/Aptivi/Nettify/issues/new).
