@@ -28,48 +28,48 @@ namespace Nettify.Rss.Searcher
     [DebuggerDisplay("{title}: {description} [{website} | {id}]")]
     public class SearcherInstance
     {
-        [JsonPropertyName("score")]
-        private readonly double score = 0;
-        [JsonPropertyName("lastUpdated")]
-        private readonly double lastUpdated = 0;
-        [JsonPropertyName("estimatedEngagement")]
-        private readonly int estimatedEngagement = 0;
-        [JsonPropertyName("description")]
-        private readonly string description = "";
-        [JsonPropertyName("language")]
-        private readonly string language = "";
-        [JsonPropertyName("id")]
-        private readonly string id = "";
-        [JsonPropertyName("title")]
-        private readonly string title = "";
-        [JsonPropertyName("coverUrl")]
-        private readonly string coverUrl = "";
-        [JsonPropertyName("website")]
-        private readonly string website = "";
-        [JsonPropertyName("topics")]
-        private readonly string[] topics = [];
-        [JsonPropertyName("subscribers")]
-        private readonly int subscribers = 0;
-        [JsonPropertyName("feedId")]
-        private readonly string feedId = "";
-        [JsonPropertyName("updated")]
-        private readonly double updated = 0;
-        [JsonPropertyName("velocity")]
-        private readonly double velocity = 0;
-        [JsonPropertyName("iconUrl")]
-        private readonly string iconUrl = "";
-        [JsonPropertyName("visualUrl")]
-        private readonly string visualUrl = "";
-        [JsonPropertyName("partial")]
-        private readonly bool partial = false;
-        [JsonPropertyName("logo")]
-        private readonly string logo = "";
-        [JsonPropertyName("relatedLayout")]
-        private readonly string relatedLayout = "";
-        [JsonPropertyName("relatedTarget")]
-        private readonly string relatedTarget = "";
-        [JsonPropertyName("accentColor")]
-        private readonly string accentColor = "";
+        [JsonInclude]
+        private double score = 0;
+        [JsonInclude]
+        private double lastUpdated = 0;
+        [JsonInclude]
+        private int estimatedEngagement = 0;
+        [JsonInclude]
+        private string description = "";
+        [JsonInclude]
+        private string language = "";
+        [JsonInclude]
+        private string id = "";
+        [JsonInclude]
+        private string title = "";
+        [JsonInclude]
+        private string coverUrl = "";
+        [JsonInclude]
+        private string website = "";
+        [JsonInclude]
+        private string[] topics = [];
+        [JsonInclude]
+        private int subscribers = 0;
+        [JsonInclude]
+        private string feedId = "";
+        [JsonInclude]
+        private double updated = 0;
+        [JsonInclude]
+        private double velocity = 0;
+        [JsonInclude]
+        private string iconUrl = "";
+        [JsonInclude]
+        private string visualUrl = "";
+        [JsonInclude]
+        private bool partial = false;
+        [JsonInclude]
+        private string logo = "";
+        [JsonInclude]
+        private string relatedLayout = "";
+        [JsonInclude]
+        private string relatedTarget = "";
+        [JsonInclude]
+        private string accentColor = "";
 
         /// <summary>
         /// Feed score
