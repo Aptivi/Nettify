@@ -5,7 +5,14 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nettify", "Nettify\Nettify.csproj", "{62C25E4C-7941-4655-9CDB-A22E2FEE4B2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nettify.Demo", "Nettify.Demo\Nettify.Demo.csproj", "{72CD0859-837E-4022-8B52-F4E7C212143B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nettify.Demo", "Nettify.Demo\Nettify.Demo.csproj", "{72CD0859-837E-4022-8B52-F4E7C212143B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{30BE6786-6B28-4051-9EAD-354F6427379C}"
+	ProjectSection(SolutionItems) = preProject
+		CHANGES = CHANGES
+		CHANGES.TITLE = CHANGES.TITLE
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
