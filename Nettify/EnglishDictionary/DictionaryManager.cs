@@ -17,11 +17,11 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Nettify.EnglishDictionary
@@ -53,7 +53,7 @@ namespace Nettify.EnglishDictionary
                 string WordInfoString = new StreamReader(WordInfoStream).ReadToEnd();
 
                 // Serialize it to DictionaryWord to cache it so that we don't have to download it again
-                DictionaryWord[] Words = (DictionaryWord[])JsonConvert.DeserializeObject(WordInfoString, typeof(DictionaryWord[]));
+                var Words = JsonSerializer.Deserialize<DictionaryWord[]>(WordInfoString);
                 CachedWords.AddRange(Words);
 
                 // Return the word
@@ -80,7 +80,7 @@ namespace Nettify.EnglishDictionary
                 string WordInfoString = new StreamReader(WordInfoStream).ReadToEnd();
 
                 // Serialize it to DictionaryWord to cache it so that we don't have to download it again
-                DictionaryWord[] Words = (DictionaryWord[])JsonConvert.DeserializeObject(WordInfoString, typeof(DictionaryWord[]));
+                var Words = JsonSerializer.Deserialize<DictionaryWord[]>(WordInfoString);
                 CachedWords.AddRange(Words);
 
                 // Return the word

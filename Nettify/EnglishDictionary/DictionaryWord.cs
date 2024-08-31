@@ -17,8 +17,8 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-using Newtonsoft.Json;
 using System.Diagnostics;
+using System.Text.Json.Serialization;
 
 namespace Nettify.EnglishDictionary
 {
@@ -37,25 +37,25 @@ namespace Nettify.EnglishDictionary
             /// <summary>
             /// Word definition
             /// </summary>
-            [JsonProperty("definition")]
+            [JsonPropertyName("definition")]
             public string Definition { get; set; }
 
             /// <summary>
             /// List of synonyms based on the definition
             /// </summary>
-            [JsonProperty("synonyms")]
+            [JsonPropertyName("synonyms")]
             public string[] Synonyms { get; set; }
 
             /// <summary>
             /// List of antonyms based on the definition
             /// </summary>
-            [JsonProperty("antonyms")]
+            [JsonPropertyName("antonyms")]
             public string[] Antonyms { get; set; }
 
             /// <summary>
             /// Example in sentence
             /// </summary>
-            [JsonProperty("example")]
+            [JsonPropertyName("example")]
             public string Example { get; set; }
         }
 
@@ -68,13 +68,13 @@ namespace Nettify.EnglishDictionary
             /// <summary>
             /// License name
             /// </summary>
-            [JsonProperty("name")]
+            [JsonPropertyName("name")]
             public string Name { get; set; }
 
             /// <summary>
             /// License URL
             /// </summary>
-            [JsonProperty("url")]
+            [JsonPropertyName("url")]
             public string Url { get; set; }
         }
 
@@ -87,25 +87,25 @@ namespace Nettify.EnglishDictionary
             /// <summary>
             /// Part of speech, usually noun, verb, adjective, adverb, interjection, etc.
             /// </summary>
-            [JsonProperty("partOfSpeech")]
+            [JsonPropertyName("partOfSpeech")]
             public string PartOfSpeech { get; set; }
 
             /// <summary>
             /// List of word definitions. Words usually come with one or more definitions.
             /// </summary>
-            [JsonProperty("definitions")]
+            [JsonPropertyName("definitions")]
             public DefinitionType[] Definitions { get; set; }
 
             /// <summary>
             /// List of synonyms based on the word meaning
             /// </summary>
-            [JsonProperty("synonyms")]
+            [JsonPropertyName("synonyms")]
             public string[] Synonyms { get; set; }
 
             /// <summary>
             /// List of antonyms based on the word meaning
             /// </summary>
-            [JsonProperty("antonyms")]
+            [JsonPropertyName("antonyms")]
             public string[] Antonyms { get; set; }
         }
 
@@ -118,62 +118,62 @@ namespace Nettify.EnglishDictionary
             /// <summary>
             /// Phonetic representation of the word
             /// </summary>
-            [JsonProperty("text")]
+            [JsonPropertyName("text")]
             public string Text { get; set; }
 
             /// <summary>
             /// Link to the pronounciation, usually in MP3 format. Use BassBoom to play it after downloading it.
             /// </summary>
-            [JsonProperty("audio")]
+            [JsonPropertyName("audio")]
             public string Audio { get; set; }
 
             /// <summary>
             /// From where did we get the audio from?
             /// </summary>
-            [JsonProperty("sourceUrl")]
+            [JsonPropertyName("sourceUrl")]
             public string SourceUrl { get; set; }
 
             /// <summary>
             /// License information for the source
             /// </summary>
-            [JsonProperty("license")]
+            [JsonPropertyName("license")]
             public License License { get; set; }
         }
 
         /// <summary>
         /// The actual word
         /// </summary>
-        [JsonProperty("word")]
+        [JsonPropertyName("word")]
         public string Word { get; set; }
 
         /// <summary>
         /// The base phonetic representation of the word
         /// </summary>
-        [JsonProperty("phonetic")]
+        [JsonPropertyName("phonetic")]
         public string PhoneticWord { get; set; }
 
         /// <summary>
         /// The alternative phonetic representations
         /// </summary>
-        [JsonProperty("phonetics")]
+        [JsonPropertyName("phonetics")]
         public Phonetic[] Phonetics { get; set; }
 
         /// <summary>
         /// Word meanings
         /// </summary>
-        [JsonProperty("meanings")]
+        [JsonPropertyName("meanings")]
         public Meaning[] Meanings { get; set; }
 
         /// <summary>
         /// License information
         /// </summary>
-        [JsonProperty("license")]
+        [JsonPropertyName("license")]
         public License LicenseInfo { get; set; }
 
         /// <summary>
         /// List of where we got the word information from
         /// </summary>
-        [JsonProperty("sourceUrls")]
+        [JsonPropertyName("sourceUrls")]
         public string[] SourceUrls { get; set; }
     }
 }

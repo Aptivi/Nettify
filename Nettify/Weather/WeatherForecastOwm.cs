@@ -20,11 +20,9 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.IO.Compression;
 using System.Net.Http;
-using System.Text;
+using System.Text.Json.Nodes;
 using System.Threading.Tasks;
-using Newtonsoft.Json.Linq;
 
 namespace Nettify.Weather
 {
@@ -70,7 +68,6 @@ namespace Nettify.Weather
         internal static WeatherForecastInfo GetWeatherInfo(string WeatherURL, UnitMeasurement Unit = UnitMeasurement.Metric)
         {
             string WeatherData;
-            JToken WeatherToken;
             Debug.WriteLine("Weather URL: {0} | Unit: {1}", WeatherURL, Unit);
 
             // Deal with measurements
@@ -81,7 +78,7 @@ namespace Nettify.Weather
 
             // Download and parse JSON data
             WeatherData = WeatherDownloader.GetStringAsync(WeatherURL).Result;
-            WeatherToken = JToken.Parse(WeatherData);
+            JsonNode WeatherToken = JsonObject.Parse(WeatherData);
             return FinalizeInstallation(WeatherToken, Unit);
         }
 
@@ -120,7 +117,6 @@ namespace Nettify.Weather
         internal static async Task<WeatherForecastInfo> GetWeatherInfoAsync(string WeatherURL, UnitMeasurement Unit = UnitMeasurement.Metric)
         {
             string WeatherData;
-            JToken WeatherToken;
             Debug.WriteLine("Weather URL: {0} | Unit: {1}", WeatherURL, Unit);
 
             // Deal with measurements
@@ -131,19 +127,19 @@ namespace Nettify.Weather
 
             // Download and parse JSON data
             WeatherData = await WeatherDownloader.GetStringAsync(WeatherURL);
-            WeatherToken = JToken.Parse(WeatherData);
+            JsonNode WeatherToken = JsonObject.Parse(WeatherData);
             return FinalizeInstallation(WeatherToken, Unit);
         }
 
-        internal static WeatherForecastInfo FinalizeInstallation(JToken WeatherToken, UnitMeasurement Unit = UnitMeasurement.Metric)
+        internal static WeatherForecastInfo FinalizeInstallation(JsonNode WeatherToken, UnitMeasurement Unit = UnitMeasurement.Metric)
         {
-            var weather = (WeatherCondition)WeatherToken.SelectToken("weather").First.SelectToken("id").ToObject(typeof(WeatherCondition));
-            var temperature = (double)WeatherToken.SelectToken("main").SelectToken("temp").ToObject(typeof(double));
-            var humidity = (double)WeatherToken.SelectToken("main").SelectToken("humidity").ToObject(typeof(double));
-            var windSpeed = (double)WeatherToken.SelectToken("wind").SelectToken("speed").ToObject(typeof(double));
-            var windDirection = (double)WeatherToken.SelectToken("wind").SelectToken("deg").ToObject(typeof(double));
+            var weather = (WeatherCondition)WeatherToken["weather"][0]["id"].GetValue<int>();
+            var temperature = (double)WeatherToken["main"]["temp"].GetValue<double>();
+            var humidity = (double)WeatherToken["main"]["humidity"].GetValue<double>();
+            var windSpeed = (double)WeatherToken["wind"]["speed"].GetValue<double>();
+            var windDirection = (double)WeatherToken["wind"]["deg"].GetValue<double>();
             var temperatureMeasurement = Unit;
-            WeatherForecastInfo WeatherInfo = new(weather, temperatureMeasurement, temperature, humidity, windSpeed, windDirection, WeatherToken, WeatherServerType.OpenWeatherMap);
+            WeatherForecastInfo WeatherInfo = new(weather, temperatureMeasurement, temperature, humidity, windSpeed, windDirection, (JsonObject)WeatherToken, WeatherServerType.OpenWeatherMap);
             return WeatherInfo;
         }
 
@@ -179,10 +175,10 @@ namespace Nettify.Weather
         {
             var WeatherCityList = new Dictionary<long, string>();
             string uncompressed = WeatherForecast.Uncompress(WeatherCityListDataStream);
-            JToken WeatherToken = JToken.Parse(uncompressed);
+            JsonArray WeatherToken = (JsonArray)JsonArray.Parse(uncompressed);
 
             // Put needed data to the class
-            foreach (JToken WeatherCityToken in WeatherToken)
+            foreach (var WeatherCityToken in WeatherToken)
             {
                 long cityId = (long)WeatherCityToken["id"];
                 string cityName = (string)WeatherCityToken["name"];

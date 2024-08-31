@@ -18,10 +18,10 @@
 //
 
 using Nettify.Rss.Instance;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Net.Http;
+using System.Text.Json;
+using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 
 namespace Nettify.Rss.Searcher
@@ -105,9 +105,9 @@ namespace Nettify.Rss.Searcher
 
         private static SearcherInstance[] DeserializeFeedJson(string feedsJson)
         {
-            var token = JObject.Parse(feedsJson);
-            var feedsToken = (JArray)token["results"];
-            var instances = JsonConvert.DeserializeObject<SearcherInstance[]>(feedsToken.ToString());
+            var token = JsonObject.Parse(feedsJson);
+            var feedsToken = token["results"];
+            var instances = JsonSerializer.Deserialize<SearcherInstance[]>(feedsToken);
             return instances;
         }
     }

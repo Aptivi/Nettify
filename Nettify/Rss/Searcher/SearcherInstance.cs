@@ -17,8 +17,8 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-using Newtonsoft.Json;
 using System.Diagnostics;
+using System.Text.Json.Serialization;
 
 namespace Nettify.Rss.Searcher
 {
@@ -28,47 +28,47 @@ namespace Nettify.Rss.Searcher
     [DebuggerDisplay("{title}: {description} [{website} | {id}]")]
     public class SearcherInstance
     {
-        [JsonProperty("score")]
+        [JsonPropertyName("score")]
         private readonly double score = 0;
-        [JsonProperty("lastUpdated")]
+        [JsonPropertyName("lastUpdated")]
         private readonly double lastUpdated = 0;
-        [JsonProperty("estimatedEngagement")]
+        [JsonPropertyName("estimatedEngagement")]
         private readonly int estimatedEngagement = 0;
-        [JsonProperty("description")]
+        [JsonPropertyName("description")]
         private readonly string description = "";
-        [JsonProperty("language")]
+        [JsonPropertyName("language")]
         private readonly string language = "";
-        [JsonProperty("id")]
+        [JsonPropertyName("id")]
         private readonly string id = "";
-        [JsonProperty("title")]
+        [JsonPropertyName("title")]
         private readonly string title = "";
-        [JsonProperty("coverUrl")]
+        [JsonPropertyName("coverUrl")]
         private readonly string coverUrl = "";
-        [JsonProperty("website")]
+        [JsonPropertyName("website")]
         private readonly string website = "";
-        [JsonProperty("topics")]
+        [JsonPropertyName("topics")]
         private readonly string[] topics = [];
-        [JsonProperty("subscribers")]
+        [JsonPropertyName("subscribers")]
         private readonly int subscribers = 0;
-        [JsonProperty("feedId")]
+        [JsonPropertyName("feedId")]
         private readonly string feedId = "";
-        [JsonProperty("updated")]
+        [JsonPropertyName("updated")]
         private readonly double updated = 0;
-        [JsonProperty("velocity")]
+        [JsonPropertyName("velocity")]
         private readonly double velocity = 0;
-        [JsonProperty("iconUrl")]
+        [JsonPropertyName("iconUrl")]
         private readonly string iconUrl = "";
-        [JsonProperty("visualUrl")]
+        [JsonPropertyName("visualUrl")]
         private readonly string visualUrl = "";
-        [JsonProperty("partial")]
+        [JsonPropertyName("partial")]
         private readonly bool partial = false;
-        [JsonProperty("logo")]
+        [JsonPropertyName("logo")]
         private readonly string logo = "";
-        [JsonProperty("relatedLayout")]
+        [JsonPropertyName("relatedLayout")]
         private readonly string relatedLayout = "";
-        [JsonProperty("relatedTarget")]
+        [JsonPropertyName("relatedTarget")]
         private readonly string relatedTarget = "";
-        [JsonProperty("accentColor")]
+        [JsonPropertyName("accentColor")]
         private readonly string accentColor = "";
 
         /// <summary>

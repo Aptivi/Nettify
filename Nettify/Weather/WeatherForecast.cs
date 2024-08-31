@@ -17,15 +17,14 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
 using System.Net.Http;
 using System.Text;
+using System.Text.Json.Nodes;
 using System.Threading.Tasks;
-using Newtonsoft.Json.Linq;
 
 namespace Nettify.Weather
 {
@@ -68,7 +67,7 @@ namespace Nettify.Weather
             var stream = WeatherDownloader.GetStreamAsync(WeatherURL).Result;
             WeatherDownloader.DefaultRequestHeaders.Remove("Accept-Encoding");
             string uncompressed = Uncompress(stream);
-            JToken WeatherToken = JToken.Parse(uncompressed);
+            var WeatherToken = JsonObject.Parse(uncompressed);
             return FinalizeInstallation(WeatherToken, Unit);
         }
 
@@ -104,20 +103,18 @@ namespace Nettify.Weather
             var stream = await WeatherDownloader.GetStreamAsync(WeatherURL);
             WeatherDownloader.DefaultRequestHeaders.Remove("Accept-Encoding");
             string uncompressed = Uncompress(stream);
-            JToken WeatherToken = JToken.Parse(uncompressed);
+            var WeatherToken = JsonObject.Parse(uncompressed);
             return FinalizeInstallation(WeatherToken, Unit);
         }
 
-        internal static WeatherForecastInfo FinalizeInstallation(JToken WeatherToken, UnitMeasurement Unit = UnitMeasurement.Metric)
+        internal static WeatherForecastInfo FinalizeInstallation(JsonNode WeatherToken, UnitMeasurement Unit = UnitMeasurement.Metric)
         {
             // Get the adjusted data
             T Adjust<T>(string dayPartData)
             {
                 var dayPartArray = WeatherToken["daypart"][0][dayPartData];
-                var adjusted = dayPartArray[0];
-                if (adjusted.Type == JTokenType.Null)
-                    adjusted = dayPartArray[1];
-                return (T)adjusted.ToObject(typeof(T));
+                var adjusted = dayPartArray[0] ?? dayPartArray[1];
+                return (T)adjusted.GetValue<T>();
             }
 
             // Now, get the necessary variables to get the weather condition info
@@ -253,7 +250,7 @@ namespace Nettify.Weather
             var windSpeed = Adjust<double>("windSpeed");
             var windDirection = Adjust<double>("windDirection");
             var temperatureMeasurement = Unit;
-            WeatherForecastInfo WeatherInfo = new(cond, temperatureMeasurement, temperature, humidity, windSpeed, windDirection, WeatherToken, WeatherServerType.TheWeatherChannel);
+            WeatherForecastInfo WeatherInfo = new(cond, temperatureMeasurement, temperature, humidity, windSpeed, windDirection, (JsonObject)WeatherToken, WeatherServerType.TheWeatherChannel);
             return WeatherInfo;
         }
 
@@ -292,13 +289,13 @@ namespace Nettify.Weather
         internal static Dictionary<string, (double, double)> FinalizeCityList(Stream WeatherCityListDataStream)
         {
             string uncompressed = Uncompress(WeatherCityListDataStream);
-            JToken token = JToken.Parse(uncompressed);
+            var token = JsonObject.Parse(uncompressed);
 
             // Get the addresses, the latitudes, and the longitudes
             var loc = token["location"];
-            var addresses = (JArray)loc["address"];
-            var latitudes = (JArray)loc["latitude"];
-            var longitudes = (JArray)loc["longitude"];
+            var addresses = (JsonArray)loc["address"];
+            var latitudes = (JsonArray)loc["latitude"];
+            var longitudes = (JsonArray)loc["longitude"];
             Debug.Assert(addresses.Count == latitudes.Count && addresses.Count == longitudes.Count && latitudes.Count == longitudes.Count);
 
             // Put needed data

@@ -17,9 +17,9 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-using Newtonsoft.Json.Linq;
 using System;
 using System.Diagnostics;
+using System.Text.Json.Nodes;
 
 namespace Nettify.Weather
 {
@@ -56,13 +56,13 @@ namespace Nettify.Weather
         /// <summary>
         /// Weather token
         /// </summary>
-        public JToken WeatherToken { get; }
+        public JsonObject WeatherToken { get; }
         /// <summary>
         /// Whether the server type is OWM or TWC
         /// </summary>
         public WeatherServerType ServerType { get; }
 
-        internal WeatherForecastInfo(WeatherCondition weather, UnitMeasurement temperatureMeasurement, double temperature, double humidity, double windSpeed, double windDirection, JToken weatherToken, WeatherServerType serverType)
+        internal WeatherForecastInfo(WeatherCondition weather, UnitMeasurement temperatureMeasurement, double temperature, double humidity, double windSpeed, double windDirection, JsonObject weatherToken, WeatherServerType serverType)
         {
             Weather = weather;
             TemperatureMeasurement = temperatureMeasurement;
