@@ -1025,6 +1025,67 @@ references:
   isSpec: "True"
   fullName: Nettify.MailAddress.IspTools.GetIspConfig
   nameWithType: IspTools.GetIspConfig
+- uid: Nettify.MailAddress.IspTools.GetIspConfigFromHost(System.String)
+  name: GetIspConfigFromHost(string)
+  href: api/Nettify.MailAddress.IspTools.html#Nettify_MailAddress_IspTools_GetIspConfigFromHost_System_String_
+  commentId: M:Nettify.MailAddress.IspTools.GetIspConfigFromHost(System.String)
+  name.vb: GetIspConfigFromHost(String)
+  fullName: Nettify.MailAddress.IspTools.GetIspConfigFromHost(string)
+  fullName.vb: Nettify.MailAddress.IspTools.GetIspConfigFromHost(String)
+  nameWithType: IspTools.GetIspConfigFromHost(string)
+  nameWithType.vb: IspTools.GetIspConfigFromHost(String)
+- uid: Nettify.MailAddress.IspTools.GetIspConfigFromHost*
+  name: GetIspConfigFromHost
+  href: api/Nettify.MailAddress.IspTools.html#Nettify_MailAddress_IspTools_GetIspConfigFromHost_
+  commentId: Overload:Nettify.MailAddress.IspTools.GetIspConfigFromHost
+  isSpec: "True"
+  fullName: Nettify.MailAddress.IspTools.GetIspConfigFromHost
+  nameWithType: IspTools.GetIspConfigFromHost
+- uid: Nettify.MailAddress.IspTools.IsIspKnown(System.String)
+  name: IsIspKnown(string)
+  href: api/Nettify.MailAddress.IspTools.html#Nettify_MailAddress_IspTools_IsIspKnown_System_String_
+  commentId: M:Nettify.MailAddress.IspTools.IsIspKnown(System.String)
+  name.vb: IsIspKnown(String)
+  fullName: Nettify.MailAddress.IspTools.IsIspKnown(string)
+  fullName.vb: Nettify.MailAddress.IspTools.IsIspKnown(String)
+  nameWithType: IspTools.IsIspKnown(string)
+  nameWithType.vb: IspTools.IsIspKnown(String)
+- uid: Nettify.MailAddress.IspTools.IsIspKnown*
+  name: IsIspKnown
+  href: api/Nettify.MailAddress.IspTools.html#Nettify_MailAddress_IspTools_IsIspKnown_
+  commentId: Overload:Nettify.MailAddress.IspTools.IsIspKnown
+  isSpec: "True"
+  fullName: Nettify.MailAddress.IspTools.IsIspKnown
+  nameWithType: IspTools.IsIspKnown
+- uid: Nettify.MailAddress.IspTools.IsIspKnownByMail(System.String)
+  name: IsIspKnownByMail(string)
+  href: api/Nettify.MailAddress.IspTools.html#Nettify_MailAddress_IspTools_IsIspKnownByMail_System_String_
+  commentId: M:Nettify.MailAddress.IspTools.IsIspKnownByMail(System.String)
+  name.vb: IsIspKnownByMail(String)
+  fullName: Nettify.MailAddress.IspTools.IsIspKnownByMail(string)
+  fullName.vb: Nettify.MailAddress.IspTools.IsIspKnownByMail(String)
+  nameWithType: IspTools.IsIspKnownByMail(string)
+  nameWithType.vb: IspTools.IsIspKnownByMail(String)
+- uid: Nettify.MailAddress.IspTools.IsIspKnownByMail*
+  name: IsIspKnownByMail
+  href: api/Nettify.MailAddress.IspTools.html#Nettify_MailAddress_IspTools_IsIspKnownByMail_
+  commentId: Overload:Nettify.MailAddress.IspTools.IsIspKnownByMail
+  isSpec: "True"
+  fullName: Nettify.MailAddress.IspTools.IsIspKnownByMail
+  nameWithType: IspTools.IsIspKnownByMail
+- uid: Nettify.MailAddress.IspTools.KnownIspHosts
+  name: KnownIspHosts
+  href: api/Nettify.MailAddress.IspTools.html#Nettify_MailAddress_IspTools_KnownIspHosts
+  commentId: P:Nettify.MailAddress.IspTools.KnownIspHosts
+  fullName: Nettify.MailAddress.IspTools.KnownIspHosts
+  nameWithType: IspTools.KnownIspHosts
+- uid: Nettify.MailAddress.IspTools.KnownIspHosts*
+  name: KnownIspHosts
+  href: api/Nettify.MailAddress.IspTools.html#Nettify_MailAddress_IspTools_KnownIspHosts_
+  commentId: Overload:Nettify.MailAddress.IspTools.KnownIspHosts
+  isSpec: "True"
+  fullName: Nettify.MailAddress.IspTools.KnownIspHosts
+  nameWithType: IspTools.KnownIspHosts
 - uid: Nettify.Rss
   name: Nettify.Rss
   href: api/Nettify.Rss.html
