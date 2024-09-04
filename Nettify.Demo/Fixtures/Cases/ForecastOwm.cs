@@ -34,12 +34,12 @@ namespace Nettify.Demo.Fixtures.Cases
 
 			// ID or name
 			Console.Write("Enter city ID or name: ");
-			StringID = Console.ReadLine();
+			StringID = Console.ReadLine() ?? "";
 			IsNumeric = long.TryParse(StringID, out long FinalID);
 
 			// API key
 			Console.Write("Enter API key: ");
-			ApiKey = Console.ReadLine();
+			ApiKey = Console.ReadLine() ?? "";
 
 			// Get weather info
 			if (IsNumeric)

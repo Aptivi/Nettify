@@ -34,7 +34,7 @@ namespace Nettify.MailAddress.IspInfo
         /// The webmail login page link
         /// </summary>
         [XmlAttribute(AttributeName = "url")]
-        public string Url { get; set; }
+        public string Url { get; set; } = "";
     }
 
 }

@@ -17,6 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -78,7 +79,8 @@ namespace Nettify.Weather
 
             // Download and parse JSON data
             WeatherData = WeatherDownloader.GetStringAsync(WeatherURL).Result;
-            JsonNode WeatherToken = JsonObject.Parse(WeatherData);
+            JsonNode WeatherToken = JsonObject.Parse(WeatherData) ??
+                throw new Exception("Can't get weather token");
             return FinalizeInstallation(WeatherToken, Unit);
         }
 
@@ -127,17 +129,18 @@ namespace Nettify.Weather
 
             // Download and parse JSON data
             WeatherData = await WeatherDownloader.GetStringAsync(WeatherURL);
-            JsonNode WeatherToken = JsonObject.Parse(WeatherData);
+            JsonNode WeatherToken = JsonObject.Parse(WeatherData) ??
+                throw new Exception("Can't get weather token");
             return FinalizeInstallation(WeatherToken, Unit);
         }
 
         internal static WeatherForecastInfo FinalizeInstallation(JsonNode WeatherToken, UnitMeasurement Unit = UnitMeasurement.Metric)
         {
-            var weather = (WeatherCondition)WeatherToken["weather"][0]["id"].GetValue<int>();
-            var temperature = (double)WeatherToken["main"]["temp"].GetValue<double>();
-            var humidity = (double)WeatherToken["main"]["humidity"].GetValue<double>();
-            var windSpeed = (double)WeatherToken["wind"]["speed"].GetValue<double>();
-            var windDirection = (double)WeatherToken["wind"]["deg"].GetValue<double>();
+            var weather = (WeatherCondition?)WeatherToken["weather"]?[0]?["id"]?.GetValue<int>() ?? WeatherCondition.Clear;
+            var temperature = (double)(WeatherToken["main"]?["temp"]?.GetValue<double>() ?? 0);
+            var humidity = (double)(WeatherToken["main"]?["humidity"]?.GetValue<double>() ?? 0);
+            var windSpeed = (double)(WeatherToken["wind"]?["speed"]?.GetValue<double>() ?? 0);
+            var windDirection = (double)(WeatherToken["wind"]?["deg"]?.GetValue<double>() ?? 0);
             var temperatureMeasurement = Unit;
             WeatherForecastInfo WeatherInfo = new(weather, temperatureMeasurement, temperature, humidity, windSpeed, windDirection, (JsonObject)WeatherToken, WeatherServerType.OpenWeatherMap);
             return WeatherInfo;
@@ -175,13 +178,14 @@ namespace Nettify.Weather
         {
             var WeatherCityList = new Dictionary<long, string>();
             string uncompressed = WeatherForecast.Uncompress(WeatherCityListDataStream);
-            JsonArray WeatherToken = (JsonArray)JsonArray.Parse(uncompressed);
+            JsonArray WeatherToken = (JsonArray?)JsonArray.Parse(uncompressed) ??
+                throw new Exception("Can't get weather token");
 
             // Put needed data to the class
             foreach (var WeatherCityToken in WeatherToken)
             {
-                long cityId = (long)WeatherCityToken["id"];
-                string cityName = (string)WeatherCityToken["name"];
+                long cityId = (long)(WeatherCityToken?["id"] ?? 0);
+                string cityName = (string?)WeatherCityToken?["name"] ?? "";
                 if (!WeatherCityList.ContainsKey(cityId))
                     WeatherCityList.Add(cityId, cityName);
             }

@@ -105,9 +105,11 @@ namespace Nettify.Rss.Searcher
 
         private static SearcherInstance[] DeserializeFeedJson(string feedsJson)
         {
-            var token = JsonObject.Parse(feedsJson);
+            var token = JsonObject.Parse(feedsJson) ??
+                throw new RSSException("Can't get feeds.");
             var feedsToken = token["results"];
-            var instances = JsonSerializer.Deserialize<SearcherInstance[]>(feedsToken);
+            var instances = JsonSerializer.Deserialize<SearcherInstance[]>(feedsToken) ??
+                throw new RSSException("Can't deserialize to an array of search results.");
             return instances;
         }
     }

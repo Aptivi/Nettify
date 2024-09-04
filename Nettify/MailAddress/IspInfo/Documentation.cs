@@ -34,13 +34,13 @@ namespace Nettify.MailAddress.IspInfo
         /// Documentation description
         /// </summary>
         [XmlElement(ElementName = "descr")]
-        public string Description { get; set; }
+        public string Description { get; set; } = "";
 
         /// <summary>
         /// Documentation URL
         /// </summary>
         [XmlAttribute(AttributeName = "url")]
-        public string Url { get; set; }
+        public string Url { get; set; } = "";
     }
 
 }

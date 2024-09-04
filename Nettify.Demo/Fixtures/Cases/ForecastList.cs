@@ -29,11 +29,11 @@ namespace Nettify.Demo.Fixtures.Cases
         {
             // City
             Console.Write("Enter city name: ");
-            string city = Console.ReadLine();
+            string city = Console.ReadLine() ?? "";
 
             // API key
             Console.Write("Enter TWC API key: ");
-            string ApiKey = Console.ReadLine();
+            string ApiKey = Console.ReadLine() ?? "";
 
             // List all cities
             var longsLats = WeatherForecast.ListAllCities(city, ApiKey);

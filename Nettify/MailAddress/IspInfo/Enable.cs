@@ -34,13 +34,13 @@ namespace Nettify.MailAddress.IspInfo
         /// The instruction
         /// </summary>
         [XmlElement(ElementName = "instruction")]
-        public string Instruction { get; set; }
+        public string Instruction { get; set; } = "";
 
         /// <summary>
         /// The URL to visit to enable login
         /// </summary>
         [XmlAttribute(AttributeName = "visiturl")]
-        public string VisitUrl { get; set; }
+        public string VisitUrl { get; set; } = "";
     }
 
 }

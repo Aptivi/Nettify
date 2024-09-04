@@ -34,25 +34,25 @@ namespace Nettify.MailAddress.IspInfo
         /// The authentication issuer
         /// </summary>
         [XmlElement(ElementName = "issuer")]
-        public string Issuer { get; set; }
+        public string Issuer { get; set; } = "";
 
         /// <summary>
         /// The authentication scope
         /// </summary>
         [XmlElement(ElementName = "scope")]
-        public string Scope { get; set; }
+        public string Scope { get; set; } = "";
 
         /// <summary>
         /// The authentication URL
         /// </summary>
         [XmlElement(ElementName = "authURL")]
-        public string AuthURL { get; set; }
+        public string AuthURL { get; set; } = "";
 
         /// <summary>
         /// The OAuth2 token URL
         /// </summary>
         [XmlElement(ElementName = "tokenURL")]
-        public string TokenURL { get; set; }
+        public string TokenURL { get; set; } = "";
     }
 
 }

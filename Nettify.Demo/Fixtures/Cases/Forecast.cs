@@ -33,13 +33,13 @@ namespace Nettify.Demo.Fixtures.Cases
 
 			// ID or name
 			Console.Write("Enter city latitude: ");
-            latitude = double.Parse(Console.ReadLine());
+            latitude = double.Parse(Console.ReadLine() ?? "");
             Console.Write("Enter city longitude: ");
-            longitude = double.Parse(Console.ReadLine());
+            longitude = double.Parse(Console.ReadLine() ?? "");
 
 			// API key
 			Console.Write("Enter TWC API key: ");
-			ApiKey = Console.ReadLine();
+			ApiKey = Console.ReadLine() ?? "";
 
 			// Get weather info
 			forecastInfo = WeatherForecast.GetWeatherInfo(latitude, longitude, ApiKey, UnitMeasurement.Metric);

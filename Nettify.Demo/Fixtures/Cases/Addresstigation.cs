@@ -29,23 +29,24 @@ namespace Nettify.Demo.Fixtures.Cases
         {
             // Prompt for an e-mail address
             Console.Write("Enter an e-mail address: ");
-            string address = Console.ReadLine();
+            string address = Console.ReadLine() ?? "";
 
             // Query it
             var ispInstance = IspTools.GetIspConfig(address);
-            var ispMail = ispInstance.EmailProvider;
+            var ispMail = ispInstance.EmailProvider ??
+                throw new Exception("Can't get mail");
             Console.WriteLine($"ISP Name: {ispMail.DisplayName} [{ispMail.DisplayShortName}]");
             Console.WriteLine($"Main domain: {ispMail.DominatingDomain}");
-            foreach (string domain in ispMail.Domain)
+            foreach (string domain in ispMail.Domain ?? [])
                 Console.WriteLine($"  Domain: {domain}");
-            foreach (var server in ispMail.IncomingServer)
+            foreach (var server in ispMail.IncomingServer ?? [])
             {
                 Console.WriteLine($"  Incoming server hostname: {server.Hostname}:{server.Port}");
                 Console.WriteLine($"  Socket type: {server.SocketType}");
                 Console.WriteLine($"  Server type: {server.Type}");
                 Console.WriteLine($"  Username: {server.Username}");
                 Console.WriteLine($"  Leave messages on server? {(server.Pop3 is not null ? server.Pop3.LeaveMessagesOnServer : "False")}");
-                Console.WriteLine($"  Auth methods: {string.Join(", ", server.Authentication)}");
+                Console.WriteLine($"  Auth methods: {string.Join(", ", server.Authentication ?? [])}");
             }
             if (ispMail.OutgoingServer is not null)
             {
@@ -53,7 +54,7 @@ namespace Nettify.Demo.Fixtures.Cases
                 Console.WriteLine($"Socket type: {ispMail.OutgoingServer.SocketType}");
                 Console.WriteLine($"Server type: {ispMail.OutgoingServer.Type}");
                 Console.WriteLine($"Username: {ispMail.OutgoingServer.Username}");
-                Console.WriteLine($"Auth methods: {string.Join(", ", ispMail.OutgoingServer.AuthenticationMethods)}");
+                Console.WriteLine($"Auth methods: {string.Join(", ", ispMail.OutgoingServer.AuthenticationMethods ?? [])}");
             }
         }
     }

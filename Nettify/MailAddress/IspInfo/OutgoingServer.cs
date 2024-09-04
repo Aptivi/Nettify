@@ -34,7 +34,7 @@ namespace Nettify.MailAddress.IspInfo
         /// The hostname for the SMTP server
         /// </summary>
         [XmlElement(ElementName = "hostname")]
-        public string Hostname { get; set; }
+        public string Hostname { get; set; } = "";
 
         /// <summary>
         /// The port for the SMTP server. Usually 465.
@@ -46,25 +46,25 @@ namespace Nettify.MailAddress.IspInfo
         /// The socket type. Usually SSL or STARTTLS
         /// </summary>
         [XmlElement(ElementName = "socketType")]
-        public string SocketType { get; set; }
+        public string SocketType { get; set; } = "";
 
         /// <summary>
         /// The username indicator. Usually, it's set to %EMAILADDRESS%, which means the E-mail address placeholder.
         /// </summary>
         [XmlElement(ElementName = "username")]
-        public string Username { get; set; }
+        public string Username { get; set; } = "";
 
         /// <summary>
         /// The authentication methods
         /// </summary>
         [XmlElement(ElementName = "authentication")]
-        public string[] AuthenticationMethods { get; set; }
+        public string[]? AuthenticationMethods { get; set; }
 
         /// <summary>
         /// The server type. Usually "smtp"
         /// </summary>
         [XmlAttribute(AttributeName = "type")]
-        public string Type { get; set; }
+        public string Type { get; set; } = "";
     }
 
 }

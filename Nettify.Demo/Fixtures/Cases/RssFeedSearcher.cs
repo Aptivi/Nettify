@@ -29,7 +29,7 @@ namespace Nettify.Demo.Fixtures.Cases
 		{
 			// Prompt for search term
 			Console.Write("Enter search term: ");
-			string address = Console.ReadLine();
+			string address = Console.ReadLine() ?? "";
 
 			// Populate the feed info
 			var feeds = SearcherTools.GetRssFeeds(address);

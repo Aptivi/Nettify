@@ -30,10 +30,10 @@ namespace Nettify.Rss.Instance
     [DebuggerDisplay("{FeedTitle}: {FeedUrl}")]
     public class RSSFeed
     {
-        private string _FeedUrl;
+        private string _FeedUrl = "";
         private RSSFeedType _FeedType;
-        private string _FeedTitle;
-        private string _FeedDescription;
+        private string _FeedTitle = "";
+        private string _FeedDescription = "";
         private RSSArticle[] _FeedArticles = [];
 
         /// <summary>
@@ -125,7 +125,6 @@ namespace Nettify.Rss.Instance
 
         internal void Finalize(XmlDocument feedDocument, RSSFeedType feedType)
         {
-
             // Infer feed type
             var FeedNodeList = default(XmlNodeList);
             if (feedType == RSSFeedType.Infer)
@@ -166,6 +165,8 @@ namespace Nettify.Rss.Instance
             }
 
             // Populate basic feed properties
+            if (FeedNodeList is null)
+                throw new RSSException("Can't get node list for this feed.");
             string FeedTitle = Convert.ToString(RSSTools.GetFeedProperty("title", FeedNodeList, _FeedType));
             string FeedDescription = Convert.ToString(RSSTools.GetFeedProperty("description", FeedNodeList, _FeedType));
 

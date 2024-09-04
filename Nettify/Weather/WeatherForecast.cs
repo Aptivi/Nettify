@@ -17,6 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -67,7 +68,8 @@ namespace Nettify.Weather
             var stream = WeatherDownloader.GetStreamAsync(WeatherURL).Result;
             WeatherDownloader.DefaultRequestHeaders.Remove("Accept-Encoding");
             string uncompressed = Uncompress(stream);
-            var WeatherToken = JsonObject.Parse(uncompressed);
+            var WeatherToken = JsonObject.Parse(uncompressed) ??
+                throw new Exception("Can't get weather token");
             return FinalizeInstallation(WeatherToken, Unit);
         }
 
@@ -103,7 +105,8 @@ namespace Nettify.Weather
             var stream = await WeatherDownloader.GetStreamAsync(WeatherURL);
             WeatherDownloader.DefaultRequestHeaders.Remove("Accept-Encoding");
             string uncompressed = Uncompress(stream);
-            var WeatherToken = JsonObject.Parse(uncompressed);
+            var WeatherToken = JsonObject.Parse(uncompressed) ??
+                throw new Exception("Can't get weather token");
             return FinalizeInstallation(WeatherToken, Unit);
         }
 
@@ -112,8 +115,10 @@ namespace Nettify.Weather
             // Get the adjusted data
             T Adjust<T>(string dayPartData)
             {
-                var dayPartArray = WeatherToken["daypart"][0][dayPartData];
-                var adjusted = dayPartArray[0] ?? dayPartArray[1];
+                var dayPartArray = WeatherToken?["daypart"]?[0]?[dayPartData] ??
+                    throw new Exception("Can't get day part array");
+                var adjusted = dayPartArray[0] ?? dayPartArray[1] ??
+                    throw new Exception("Can't get adjusted day part");
                 return (T)adjusted.GetValue<T>();
             }
 
@@ -289,22 +294,27 @@ namespace Nettify.Weather
         internal static Dictionary<string, (double, double)> FinalizeCityList(Stream WeatherCityListDataStream)
         {
             string uncompressed = Uncompress(WeatherCityListDataStream);
-            var token = JsonObject.Parse(uncompressed);
+            var token = JsonObject.Parse(uncompressed) ??
+                throw new Exception("Can't get city list");
 
             // Get the addresses, the latitudes, and the longitudes
-            var loc = token["location"];
-            var addresses = (JsonArray)loc["address"];
-            var latitudes = (JsonArray)loc["latitude"];
-            var longitudes = (JsonArray)loc["longitude"];
+            var loc = token["location"] ??
+                throw new Exception("Can't get location");
+            var addresses = (JsonArray?)loc["address"] ??
+                throw new Exception("Can't get addresses");
+            var latitudes = (JsonArray?)loc["latitude"] ??
+                throw new Exception("Can't get latitudes");
+            var longitudes = (JsonArray?)loc["longitude"] ??
+                throw new Exception("Can't get longitudes");
             Debug.Assert(addresses.Count == latitudes.Count && addresses.Count == longitudes.Count && latitudes.Count == longitudes.Count);
 
             // Put needed data
             Dictionary<string, (double, double)> cities = [];
             for (int i = 0; i < addresses.Count; i++)
             {
-                var address = (string)addresses[i];
-                var lat = (double)latitudes[i];
-                var lng = (double)longitudes[i];
+                var address = (string?)addresses[i] ?? "";
+                var lat = (double)(latitudes[i] ?? 0);
+                var lng = (double)(longitudes[i] ?? 0);
                 cities.Add(address, (lat, lng));
             }
 

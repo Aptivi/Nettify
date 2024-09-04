@@ -29,7 +29,7 @@ namespace Nettify.Demo.Fixtures.Cases
 		{
 			// Prompt for RSS URL
 			Console.Write("Enter RSS URL: ");
-			string address = Console.ReadLine();
+			string address = Console.ReadLine() ?? "";
 
 			// Populate the RSS info
 			var feed = new RSSFeed(address, RSSFeedType.Infer);

@@ -34,31 +34,31 @@ namespace Nettify.MailAddress.IspInfo
         /// The username indicator. Usually, it's set to %EMAILADDRESS%, which means the E-mail address placeholder.
         /// </summary>
         [XmlElement(ElementName = "username")]
-        public string Username { get; set; }
+        public string Username { get; set; } = "";
 
         /// <summary>
         /// The username field information
         /// </summary>
         [XmlElement(ElementName = "usernameField")]
-        public UsernameField UsernameField { get; set; }
+        public UsernameField? UsernameField { get; set; }
 
         /// <summary>
         /// The password field information
         /// </summary>
         [XmlElement(ElementName = "passwordField")]
-        public PasswordField PasswordField { get; set; }
+        public PasswordField? PasswordField { get; set; }
 
         /// <summary>
         /// The log-in button information
         /// </summary>
         [XmlElement(ElementName = "loginButton")]
-        public LoginButton LoginButton { get; set; }
+        public LoginButton? LoginButton { get; set; }
 
         /// <summary>
         /// The webmail URL
         /// </summary>
         [XmlAttribute(AttributeName = "url")]
-        public string Url { get; set; }
+        public string Url { get; set; } = "";
     }
 
 }

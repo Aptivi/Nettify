@@ -94,7 +94,9 @@ namespace Nettify.Rss
         {
             // Variables
             var Parameters = new Dictionary<string, XmlNode>();
-            string Title = default, Link = default, Description = default;
+            string Title = "";
+            string Link = "";
+            string Description = "";
 
             // Parse article
             foreach (XmlNode ArticleNode in Article.ChildNodes)

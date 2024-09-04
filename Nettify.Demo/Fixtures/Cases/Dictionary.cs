@@ -29,7 +29,7 @@ namespace Nettify.Demo.Fixtures.Cases
         {
             // Prompt for a word
             Console.Write("Enter a word: ");
-            string input = Console.ReadLine();
+            string input = Console.ReadLine() ?? "";
 
             // Analyze them
             var result = DictionaryManager.GetWordInfo(input);
@@ -40,35 +40,35 @@ namespace Nettify.Demo.Fixtures.Cases
                 Console.WriteLine($"  Phonetic: {word.PhoneticWord}");
 
                 // Meanings
-                foreach (var meaning in word.Meanings)
+                foreach (var meaning in word.Meanings ?? [])
                 {
                     // Part of Speech
                     Console.WriteLine($"    Part of Speech: {meaning.PartOfSpeech}");
 
                     // Definitions
-                    foreach (var definition in meaning.Definitions)
+                    foreach (var definition in meaning.Definitions ?? [])
                     {
                         // A definition and an example
                         Console.WriteLine($"      Definition: {definition.Definition}");
                         Console.WriteLine($"      Example in Sentence: {definition.Example}");
 
                         // Synonyms and Antonyms
-                        Console.WriteLine($"      Def. Synonyms: {string.Join(", ", definition.Synonyms)}");
-                        Console.WriteLine($"      Def. Antonyms: {string.Join(", ", definition.Antonyms)}");
+                        Console.WriteLine($"      Def. Synonyms: {string.Join(", ", definition.Synonyms ?? [])}");
+                        Console.WriteLine($"      Def. Antonyms: {string.Join(", ", definition.Antonyms ?? [])}");
                     }
 
                     // Synonyms and Antonyms
-                    Console.WriteLine($"    Base Synonyms: {string.Join(", ", meaning.Synonyms)}");
-                    Console.WriteLine($"    Base Antonyms: {string.Join(", ", meaning.Antonyms)}");
+                    Console.WriteLine($"    Base Synonyms: {string.Join(", ", meaning.Synonyms ?? [])}");
+                    Console.WriteLine($"    Base Antonyms: {string.Join(", ", meaning.Antonyms ?? [])}");
                 }
 
                 // Sources
-                foreach (var source in word.SourceUrls)
+                foreach (var source in word.SourceUrls ?? [])
                     Console.WriteLine($"    Source: {source}");
 
                 // License
                 var license = word.LicenseInfo;
-                Console.WriteLine($"  License: {license.Name} [{license.Url}]");
+                Console.WriteLine($"  License: {license?.Name} [{license?.Url}]");
             }
         }
     }

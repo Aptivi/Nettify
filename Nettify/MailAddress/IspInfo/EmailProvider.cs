@@ -34,43 +34,43 @@ namespace Nettify.MailAddress.IspInfo
         /// The list of domains
         /// </summary>
         [XmlElement(ElementName = "domain")]
-        public string[] Domain { get; set; }
+        public string[]? Domain { get; set; }
 
         /// <summary>
         /// The full name for the ISP mail server
         /// </summary>
         [XmlElement(ElementName = "displayName")]
-        public string DisplayName { get; set; }
+        public string DisplayName { get; set; } = "";
 
         /// <summary>
         /// The short name for the ISP mail server
         /// </summary>
         [XmlElement(ElementName = "displayShortName")]
-        public string DisplayShortName { get; set; }
+        public string DisplayShortName { get; set; } = "";
 
         /// <summary>
         /// List of incoming servers
         /// </summary>
         [XmlElement(ElementName = "incomingServer")]
-        public IncomingServer[] IncomingServer { get; set; }
+        public IncomingServer[]? IncomingServer { get; set; }
 
         /// <summary>
         /// Outgoing server
         /// </summary>
         [XmlElement(ElementName = "outgoingServer")]
-        public OutgoingServer OutgoingServer { get; set; }
+        public OutgoingServer? OutgoingServer { get; set; }
 
         /// <summary>
         /// Documentation information
         /// </summary>
         [XmlElement(ElementName = "documentation")]
-        public Documentation[] Documentation { get; set; }
+        public Documentation[]? Documentation { get; set; }
 
         /// <summary>
         /// The dominating domain
         /// </summary>
         [XmlAttribute(AttributeName = "id")]
-        public string DominatingDomain { get; set; }
+        public string DominatingDomain { get; set; } = "";
     }
 
 }

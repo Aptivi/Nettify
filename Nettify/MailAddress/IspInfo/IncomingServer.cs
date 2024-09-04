@@ -34,7 +34,7 @@ namespace Nettify.MailAddress.IspInfo
         /// The hostname for the server
         /// </summary>
         [XmlElement(ElementName = "hostname")]
-        public string Hostname { get; set; }
+        public string Hostname { get; set; } = "";
 
         /// <summary>
         /// The port for the server. Usually 995 or 993, depending on the server.
@@ -46,31 +46,31 @@ namespace Nettify.MailAddress.IspInfo
         /// The socket type. Usually SSL or STARTTLS
         /// </summary>
         [XmlElement(ElementName = "socketType")]
-        public string SocketType { get; set; }
+        public string SocketType { get; set; } = "";
 
         /// <summary>
         /// The username indicator. Usually, it's set to %EMAILADDRESS%, which means the E-mail address placeholder.
         /// </summary>
         [XmlElement(ElementName = "username")]
-        public string Username { get; set; }
+        public string Username { get; set; } = "";
 
         /// <summary>
         /// The authentication methods
         /// </summary>
         [XmlElement(ElementName = "authentication")]
-        public string[] Authentication { get; set; }
+        public string[]? Authentication { get; set; }
 
         /// <summary>
         /// The server type. Usually "imap" or "pop3"
         /// </summary>
         [XmlAttribute(AttributeName = "type")]
-        public string Type { get; set; }
+        public string Type { get; set; } = "";
 
         /// <summary>
         /// POP3 server properties
         /// </summary>
         [XmlElement(ElementName = "pop3")]
-        public Pop3 Pop3 { get; set; }
+        public Pop3? Pop3 { get; set; }
     }
 
 }
