@@ -39,6 +39,10 @@ do
 
     # Optimize the XML for .NET's strict XML parser
     sed -i '1 i\<?xml version=\"1.0\" encoding=\"UTF-8\"?>' $OUTPUTFILE
+
+    # Write ISP name to file
+    rm -f $ROOT/isps.txt
+    printf "${ISP}\n" >> $ROOT/isps.txt
 done
 
 # Done. User can now build Nettify.

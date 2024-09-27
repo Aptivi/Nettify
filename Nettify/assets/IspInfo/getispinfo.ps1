@@ -11,4 +11,6 @@ $ISPS | ForEach-Object -Process {
     $a = Get-Content $XMLFILE
     $b = '<?xml version="1.0" encoding="UTF-8"?>'
     Set-Content $XMLFILE -value $b,$a
+    if (Test-Path "$PSScriptRoot\isps.txt") { Remove-Item -Path "$PSScriptRoot\isps.txt" }
+    Write-Output "$_" >> "$PSScriptRoot\isps.txt"
 }
