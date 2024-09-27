@@ -21,6 +21,7 @@ readarray -t ISPS < <(cat $DBFILE | grep -oP 'href=".+?"' | tail -n +6 | cut -b 
 
 # Form URLs and download their information one by one here
 ISPCOUNT=${#ISPS[@]}
+rm -f $ROOT/isps.txt
 for ISPIDX in "${!ISPS[@]}"
 do
     ISP=${ISPS[ISPIDX]}
@@ -41,7 +42,6 @@ do
     sed -i '1 i\<?xml version=\"1.0\" encoding=\"UTF-8\"?>' $OUTPUTFILE
 
     # Write ISP name to file
-    rm -f $ROOT/isps.txt
     printf "${ISP}\n" >> $ROOT/isps.txt
 done
 
