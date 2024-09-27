@@ -12,10 +12,6 @@ jobs:
   track:
     name: Track
     runs-on: 'ubuntu-latest'
-    permissions:
-      actions: read
-      contents: read
-      security-events: write
     strategy:
       fail-fast: false
 
@@ -29,10 +25,6 @@ jobs:
     - name: Download the list
       run: |
         bash Nettify/assets/IspInfo/getispinfo.sh
-    - name: Show git diff
-      run: |
-        git status
-        git diff
     - name: Add difference and push
       uses: EndBug/add-and-commit@v9
       with:
