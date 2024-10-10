@@ -1,10 +1,10 @@
-This version of Nettify enables nullable support so that you can now know if there are possible nulls when using it.
+This version of Nettify fixes security issues with `System.Text.Json`.
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[+]` Added nullable support
+- `[+]` Updated `System.Text.Json` to fix a security issue (see [here](https://github.com/advisories/GHSA-8g4q-xg66-9fp4))
 
 Review the commit history if you want to get a deep insight about the changes.
 
