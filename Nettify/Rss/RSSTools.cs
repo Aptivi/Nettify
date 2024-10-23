@@ -18,6 +18,7 @@
 //
 
 using HtmlAgilityPack;
+using Nettify.Helpers;
 using Nettify.Rss.Instance;
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,7 @@ namespace Nettify.Rss
     /// </summary>
     public static class RSSTools
     {
-        internal static HttpClient Client = new();
+        internal static HttpClient Client = new(new HttpGetRedirectingHandler());
 
         /// <summary>
         /// Make instances of RSS Article from feed node and type
