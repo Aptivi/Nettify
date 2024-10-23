@@ -1,10 +1,10 @@
-This version of Nettify fixes security issues with `System.Text.Json`.
+This version of Nettify adds a handler that allows the RSS feed reader to handle redirects.
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[+]` Updated `System.Text.Json` to fix a security issue (see [here](https://github.com/advisories/GHSA-8g4q-xg66-9fp4))
+- `[*]` Fixed some RSS feeds, such as NY Times, causing unhelpful error messages
 
 Review the commit history if you want to get a deep insight about the changes.
 
