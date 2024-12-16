@@ -5,7 +5,7 @@
 <br>
     
 <img
-  src = 'https://cdn.jsdelivr.net/gh/Aptivi/Nettify@main/Nettify/OfficialAppIcon-Nettify-512.png'
+  src = 'https://cdn.jsdelivr.net/gh/Aptivi/Nettify@main/assets/OfficialAppIcon-Nettify-512.png'
   width = 256
   align = center
 />

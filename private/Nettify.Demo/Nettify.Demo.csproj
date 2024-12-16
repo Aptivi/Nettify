@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Nettify\Nettify.csproj" />
+    <ProjectReference Include="..\..\public\Nettify\Nettify.csproj" />
   </ItemGroup>
 
   <ItemGroup>

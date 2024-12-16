@@ -3,7 +3,7 @@
         {
             "src": [
                 {
-                    "files": [ "Nettify/**.csproj" ],
+                    "files": [ "public/**/*.csproj" ],
                     "src": ".."
                 }
             ],

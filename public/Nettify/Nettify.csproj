@@ -23,7 +23,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <None Include="..\README.md">
+    <None Include="..\..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
@@ -35,7 +35,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="OfficialAppIcon-Nettify-512.png">
+    <None Include="..\..\assets\OfficialAppIcon-Nettify-512.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
