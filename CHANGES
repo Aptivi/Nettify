@@ -1,10 +1,10 @@
-This version of Nettify adds a handler that allows the RSS feed reader to handle redirects.
+This version of Nettify fixes the ISP list.
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[*]` Fixed some RSS feeds, such as NY Times, causing unhelpful error messages
+- `[*]` Fixed ISP list
 
 Review the commit history if you want to get a deep insight about the changes.
 
