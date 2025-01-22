@@ -28,9 +28,9 @@ jobs:
         id: release-asset
         run: |
           chmod +x tools/*.sh
+          bash public/Nettify/assets/IspInfo/getispinfo.sh
           make
           make doc
-          bash public/Nettify/assets/IspInfo/getispinfo.sh
           cd tools ; ./docgen-pack.sh ; cd ..
           echo "SUBJECT=$(cat CHANGES.TITLE)" >> "$GITHUB_OUTPUT"
           echo 'BODY<<EOF' >> "$GITHUB_OUTPUT"
