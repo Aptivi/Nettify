@@ -31,5 +31,5 @@ jobs:
         message: upd - Updated ISP list (text)
         committer_name: Mail Provider Watch
         committer_email: actions@github.com
-        add: 'Nettify/assets/IspInfo/isps.txt'
+        add: 'public/Nettify/assets/IspInfo/isps.txt'
         push: true
