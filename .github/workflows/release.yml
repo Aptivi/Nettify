@@ -28,7 +28,6 @@ jobs:
         id: release-asset
         run: |
           chmod +x tools/*.sh
-          bash public/Nettify/assets/IspInfo/getispinfo.sh
           make rel-ci
           make doc
           cd tools ; ./docgen-pack.sh ; cd ..

@@ -36,6 +36,10 @@ fi
 dotnetpath=`which dotnet`
 checkerror $? "dotnet is not found"
 
+# Download ISP info
+echo Downloading ISP info...
+bash ../public/Nettify/assets/IspInfo/getispinfo.sh
+
 # Download packages
 echo Downloading packages...
 "$dotnetpath" restore "../Nettify.sln" -p:Configuration=$releaseconf ${@:2}
