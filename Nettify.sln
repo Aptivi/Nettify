@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Private", "Private", "{32BA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildTargets", "private\BuildTargets\BuildTargets.csproj", "{BBB1335C-DF6A-4BB0-9341-BB3B503739D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nettify.Tests", "private\Nettify.Tests\Nettify.Tests.csproj", "{53ED0ED1-F3F2-41CF-915F-966C952FCFE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{BBB1335C-DF6A-4BB0-9341-BB3B503739D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBB1335C-DF6A-4BB0-9341-BB3B503739D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBB1335C-DF6A-4BB0-9341-BB3B503739D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53ED0ED1-F3F2-41CF-915F-966C952FCFE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53ED0ED1-F3F2-41CF-915F-966C952FCFE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53ED0ED1-F3F2-41CF-915F-966C952FCFE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53ED0ED1-F3F2-41CF-915F-966C952FCFE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{62C25E4C-7941-4655-9CDB-A22E2FEE4B2D} = {FEBDAC29-915F-4A9F-9B17-81AC4A7B2178}
 		{72CD0859-837E-4022-8B52-F4E7C212143B} = {32BAC8ED-C125-4B9A-B4BB-21DF46467013}
 		{BBB1335C-DF6A-4BB0-9341-BB3B503739D8} = {32BAC8ED-C125-4B9A-B4BB-21DF46467013}
+		{53ED0ED1-F3F2-41CF-915F-966C952FCFE0} = {32BAC8ED-C125-4B9A-B4BB-21DF46467013}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A90B7DED-5D5D-4422-8B98-5D71FBF96268}

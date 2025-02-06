@@ -1,0 +1,17 @@
+﻿<Project Sdk="MSTest.Sdk/3.7.3">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <TestingPlatformShowTestsFailure>true</TestingPlatformShowTestsFailure>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Shouldly" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\public\Nettify\Nettify.csproj" />
+  </ItemGroup>
+
+</Project>
