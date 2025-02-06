@@ -17,7 +17,7 @@ then
     printf "${RED}Failed to download the ISP list.$RESET\n"
     exit $ERROR
 fi
-readarray -t ISPS < <(cat $DBFILE | grep -oP 'href=".+?"' | tail -n +6 | cut -b 7- | sed 's/.$//')
+ISPS=($(cat $DBFILE | grep -oE 'href=".+?"' | cut -b 6- | sed 's/^"\([^"]*\).*/\1/' | tail -n +3))
 
 # Form URLs and download their information one by one here
 ISPCOUNT=${#ISPS[@]}
