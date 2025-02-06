@@ -39,7 +39,8 @@ do
     fi
 
     # Optimize the XML for .NET's strict XML parser
-    sed -i '1 i\<?xml version=\"1.0\" encoding=\"UTF-8\"?>' $OUTPUTFILE
+    (echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" ; cat $OUTPUTFILE) > $OUTPUTFILE.new
+    mv $OUTPUTFILE.new $OUTPUTFILE
 
     # Write ISP name to file
     printf "${ISP}\n" >> $ROOT/isps.txt
