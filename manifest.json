@@ -21,7 +21,11 @@
           "relative_path": "api/Nettify.EnglishDictionary.DictionaryManager.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.EnglishDictionary.DictionaryManager",
+      "Summary": "<p sourcefile=\"api/Nettify.EnglishDictionary.DictionaryManager.yml\" sourcestartlinenumber=\"1\">Dictionary management module</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -31,7 +35,11 @@
           "relative_path": "api/Nettify.EnglishDictionary.DictionaryWord.DefinitionType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.EnglishDictionary.DictionaryWord.DefinitionType",
+      "Summary": "<p sourcefile=\"api/Nettify.EnglishDictionary.DictionaryWord.DefinitionType.yml\" sourcestartlinenumber=\"1\">The definition class</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -41,7 +49,11 @@
           "relative_path": "api/Nettify.EnglishDictionary.DictionaryWord.License.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.EnglishDictionary.DictionaryWord.License",
+      "Summary": "<p sourcefile=\"api/Nettify.EnglishDictionary.DictionaryWord.License.yml\" sourcestartlinenumber=\"1\">The license class</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -51,7 +63,11 @@
           "relative_path": "api/Nettify.EnglishDictionary.DictionaryWord.Meaning.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.EnglishDictionary.DictionaryWord.Meaning",
+      "Summary": "<p sourcefile=\"api/Nettify.EnglishDictionary.DictionaryWord.Meaning.yml\" sourcestartlinenumber=\"1\">Word meaning class</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -61,7 +77,11 @@
           "relative_path": "api/Nettify.EnglishDictionary.DictionaryWord.Phonetic.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.EnglishDictionary.DictionaryWord.Phonetic",
+      "Summary": "<p sourcefile=\"api/Nettify.EnglishDictionary.DictionaryWord.Phonetic.yml\" sourcestartlinenumber=\"1\">Phonetic class</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -71,7 +91,11 @@
           "relative_path": "api/Nettify.EnglishDictionary.DictionaryWord.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.EnglishDictionary.DictionaryWord",
+      "Summary": "<p sourcefile=\"api/Nettify.EnglishDictionary.DictionaryWord.yml\" sourcestartlinenumber=\"1\">A dictionary word</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -81,7 +105,11 @@
           "relative_path": "api/Nettify.EnglishDictionary.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.EnglishDictionary",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -91,7 +119,11 @@
           "relative_path": "api/Nettify.MailAddress.IspInfo.ClientConfig.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.MailAddress.IspInfo.ClientConfig",
+      "Summary": "<p sourcefile=\"api/Nettify.MailAddress.IspInfo.ClientConfig.yml\" sourcestartlinenumber=\"1\">Client configuration parameters</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -101,7 +133,11 @@
           "relative_path": "api/Nettify.MailAddress.IspInfo.Documentation.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.MailAddress.IspInfo.Documentation",
+      "Summary": "<p sourcefile=\"api/Nettify.MailAddress.IspInfo.Documentation.yml\" sourcestartlinenumber=\"1\">Documentation information</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -111,7 +147,11 @@
           "relative_path": "api/Nettify.MailAddress.IspInfo.EmailProvider.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.MailAddress.IspInfo.EmailProvider",
+      "Summary": "<p sourcefile=\"api/Nettify.MailAddress.IspInfo.EmailProvider.yml\" sourcestartlinenumber=\"1\">The E-mail provider (ISP) information</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -121,7 +161,11 @@
           "relative_path": "api/Nettify.MailAddress.IspInfo.Enable.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.MailAddress.IspInfo.Enable",
+      "Summary": "<p sourcefile=\"api/Nettify.MailAddress.IspInfo.Enable.yml\" sourcestartlinenumber=\"1\">The log-in server enablement instructions</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -131,7 +175,11 @@
           "relative_path": "api/Nettify.MailAddress.IspInfo.IncomingServer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.MailAddress.IspInfo.IncomingServer",
+      "Summary": "<p sourcefile=\"api/Nettify.MailAddress.IspInfo.IncomingServer.yml\" sourcestartlinenumber=\"1\">The incoming server information (POP3 or IMAP)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -141,7 +189,11 @@
           "relative_path": "api/Nettify.MailAddress.IspInfo.LoginButton.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.MailAddress.IspInfo.LoginButton",
+      "Summary": "<p sourcefile=\"api/Nettify.MailAddress.IspInfo.LoginButton.yml\" sourcestartlinenumber=\"1\">The log-in button information</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -151,7 +203,11 @@
           "relative_path": "api/Nettify.MailAddress.IspInfo.LoginPage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.MailAddress.IspInfo.LoginPage",
+      "Summary": "<p sourcefile=\"api/Nettify.MailAddress.IspInfo.LoginPage.yml\" sourcestartlinenumber=\"1\">The webmail login page</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -161,7 +217,11 @@
           "relative_path": "api/Nettify.MailAddress.IspInfo.LoginPageInfo.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.MailAddress.IspInfo.LoginPageInfo",
+      "Summary": "<p sourcefile=\"api/Nettify.MailAddress.IspInfo.LoginPageInfo.yml\" sourcestartlinenumber=\"1\">The login page information for the ISP's webmail</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -171,7 +231,11 @@
           "relative_path": "api/Nettify.MailAddress.IspInfo.OAuth2.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.MailAddress.IspInfo.OAuth2",
+      "Summary": "<p sourcefile=\"api/Nettify.MailAddress.IspInfo.OAuth2.yml\" sourcestartlinenumber=\"1\">The OAuth2 information for the ISP's mail server</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -181,7 +245,11 @@
           "relative_path": "api/Nettify.MailAddress.IspInfo.OutgoingServer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.MailAddress.IspInfo.OutgoingServer",
+      "Summary": "<p sourcefile=\"api/Nettify.MailAddress.IspInfo.OutgoingServer.yml\" sourcestartlinenumber=\"1\">The outgoing server information (SMTP)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -191,7 +259,11 @@
           "relative_path": "api/Nettify.MailAddress.IspInfo.PasswordField.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.MailAddress.IspInfo.PasswordField",
+      "Summary": "<p sourcefile=\"api/Nettify.MailAddress.IspInfo.PasswordField.yml\" sourcestartlinenumber=\"1\">The password field information</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -201,7 +273,11 @@
           "relative_path": "api/Nettify.MailAddress.IspInfo.Pop3.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.MailAddress.IspInfo.Pop3",
+      "Summary": "<p sourcefile=\"api/Nettify.MailAddress.IspInfo.Pop3.yml\" sourcestartlinenumber=\"1\">POP3 server properties</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -211,7 +287,11 @@
           "relative_path": "api/Nettify.MailAddress.IspInfo.UsernameField.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.MailAddress.IspInfo.UsernameField",
+      "Summary": "<p sourcefile=\"api/Nettify.MailAddress.IspInfo.UsernameField.yml\" sourcestartlinenumber=\"1\">The username field for the webmail</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -221,7 +301,11 @@
           "relative_path": "api/Nettify.MailAddress.IspInfo.WebMail.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.MailAddress.IspInfo.WebMail",
+      "Summary": "<p sourcefile=\"api/Nettify.MailAddress.IspInfo.WebMail.yml\" sourcestartlinenumber=\"1\">The webmail configuration</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -231,7 +315,11 @@
           "relative_path": "api/Nettify.MailAddress.IspInfo.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.MailAddress.IspInfo",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -241,7 +329,11 @@
           "relative_path": "api/Nettify.MailAddress.IspTools.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.MailAddress.IspTools",
+      "Summary": "<p sourcefile=\"api/Nettify.MailAddress.IspTools.yml\" sourcestartlinenumber=\"1\">Internet Service Provider server information</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -251,7 +343,11 @@
           "relative_path": "api/Nettify.MailAddress.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.MailAddress",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -261,7 +357,11 @@
           "relative_path": "api/Nettify.Rss.Instance.RSSArticle.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.Rss.Instance.RSSArticle",
+      "Summary": "<p sourcefile=\"api/Nettify.Rss.Instance.RSSArticle.yml\" sourcestartlinenumber=\"1\">RSS article instance</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -271,7 +371,11 @@
           "relative_path": "api/Nettify.Rss.Instance.RSSFeed.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.Rss.Instance.RSSFeed",
+      "Summary": "<p sourcefile=\"api/Nettify.Rss.Instance.RSSFeed.yml\" sourcestartlinenumber=\"1\">RSS feed class instance</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -281,7 +385,11 @@
           "relative_path": "api/Nettify.Rss.Instance.RSSFeedType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.Rss.Instance.RSSFeedType",
+      "Summary": "<p sourcefile=\"api/Nettify.Rss.Instance.RSSFeedType.yml\" sourcestartlinenumber=\"1\">Enumeration for RSS feed type</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -291,7 +399,11 @@
           "relative_path": "api/Nettify.Rss.Instance.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.Rss.Instance",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -301,7 +413,11 @@
           "relative_path": "api/Nettify.Rss.RSSTools.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.Rss.RSSTools",
+      "Summary": "<p sourcefile=\"api/Nettify.Rss.RSSTools.yml\" sourcestartlinenumber=\"1\">The RSS tools</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -311,7 +427,11 @@
           "relative_path": "api/Nettify.Rss.Searcher.SearcherInstance.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.Rss.Searcher.SearcherInstance",
+      "Summary": "<p sourcefile=\"api/Nettify.Rss.Searcher.SearcherInstance.yml\" sourcestartlinenumber=\"1\">Feedly search result class instance</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -321,7 +441,11 @@
           "relative_path": "api/Nettify.Rss.Searcher.SearcherTools.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.Rss.Searcher.SearcherTools",
+      "Summary": "<p sourcefile=\"api/Nettify.Rss.Searcher.SearcherTools.yml\" sourcestartlinenumber=\"1\">RSS feed searcher tools powered by Feedly</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -331,7 +455,11 @@
           "relative_path": "api/Nettify.Rss.Searcher.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.Rss.Searcher",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -341,7 +469,11 @@
           "relative_path": "api/Nettify.Rss.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.Rss",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -351,7 +483,11 @@
           "relative_path": "api/Nettify.Weather.UnitMeasurement.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.Weather.UnitMeasurement",
+      "Summary": "<p sourcefile=\"api/Nettify.Weather.UnitMeasurement.yml\" sourcestartlinenumber=\"1\">Unit measurement</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -361,7 +497,11 @@
           "relative_path": "api/Nettify.Weather.WeatherCondition.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.Weather.WeatherCondition",
+      "Summary": "<p sourcefile=\"api/Nettify.Weather.WeatherCondition.yml\" sourcestartlinenumber=\"1\">Weather condition</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -371,7 +511,11 @@
           "relative_path": "api/Nettify.Weather.WeatherForecast.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.Weather.WeatherForecast",
+      "Summary": "<p sourcefile=\"api/Nettify.Weather.WeatherForecast.yml\" sourcestartlinenumber=\"1\">The forecast tools (The Weather Channel)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -381,7 +525,11 @@
           "relative_path": "api/Nettify.Weather.WeatherForecastInfo.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.Weather.WeatherForecastInfo",
+      "Summary": "<p sourcefile=\"api/Nettify.Weather.WeatherForecastInfo.yml\" sourcestartlinenumber=\"1\">Forecast information</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -391,7 +539,11 @@
           "relative_path": "api/Nettify.Weather.WeatherForecastOwm.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.Weather.WeatherForecastOwm",
+      "Summary": "<p sourcefile=\"api/Nettify.Weather.WeatherForecastOwm.yml\" sourcestartlinenumber=\"1\">The forecast tools (OpenWeatherMap)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -401,7 +553,11 @@
           "relative_path": "api/Nettify.Weather.WeatherServerType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.Weather.WeatherServerType",
+      "Summary": "<p sourcefile=\"api/Nettify.Weather.WeatherServerType.yml\" sourcestartlinenumber=\"1\">Weather server type</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -411,7 +567,11 @@
           "relative_path": "api/Nettify.Weather.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.Weather",
+      "Summary": null
     },
     {
       "type": "Toc",
