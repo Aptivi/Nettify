@@ -8,6 +8,10 @@ set buildoptions=%*
 call set buildoptions=%%buildoptions:*%1=%%
 if "%buildoptions%" == "*=" set buildoptions=
 
+REM Turn off telemetry and logo
+set DOTNET_CLI_TELEMETRY_OPTOUT=1
+set DOTNET_NOLOGO=1
+
 :ispinfo
 echo Downloading ISP info...
 powershell "Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process ; ../public/Nettify/assets/IspInfo/getispinfo.ps1"
