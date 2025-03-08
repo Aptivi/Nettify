@@ -2,247 +2,247 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.EnglishDictionary.DictionaryManager.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.EnglishDictionary.DictionaryWord.DefinitionType.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.EnglishDictionary.DictionaryWord.License.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.EnglishDictionary.DictionaryWord.Meaning.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.EnglishDictionary.DictionaryWord.Phonetic.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.EnglishDictionary.DictionaryWord.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.EnglishDictionary.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.MailAddress.IspInfo.ClientConfig.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.MailAddress.IspInfo.Documentation.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.MailAddress.IspInfo.EmailProvider.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.MailAddress.IspInfo.Enable.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.MailAddress.IspInfo.IncomingServer.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.MailAddress.IspInfo.LoginButton.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.MailAddress.IspInfo.LoginPage.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.MailAddress.IspInfo.LoginPageInfo.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.MailAddress.IspInfo.OAuth2.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.MailAddress.IspInfo.OutgoingServer.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.MailAddress.IspInfo.PasswordField.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.MailAddress.IspInfo.Pop3.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.MailAddress.IspInfo.UsernameField.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.MailAddress.IspInfo.WebMail.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.MailAddress.IspInfo.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.MailAddress.IspTools.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.MailAddress.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.Rss.Instance.RSSArticle.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.Rss.Instance.RSSFeed.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.Rss.Instance.RSSFeedType.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.Rss.Instance.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.Rss.RSSTools.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.Rss.Searcher.SearcherInstance.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.Rss.Searcher.SearcherTools.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.Rss.Searcher.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.Rss.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.Weather.UnitMeasurement.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.Weather.WeatherCondition.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.Weather.WeatherForecast.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.Weather.WeatherForecastInfo.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.Weather.WeatherForecastOwm.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.Weather.WeatherServerType.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/api/Nettify.Weather.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Nettify/index.html</loc>
-    <lastmod>2025-03-01T05:50:42+00:00</lastmod>
+    <lastmod>2025-03-08T12:54:54+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
