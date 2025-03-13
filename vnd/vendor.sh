@@ -1,6 +1,10 @@
 #!/bin/bash
 
 prebuild() {
+    # Check for dependencies
+    dotnetpath=`which dotnet`
+    checkerror $? "dotnet is not found"
+    
     # Download ISP info
     echo Downloading ISP info...
     bash $ROOTDIR/public/Nettify/assets/IspInfo/getispinfo.sh
