@@ -4,10 +4,16 @@ prebuild() {
     # Check for dependencies
     dotnetpath=`which dotnet`
     checkerror $? "dotnet is not found"
+    pythonpath=`which python3`
+    checkerror $? "python3 is not found"
     
-    # Download ISP info
-    echo Downloading ISP info...
-    bash $ROOTDIR/public/Nettify/assets/IspInfo/getispinfo.sh
+    # Process ISP info
+    echo Processing ISP info...
+    mkdir -p $ROOTDIR/assets/ispdb
+    rm -rf $ROOTDIR/assets/ispdb/*
+    find $ROOTDIR/assets/autoconfig/ispdb -mindepth 1 -maxdepth 1 -type f -name "*.xml" -exec "$pythonpath" $ROOTDIR/assets/autoconfig/tools/convert.py -a -d $ROOTDIR/assets/ispdb {} \;
+    checkerror $? "Failed to process ISP info"
+    find $ROOTDIR/assets/ispdb -mindepth 1 -maxdepth 1 -type f -exec mv {} {}.xml \;
 }
 
 build() {

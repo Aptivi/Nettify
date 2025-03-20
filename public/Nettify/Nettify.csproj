@@ -19,7 +19,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="assets\IspInfo\*.xml" />
+    <Content Remove="..\..\assets\ispdb\*.xml" />
   </ItemGroup>
   
   <ItemGroup>
@@ -42,7 +42,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="assets\IspInfo\*.xml" />
+    <EmbeddedResource Include="..\..\assets\ispdb\*.xml" Visible="false" />
   </ItemGroup>
 
 </Project>

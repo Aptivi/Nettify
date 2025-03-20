@@ -43,7 +43,7 @@ namespace Nettify.MailAddress
             {
                 // Get the resource names
                 string[] resourceNames = thisAssembly.GetManifestResourceNames();
-                int prefixLength = "Nettify.assets.IspInfo.".Length;
+                int prefixLength = "Nettify.".Length;
                 List<string> hosts = [];
 
                 // Process and return them
@@ -104,7 +104,7 @@ namespace Nettify.MailAddress
                 throw new ArgumentException($"ISP {host} not known.");
 
             // Get the final database address
-            var xmlStream = thisAssembly.GetManifestResourceStream($"Nettify.assets.IspInfo.{host}.xml");
+            var xmlStream = thisAssembly.GetManifestResourceStream($"Nettify.{host}.xml");
             string xmlContent = new StreamReader(xmlStream).ReadToEnd();
 
             // Get the client config
