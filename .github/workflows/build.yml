@@ -28,6 +28,12 @@ jobs:
       - name: Setup Mono (Unix)
         if: matrix.runs-on == 'ubuntu-latest'
         run: sudo apt install mono-complete
+      - name: Setup lxml (Ubuntu)
+        if: matrix.runs-on == 'ubuntu-latest'
+        run: sudo apt install python3-lxml
+      - name: Setup lxml (pip3)
+        if: matrix.runs-on != 'ubuntu-latest'
+        run: pip install lxml
       - name: Solution Compilation (Windows)
         if: matrix.runs-on == 'windows-latest'
         run: ./tools/build.cmd Debug -p:ContinuousIntegrationBuild=true

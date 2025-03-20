@@ -28,6 +28,7 @@ jobs:
         id: release-asset
         run: |
           chmod +x tools/*.sh
+          sudo apt install python3-lxml
           make rel-ci
           make doc
           ./tools/docgen-pack.sh
