@@ -10,7 +10,7 @@ RESET=$(tput sgr0)
 
 # Download and parse the ISP list
 printf "Downloading the ISP list...\n"
-curl -s -o $DBFILE $DATABASEADDRESS
+curl -o $DBFILE $DATABASEADDRESS
 if [ $? -ne 0 ]
 then
     ERROR=$?
