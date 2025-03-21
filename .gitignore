@@ -411,5 +411,6 @@ DocGen/api/
 # Vim
 *.swp
 
-# ISP info XML Files
+# ISP info XML Files and virtual environment
 assets/ispdb
+nvenv

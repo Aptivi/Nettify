@@ -35,7 +35,7 @@ jobs:
         languages: ${{ matrix.language }}
     - name: Build
       run: |
-        sudo apt install python3-lxml
+        sudo apt install python3-venv
         make rel-ci
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3

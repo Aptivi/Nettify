@@ -11,9 +11,12 @@ prebuild() {
     echo Processing ISP info...
     mkdir -p $ROOTDIR/assets/ispdb
     rm -rf $ROOTDIR/assets/ispdb/*
-    find $ROOTDIR/assets/autoconfig/ispdb -mindepth 1 -maxdepth 1 -type f -name "*.xml" -exec "$pythonpath" $ROOTDIR/assets/autoconfig/tools/convert.py -a -d $ROOTDIR/assets/ispdb {} \;
+    "$pythonpath" -m venv $ROOTDIR/nvenv
+    "$ROOTDIR/nvenv/bin/pip" install lxml
+    find $ROOTDIR/assets/autoconfig/ispdb -mindepth 1 -maxdepth 1 -type f -name "*.xml" -exec "$ROOTDIR/nvenv/bin/python" $ROOTDIR/assets/autoconfig/tools/convert.py -a -d $ROOTDIR/assets/ispdb {} \;
     checkerror $? "Failed to process ISP info"
     find $ROOTDIR/assets/ispdb -mindepth 1 -maxdepth 1 -type f -exec mv {} {}.xml \;
+    rm -rf $ROOTDIR/nvenv
 }
 
 build() {

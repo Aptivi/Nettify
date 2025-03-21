@@ -28,7 +28,7 @@ jobs:
           dotnet-version: '8.0.x'
       - name: Release Asset Preparation
         run: |
-          sudo apt install python3-lxml
+          sudo apt install python3-venv
           make dbg-ci
       - name: Package Publication
         run: |
