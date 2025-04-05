@@ -4,3 +4,6 @@
 [submodule "assets/autoconfig"]
 	path = assets/autoconfig
 	url = https://github.com/thunderbird/autoconfig
+[submodule "DocGen/theme"]
+	path = DocGen/theme
+	url = https://github.com/Aptivi/docfx-apt
