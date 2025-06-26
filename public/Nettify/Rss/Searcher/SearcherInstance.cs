@@ -19,6 +19,7 @@
 
 using System.Diagnostics;
 using System.Text.Json.Serialization;
+using Textify.General;
 
 namespace Nettify.Rss.Searcher
 {
@@ -92,7 +93,19 @@ namespace Nettify.Rss.Searcher
         /// <summary>
         /// Description of the feed
         /// </summary>
-        public string Description =>
+        public string Description
+        {
+            get
+            {
+                var lines = FullDescription.SplitNewLines();
+                return lines.Length > 0 ? lines[0] : "";
+            }
+        }
+
+        /// <summary>
+        /// Full description of the field
+        /// </summary>
+        public string FullDescription =>
             description;
 
         /// <summary>
