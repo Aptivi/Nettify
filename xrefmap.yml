@@ -1445,6 +1445,19 @@ references:
   isSpec: "True"
   fullName: Nettify.Rss.Searcher.SearcherInstance.FeedId
   nameWithType: SearcherInstance.FeedId
+- uid: Nettify.Rss.Searcher.SearcherInstance.FullDescription
+  name: FullDescription
+  href: api/Nettify.Rss.Searcher.SearcherInstance.html#Nettify_Rss_Searcher_SearcherInstance_FullDescription
+  commentId: P:Nettify.Rss.Searcher.SearcherInstance.FullDescription
+  fullName: Nettify.Rss.Searcher.SearcherInstance.FullDescription
+  nameWithType: SearcherInstance.FullDescription
+- uid: Nettify.Rss.Searcher.SearcherInstance.FullDescription*
+  name: FullDescription
+  href: api/Nettify.Rss.Searcher.SearcherInstance.html#Nettify_Rss_Searcher_SearcherInstance_FullDescription_
+  commentId: Overload:Nettify.Rss.Searcher.SearcherInstance.FullDescription
+  isSpec: "True"
+  fullName: Nettify.Rss.Searcher.SearcherInstance.FullDescription
+  nameWithType: SearcherInstance.FullDescription
 - uid: Nettify.Rss.Searcher.SearcherInstance.IconUrl
   name: IconUrl
   href: api/Nettify.Rss.Searcher.SearcherInstance.html#Nettify_Rss_Searcher_SearcherInstance_IconUrl
