@@ -1685,15 +1685,15 @@ references:
   isSpec: "True"
   fullName: Nettify.Rss.Searcher.SearcherTools.GetFeedFromSearcherAsync
   nameWithType: SearcherTools.GetFeedFromSearcherAsync
-- uid: Nettify.Rss.Searcher.SearcherTools.GetRssFeeds(System.String)
-  name: GetRssFeeds(string)
-  href: api/Nettify.Rss.Searcher.SearcherTools.html#Nettify_Rss_Searcher_SearcherTools_GetRssFeeds_System_String_
-  commentId: M:Nettify.Rss.Searcher.SearcherTools.GetRssFeeds(System.String)
-  name.vb: GetRssFeeds(String)
-  fullName: Nettify.Rss.Searcher.SearcherTools.GetRssFeeds(string)
-  fullName.vb: Nettify.Rss.Searcher.SearcherTools.GetRssFeeds(String)
-  nameWithType: SearcherTools.GetRssFeeds(string)
-  nameWithType.vb: SearcherTools.GetRssFeeds(String)
+- uid: Nettify.Rss.Searcher.SearcherTools.GetRssFeeds(System.String,System.Int32)
+  name: GetRssFeeds(string, int)
+  href: api/Nettify.Rss.Searcher.SearcherTools.html#Nettify_Rss_Searcher_SearcherTools_GetRssFeeds_System_String_System_Int32_
+  commentId: M:Nettify.Rss.Searcher.SearcherTools.GetRssFeeds(System.String,System.Int32)
+  name.vb: GetRssFeeds(String, Integer)
+  fullName: Nettify.Rss.Searcher.SearcherTools.GetRssFeeds(string, int)
+  fullName.vb: Nettify.Rss.Searcher.SearcherTools.GetRssFeeds(String, Integer)
+  nameWithType: SearcherTools.GetRssFeeds(string, int)
+  nameWithType.vb: SearcherTools.GetRssFeeds(String, Integer)
 - uid: Nettify.Rss.Searcher.SearcherTools.GetRssFeeds*
   name: GetRssFeeds
   href: api/Nettify.Rss.Searcher.SearcherTools.html#Nettify_Rss_Searcher_SearcherTools_GetRssFeeds_
@@ -1701,15 +1701,15 @@ references:
   isSpec: "True"
   fullName: Nettify.Rss.Searcher.SearcherTools.GetRssFeeds
   nameWithType: SearcherTools.GetRssFeeds
-- uid: Nettify.Rss.Searcher.SearcherTools.GetRssFeedsAsync(System.String)
-  name: GetRssFeedsAsync(string)
-  href: api/Nettify.Rss.Searcher.SearcherTools.html#Nettify_Rss_Searcher_SearcherTools_GetRssFeedsAsync_System_String_
-  commentId: M:Nettify.Rss.Searcher.SearcherTools.GetRssFeedsAsync(System.String)
-  name.vb: GetRssFeedsAsync(String)
-  fullName: Nettify.Rss.Searcher.SearcherTools.GetRssFeedsAsync(string)
-  fullName.vb: Nettify.Rss.Searcher.SearcherTools.GetRssFeedsAsync(String)
-  nameWithType: SearcherTools.GetRssFeedsAsync(string)
-  nameWithType.vb: SearcherTools.GetRssFeedsAsync(String)
+- uid: Nettify.Rss.Searcher.SearcherTools.GetRssFeedsAsync(System.String,System.Int32)
+  name: GetRssFeedsAsync(string, int)
+  href: api/Nettify.Rss.Searcher.SearcherTools.html#Nettify_Rss_Searcher_SearcherTools_GetRssFeedsAsync_System_String_System_Int32_
+  commentId: M:Nettify.Rss.Searcher.SearcherTools.GetRssFeedsAsync(System.String,System.Int32)
+  name.vb: GetRssFeedsAsync(String, Integer)
+  fullName: Nettify.Rss.Searcher.SearcherTools.GetRssFeedsAsync(string, int)
+  fullName.vb: Nettify.Rss.Searcher.SearcherTools.GetRssFeedsAsync(String, Integer)
+  nameWithType: SearcherTools.GetRssFeedsAsync(string, int)
+  nameWithType.vb: SearcherTools.GetRssFeedsAsync(String, Integer)
 - uid: Nettify.Rss.Searcher.SearcherTools.GetRssFeedsAsync*
   name: GetRssFeedsAsync
   href: api/Nettify.Rss.Searcher.SearcherTools.html#Nettify_Rss_Searcher_SearcherTools_GetRssFeedsAsync_
