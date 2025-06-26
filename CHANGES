@@ -1,10 +1,11 @@
-This version of Nettify fixes the ISP list.
+This version of Nettify adds more control to the RSS search feature.
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[*]` Fixed ISP list
+- `[+]` Added an option to control the RSS feed count when searching
+- `[+]` Added an option to get the first line of the description
 
 Review the commit history if you want to get a deep insight about the changes.
 
