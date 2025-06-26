@@ -32,16 +32,16 @@ namespace Nettify.Rss.Searcher
     public static class SearcherTools
     {
         private static readonly HttpClient client = new();
-        private const string feedlySearchLink = "https://cloud.feedly.com/v3/search/feeds/?n=100000&query=";
 
         /// <summary>
         /// Gets RSS feed list from search query (up to 100,000 feeds)
         /// </summary>
         /// <param name="searchTerm">Search term</param>
+        /// <param name="feeds">Number of feeds to fetch</param>
         /// <returns>List of RSS feeds</returns>
-        public static SearcherInstance[] GetRssFeeds(string searchTerm)
+        public static SearcherInstance[] GetRssFeeds(string searchTerm, int feeds = 100000)
         {
-            string feedsJson = InitializeFeedJsonAsync(searchTerm).Result;
+            string feedsJson = InitializeFeedJsonAsync(searchTerm, feeds).Result;
             return DeserializeFeedJson(feedsJson);
         }
 
@@ -49,17 +49,18 @@ namespace Nettify.Rss.Searcher
         /// Gets RSS feed list from search query asynchronously (up to 100,000 feeds)
         /// </summary>
         /// <param name="searchTerm">Search term</param>
+        /// <param name="feeds">Number of feeds to fetch</param>
         /// <returns>List of RSS feeds</returns>
-        public static async Task<SearcherInstance[]> GetRssFeedsAsync(string searchTerm)
+        public static async Task<SearcherInstance[]> GetRssFeedsAsync(string searchTerm, int feeds = 100000)
         {
-            string feedsJson = await InitializeFeedJsonAsync(searchTerm);
+            string feedsJson = await InitializeFeedJsonAsync(searchTerm, feeds);
             return DeserializeFeedJson(feedsJson);
         }
 
         /// <summary>
         /// Gets a working <see cref="RSSFeed"/> instance from one of the search results
         /// </summary>
-        /// <param name="feed">Feed obtained from <see cref="GetRssFeeds(string)"/> or <see cref="GetRssFeedsAsync(string)"/></param>
+        /// <param name="feed">Feed obtained from <see cref="GetRssFeeds(string, int)"/> or <see cref="GetRssFeedsAsync(string, int)"/></param>
         /// <returns>A working RSS feed instance</returns>
         public static RSSFeed GetFeedFromSearcher(SearcherInstance feed)
         {
@@ -78,7 +79,7 @@ namespace Nettify.Rss.Searcher
         /// <summary>
         /// Gets a working <see cref="RSSFeed"/> instance from one of the search results asynchronously
         /// </summary>
-        /// <param name="feed">Feed obtained from <see cref="GetRssFeeds(string)"/> or <see cref="GetRssFeedsAsync(string)"/></param>
+        /// <param name="feed">Feed obtained from <see cref="GetRssFeeds(string, int)"/> or <see cref="GetRssFeedsAsync(string, int)"/></param>
         /// <returns>A working RSS feed instance</returns>
         public static async Task<RSSFeed> GetFeedFromSearcherAsync(SearcherInstance feed)
         {
@@ -94,11 +95,15 @@ namespace Nettify.Rss.Searcher
             return rssFeed;
         }
 
-        private static async Task<string> InitializeFeedJsonAsync(string searchTerm)
+        private static async Task<string> InitializeFeedJsonAsync(string searchTerm, int feeds)
         {
+            if (feeds < 1)
+                feeds = 1;
+            if (feeds > 100000)
+                feeds = 100000;
             if (string.IsNullOrWhiteSpace(searchTerm))
                 searchTerm = "tech";
-            Uri feedsUri = new(feedlySearchLink + searchTerm);
+            Uri feedsUri = new("https://cloud.feedly.com/v3/search/feeds/?n=" + feeds + "&query=" + searchTerm);
             string response = await client.GetStringAsync(feedsUri);
             return response;
         }

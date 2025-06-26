@@ -32,7 +32,7 @@ namespace Nettify.Demo.Fixtures.Cases
 			string address = Console.ReadLine() ?? "";
 
 			// Populate the feed info
-			var feeds = SearcherTools.GetRssFeeds(address);
+			var feeds = SearcherTools.GetRssFeeds(address, 10);
 			foreach (var feed in feeds)
 			{
 				Console.WriteLine("  Title: {0}", feed.Title);
