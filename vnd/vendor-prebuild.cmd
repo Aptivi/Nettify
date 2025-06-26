@@ -12,4 +12,4 @@ pip install lxml
 forfiles /s /m *.xml /p "%ROOTDIRFIND%\assets\autoconfig\ispdb" /C "cmd /c echo @path && python3 "%ROOTDIR%/assets/autoconfig/tools/convert.py" -a -d "%ROOTDIR%/assets/ispdb" @path"
 forfiles /s /m * /p "%ROOTDIRFIND%\assets\ispdb" /C "cmd /c echo @path && move @path @path.xml"
 call "%ROOTDIR%\nvenv\Scripts\deactivate.bat"
-del /s /q "%ROOTDIR%\nvenv"
+rd /s /q "%ROOTDIR%\nvenv"
