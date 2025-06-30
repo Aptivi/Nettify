@@ -101,7 +101,7 @@ namespace Nettify.MailAddress
         {
             // Check to see if the ISP is known
             if (!IsIspKnown(host))
-                throw new ArgumentException($"ISP {host} not known.");
+                throw new ArgumentException(string.Format("ISP {0} not known.", host));
 
             // Get the final database address
             var xmlStream = thisAssembly.GetManifestResourceStream($"Nettify.{host}.xml");
