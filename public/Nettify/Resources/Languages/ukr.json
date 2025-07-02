@@ -1,0 +1,62 @@
+{
+  "lang": "ukr",
+  "name": "Ukrainian",
+  "cultures": [
+    "uk",
+    "uk-UA"
+  ],
+  "locs": [
+    {
+      "loc": "NETTIFY_MAILADDRESS_EXCEPTION_UNKNOWNISP",
+      "text": "Інтернет-провайдер {0} невідомий."
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_NOFEEDNODE",
+      "text": "Не вдається отримати список вузлів для цього каналу."
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_NOFEEDS",
+      "text": "Не вдається отримати канали."
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_SEARCHRESULTDESERIALIZE",
+      "text": "Не вдається десеріалізувати в масив результатів пошуку."
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_FEEDTYPEINVALID",
+      "text": "Недійсний тип RSS-каналу."
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOWEATHERTOKEN",
+      "text": "Не вдається отримати токен погоди."
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NODAYPART",
+      "text": "Не вдається отримати масив частин доби."
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOADJDAYPART",
+      "text": "Не вдається отримати скориговану частину доби."
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOCITYLIST",
+      "text": "Не вдається отримати список міст."
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOLOCATION",
+      "text": "Не вдається отримати місцезнаходження."
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOADDRESSES",
+      "text": "Не вдається отримати адреси."
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOLATS",
+      "text": "Не вдається отримати широти."
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOLONGS",
+      "text": "Не вдається отримати довготи."
+    }
+  ]
+}

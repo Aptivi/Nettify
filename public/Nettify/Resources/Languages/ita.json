@@ -1,0 +1,65 @@
+{
+  "lang": "ita",
+  "name": "Italian",
+  "cultures": [
+    "it",
+    "it-CH",
+    "it-IT",
+    "it-SM",
+    "it-VA"
+  ],
+  "locs": [
+    {
+      "loc": "NETTIFY_MAILADDRESS_EXCEPTION_UNKNOWNISP",
+      "text": "ISP {0} sconosciuto."
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_NOFEEDNODE",
+      "text": "Impossibile ottenere l'elenco dei nodi per questo feed."
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_NOFEEDS",
+      "text": "Impossibile ottenere i feed."
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_SEARCHRESULTDESERIALIZE",
+      "text": "Impossibile deserializzare in un array di risultati di ricerca."
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_FEEDTYPEINVALID",
+      "text": "Tipo di feed RSS non valido."
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOWEATHERTOKEN",
+      "text": "Impossibile ottenere il token meteo"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NODAYPART",
+      "text": "Impossibile ottenere l'array delle fasce orarie"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOADJDAYPART",
+      "text": "Impossibile ottenere la fascia oraria modificata"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOCITYLIST",
+      "text": "Impossibile ottenere l'elenco delle città"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOLOCATION",
+      "text": "Impossibile ottenere la posizione"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOADDRESSES",
+      "text": "Impossibile ottenere gli indirizzi"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOLATS",
+      "text": "Impossibile ottenere le latitudini"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOLONGS",
+      "text": "Impossibile ottenere le longitudini"
+    }
+  ]
+}

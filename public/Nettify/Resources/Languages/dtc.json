@@ -1,0 +1,68 @@
+{
+  "lang": "dtc",
+  "name": "Dutch",
+  "cultures": [
+    "nl",
+    "nl-AW",
+    "nl-BE",
+    "nl-BQ",
+    "nl-CW",
+    "nl-NL",
+    "nl-SR",
+    "nl-SX"
+  ],
+  "locs": [
+    {
+      "loc": "NETTIFY_MAILADDRESS_EXCEPTION_UNKNOWNISP",
+      "text": "ISP {0} onbekend."
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_NOFEEDNODE",
+      "text": "Kan geen knooppuntenlijst voor deze feed ophalen."
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_NOFEEDS",
+      "text": "Kan geen feeds ophalen."
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_SEARCHRESULTDESERIALIZE",
+      "text": "Kan niet deserialiseren naar een array met zoekresultaten."
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_FEEDTYPEINVALID",
+      "text": "Ongeldig RSS-feedtype."
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOWEATHERTOKEN",
+      "text": "Kan geen weertoken ophalen"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NODAYPART",
+      "text": "Kan geen dagdeel-array ophalen"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOADJDAYPART",
+      "text": "Kan geen aangepast dagdeel ophalen"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOCITYLIST",
+      "text": "Kan geen stedenlijst ophalen"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOLOCATION",
+      "text": "Kan geen locatie ophalen"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOADDRESSES",
+      "text": "Kan geen adressen ophalen"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOLATS",
+      "text": "Kan geen breedtegraden ophalen"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOLONGS",
+      "text": "Kan geen lengtegraden ophalen"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "lang": "ind-T",
+  "name": "Hindi",
+  "cultures": [
+    "hi",
+    "hi-IN"
+  ],
+  "locs": [
+    {
+      "loc": "NETTIFY_MAILADDRESS_EXCEPTION_UNKNOWNISP",
+      "text": "ISP {0} ज्ञात नहीं है।"
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_NOFEEDNODE",
+      "text": "इस फ़ीड के लिए नोड सूची नहीं मिल सकती।"
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_NOFEEDS",
+      "text": "फ़ीड नहीं मिल सकती।"
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_SEARCHRESULTDESERIALIZE",
+      "text": "खोज परिणामों की सरणी में डीसेरियलाइज़ नहीं किया जा सकता।"
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_FEEDTYPEINVALID",
+      "text": "अमान्य RSS फ़ीड प्रकार।"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOWEATHERTOKEN",
+      "text": "मौसम टोकन नहीं मिल सकता"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NODAYPART",
+      "text": "दिन भाग सरणी नहीं मिल सकती"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOADJDAYPART",
+      "text": "समायोजित दिन भाग नहीं मिल सकता"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOCITYLIST",
+      "text": "शहर सूची नहीं मिल सकती"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOLOCATION",
+      "text": "स्थान नहीं मिल सकता"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOADDRESSES",
+      "text": "पते नहीं मिल सकते"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOLATS",
+      "text": "अक्षांश नहीं मिल सकते"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOLONGS",
+      "text": "देशांतर नहीं मिल सकते"
+    }
+  ]
+}

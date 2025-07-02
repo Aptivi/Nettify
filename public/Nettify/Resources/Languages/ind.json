@@ -1,0 +1,62 @@
+{
+  "lang": "ind",
+  "name": "Hindi",
+  "cultures": [
+    "hi-Latn",
+    "hi-Latn-IN"
+  ],
+  "locs": [
+    {
+      "loc": "NETTIFY_MAILADDRESS_EXCEPTION_UNKNOWNISP",
+      "text": "isp {0} gyaat nahin hai."
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_NOFEEDNODE",
+      "text": "is feed ke lie nod soochee nahin mil sakatee."
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_NOFEEDS",
+      "text": "feed nahin mil sakatee."
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_SEARCHRESULTDESERIALIZE",
+      "text": "khoj parinaamon kee saranee mein deeseriyalaiz nahin kiya ja sakata."
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_FEEDTYPEINVALID",
+      "text": "amaany rss feed prakaar."
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOWEATHERTOKEN",
+      "text": "mausam tokan nahin mil sakata"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NODAYPART",
+      "text": "din bhaag saranee nahin mil sakatee"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOADJDAYPART",
+      "text": "samaayojit din bhaag nahin mil sakata"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOCITYLIST",
+      "text": "shahar soochee nahin mil sakatee"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOLOCATION",
+      "text": "sthaan nahin mil sakata"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOADDRESSES",
+      "text": "pate nahin mil sakate"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOLATS",
+      "text": "akshaansh nahin mil sakate"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOLONGS",
+      "text": "deshaantar nahin mil sakate"
+    }
+  ]
+}

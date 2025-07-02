@@ -1,4 +1,4 @@
-﻿//
+//
 // Nettify  Copyright (C) 2023-2025  Aptivi
 //
 // This file is part of Nettify
@@ -17,6 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using Nettify.Language;
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -166,7 +167,7 @@ namespace Nettify.Rss.Instance
 
             // Populate basic feed properties
             if (FeedNodeList is null)
-                throw new RSSException("Can't get node list for this feed.");
+                throw new RSSException(LanguageTools.GetLocalized("NETTIFY_RSS_EXCEPTION_NOFEEDNODE"));
             string FeedTitle = Convert.ToString(RSSTools.GetFeedProperty("title", FeedNodeList, _FeedType));
             string FeedDescription = Convert.ToString(RSSTools.GetFeedProperty("description", FeedNodeList, _FeedType));
 

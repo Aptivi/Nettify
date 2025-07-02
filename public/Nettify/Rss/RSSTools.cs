@@ -1,4 +1,4 @@
-﻿//
+//
 // Nettify  Copyright (C) 2023-2025  Aptivi
 //
 // This file is part of Nettify
@@ -19,6 +19,7 @@
 
 using HtmlAgilityPack;
 using Nettify.Helpers;
+using Nettify.Language;
 using Nettify.Rss.Instance;
 using System;
 using System.Collections.Generic;
@@ -81,7 +82,7 @@ namespace Nettify.Rss
 
                     break;
                 default:
-                    throw new RSSException("Invalid RSS feed type.");
+                    throw new RSSException(LanguageTools.GetLocalized("NETTIFY_RSS_EXCEPTION_FEEDTYPEINVALID"));
             }
             return [.. Articles];
         }
@@ -177,7 +178,7 @@ namespace Nettify.Rss
 
                     break;
                 default:
-                    throw new RSSException("Invalid RSS feed type.");
+                    throw new RSSException(LanguageTools.GetLocalized("NETTIFY_RSS_EXCEPTION_FEEDTYPEINVALID"));
             }
             return "";
         }

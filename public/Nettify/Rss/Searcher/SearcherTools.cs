@@ -1,4 +1,4 @@
-﻿//
+//
 // Nettify  Copyright (C) 2023-2025  Aptivi
 //
 // This file is part of Nettify
@@ -17,6 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using Nettify.Language;
 using Nettify.Rss.Instance;
 using System;
 using System.Net.Http;
@@ -111,10 +112,10 @@ namespace Nettify.Rss.Searcher
         private static SearcherInstance[] DeserializeFeedJson(string feedsJson)
         {
             var token = JsonObject.Parse(feedsJson) ??
-                throw new RSSException("Can't get feeds.");
+                throw new RSSException(LanguageTools.GetLocalized("NETTIFY_RSS_EXCEPTION_NOFEEDS"));
             var feedsToken = token["results"];
             var instances = JsonSerializer.Deserialize<SearcherInstance[]>(feedsToken) ??
-                throw new RSSException("Can't deserialize to an array of search results.");
+                throw new RSSException(LanguageTools.GetLocalized("NETTIFY_RSS_EXCEPTION_SEARCHRESULTDESERIALIZE"));
             return instances;
         }
     }

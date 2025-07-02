@@ -1,4 +1,4 @@
-﻿//
+//
 // Nettify  Copyright (C) 2023-2025  Aptivi
 //
 // This file is part of Nettify
@@ -17,6 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using Nettify.Language;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -69,7 +70,7 @@ namespace Nettify.Weather
             WeatherDownloader.DefaultRequestHeaders.Remove("Accept-Encoding");
             string uncompressed = Uncompress(stream);
             var WeatherToken = JsonObject.Parse(uncompressed) ??
-                throw new Exception("Can't get weather token");
+                throw new Exception(LanguageTools.GetLocalized("NETTIFY_WEATHER_EXCEPTION_NOWEATHERTOKEN"));
             return FinalizeInstallation(WeatherToken, Unit);
         }
 
@@ -106,7 +107,7 @@ namespace Nettify.Weather
             WeatherDownloader.DefaultRequestHeaders.Remove("Accept-Encoding");
             string uncompressed = Uncompress(stream);
             var WeatherToken = JsonObject.Parse(uncompressed) ??
-                throw new Exception("Can't get weather token");
+                throw new Exception(LanguageTools.GetLocalized("NETTIFY_WEATHER_EXCEPTION_NOWEATHERTOKEN"));
             return FinalizeInstallation(WeatherToken, Unit);
         }
 
@@ -116,9 +117,9 @@ namespace Nettify.Weather
             T Adjust<T>(string dayPartData)
             {
                 var dayPartArray = WeatherToken?["daypart"]?[0]?[dayPartData] ??
-                    throw new Exception("Can't get day part array");
+                    throw new Exception(LanguageTools.GetLocalized("NETTIFY_WEATHER_EXCEPTION_NODAYPART"));
                 var adjusted = dayPartArray[0] ?? dayPartArray[1] ??
-                    throw new Exception("Can't get adjusted day part");
+                    throw new Exception(LanguageTools.GetLocalized("NETTIFY_WEATHER_EXCEPTION_NOADJDAYPART"));
                 return (T)adjusted.GetValue<T>();
             }
 
@@ -295,17 +296,17 @@ namespace Nettify.Weather
         {
             string uncompressed = Uncompress(WeatherCityListDataStream);
             var token = JsonObject.Parse(uncompressed) ??
-                throw new Exception("Can't get city list");
+                throw new Exception(LanguageTools.GetLocalized("NETTIFY_WEATHER_EXCEPTION_NOCITYLIST"));
 
             // Get the addresses, the latitudes, and the longitudes
             var loc = token["location"] ??
-                throw new Exception("Can't get location");
+                throw new Exception(LanguageTools.GetLocalized("NETTIFY_WEATHER_EXCEPTION_NOLOCATION"));
             var addresses = (JsonArray?)loc["address"] ??
-                throw new Exception("Can't get addresses");
+                throw new Exception(LanguageTools.GetLocalized("NETTIFY_WEATHER_EXCEPTION_NOADDRESSES"));
             var latitudes = (JsonArray?)loc["latitude"] ??
-                throw new Exception("Can't get latitudes");
+                throw new Exception(LanguageTools.GetLocalized("NETTIFY_WEATHER_EXCEPTION_NOLATS"));
             var longitudes = (JsonArray?)loc["longitude"] ??
-                throw new Exception("Can't get longitudes");
+                throw new Exception(LanguageTools.GetLocalized("NETTIFY_WEATHER_EXCEPTION_NOLONGS"));
             Debug.Assert(addresses.Count == latitudes.Count && addresses.Count == longitudes.Count && latitudes.Count == longitudes.Count);
 
             // Put needed data

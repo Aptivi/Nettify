@@ -1,4 +1,4 @@
-﻿//
+//
 // Nettify  Copyright (C) 2023-2025  Aptivi
 //
 // This file is part of Nettify
@@ -17,6 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using Nettify.Language;
 using Nettify.MailAddress.IspInfo;
 using System;
 using System.Collections.Generic;
@@ -101,7 +102,7 @@ namespace Nettify.MailAddress
         {
             // Check to see if the ISP is known
             if (!IsIspKnown(host))
-                throw new ArgumentException(string.Format("ISP {0} not known.", host));
+                throw new ArgumentException(string.Format(LanguageTools.GetLocalized("NETTIFY_MAILADDRESS_EXCEPTION_UNKNOWNISP"), host));
 
             // Get the final database address
             var xmlStream = thisAssembly.GetManifestResourceStream($"Nettify.{host}.xml");

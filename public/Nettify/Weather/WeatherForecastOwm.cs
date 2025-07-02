@@ -1,4 +1,4 @@
-﻿//
+//
 // Nettify  Copyright (C) 2023-2025  Aptivi
 //
 // This file is part of Nettify
@@ -17,6 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using Nettify.Language;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -80,7 +81,7 @@ namespace Nettify.Weather
             // Download and parse JSON data
             WeatherData = WeatherDownloader.GetStringAsync(WeatherURL).Result;
             JsonNode WeatherToken = JsonObject.Parse(WeatherData) ??
-                throw new Exception("Can't get weather token");
+                throw new Exception(LanguageTools.GetLocalized("NETTIFY_WEATHER_EXCEPTION_NOWEATHERTOKEN"));
             return FinalizeInstallation(WeatherToken, Unit);
         }
 
@@ -130,7 +131,7 @@ namespace Nettify.Weather
             // Download and parse JSON data
             WeatherData = await WeatherDownloader.GetStringAsync(WeatherURL);
             JsonNode WeatherToken = JsonObject.Parse(WeatherData) ??
-                throw new Exception("Can't get weather token");
+                throw new Exception(LanguageTools.GetLocalized("NETTIFY_WEATHER_EXCEPTION_NOWEATHERTOKEN"));
             return FinalizeInstallation(WeatherToken, Unit);
         }
 
@@ -179,7 +180,7 @@ namespace Nettify.Weather
             var WeatherCityList = new Dictionary<long, string>();
             string uncompressed = WeatherForecast.Uncompress(WeatherCityListDataStream);
             JsonArray WeatherToken = (JsonArray?)JsonArray.Parse(uncompressed) ??
-                throw new Exception("Can't get weather token");
+                throw new Exception(LanguageTools.GetLocalized("NETTIFY_WEATHER_EXCEPTION_NOWEATHERTOKEN"));
 
             // Put needed data to the class
             foreach (var WeatherCityToken in WeatherToken)

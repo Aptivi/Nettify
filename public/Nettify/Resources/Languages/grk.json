@@ -1,0 +1,63 @@
+{
+  "lang": "grk",
+  "name": "Greek",
+  "cultures": [
+    "el",
+    "el-CY",
+    "el-GR"
+  ],
+  "locs": [
+    {
+      "loc": "NETTIFY_MAILADDRESS_EXCEPTION_UNKNOWNISP",
+      "text": "Ο πάροχος υπηρεσιών Διαδικτύου {0} δεν είναι γνωστός."
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_NOFEEDNODE",
+      "text": "Δεν είναι δυνατή η λήψη λίστας κόμβων για αυτήν την ροή δεδομένων."
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_NOFEEDS",
+      "text": "Δεν είναι δυνατή η λήψη ροών δεδομένων."
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_SEARCHRESULTDESERIALIZE",
+      "text": "Δεν είναι δυνατή η αποσειριοποίηση σε έναν πίνακα αποτελεσμάτων αναζήτησης."
+    },
+    {
+      "loc": "NETTIFY_RSS_EXCEPTION_FEEDTYPEINVALID",
+      "text": "Μη έγκυρος τύπος ροής RSS."
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOWEATHERTOKEN",
+      "text": "Δεν είναι δυνατή η λήψη διακριτικού καιρού"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NODAYPART",
+      "text": "Δεν είναι δυνατή η λήψη πίνακα μέρους ημέρας"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOADJDAYPART",
+      "text": "Δεν είναι δυνατή η λήψη προσαρμοσμένου μέρους ημέρας"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOCITYLIST",
+      "text": "Δεν είναι δυνατή η λήψη λίστας πόλεων"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOLOCATION",
+      "text": "Δεν είναι δυνατή η λήψη τοποθεσίας"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOADDRESSES",
+      "text": "Δεν είναι δυνατή η λήψη διευθύνσεων"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOLATS",
+      "text": "Δεν είναι δυνατή η λήψη γεωγραφικών πλάτων"
+    },
+    {
+      "loc": "NETTIFY_WEATHER_EXCEPTION_NOLONGS",
+      "text": "Δεν είναι δυνατή η λήψη γεωγραφικών μηκών"
+    }
+  ]
+}
