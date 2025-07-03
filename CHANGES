@@ -1,11 +1,10 @@
-This version of Nettify adds more control to the RSS search feature.
+We've updated this project to accommodate the localization needs!
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[+]` Added an option to control the RSS feed count when searching
-- `[+]` Added an option to get the first line of the description
+- `[+]` Added localized strings
 
 Review the commit history if you want to get a deep insight about the changes.
 
