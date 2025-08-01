@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Remove="Microsoft.SourceLink.GitHub" />
+    <PackageReference Remove="Microsoft.SourceLink.GitLab" />
   </ItemGroup>
 
 </Project>
