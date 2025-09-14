@@ -36,7 +36,7 @@
 
 <!----------------------------------------------------------------------------->
 
-[Releases]: https://gitlab.com/aptivi/main/Nettify/-/releases
+[Releases]: https://github.com/Aptivi/Nettify/releases
 [NuGet]: https://www.nuget.org/packages/Nettify/
 
 [Libraries]: https://aptivi.gitbook.io/nettify-manual/project-dependencies
