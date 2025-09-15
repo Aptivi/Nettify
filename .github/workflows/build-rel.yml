@@ -28,6 +28,9 @@ jobs:
       - name: Setup Mono (Unix)
         if: matrix.runs-on == 'ubuntu-latest'
         run: sudo apt install mono-complete
+      - name: Setup Mono (macOS)
+        if: matrix.runs-on == 'macos-latest'
+        run: brew install mono
       - name: Setup systemwide Python3 venv (Ubuntu)
         if: matrix.runs-on == 'ubuntu-latest'
         run: sudo apt install python3-venv
