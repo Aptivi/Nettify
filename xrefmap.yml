@@ -335,6 +335,108 @@ references:
   isSpec: "True"
   fullName: Nettify.EnglishDictionary.DictionaryWord.Word
   nameWithType: DictionaryWord.Word
+- uid: Nettify.Localized
+  name: Nettify.Localized
+  href: api/Nettify.Localized.html
+  commentId: N:Nettify.Localized
+  fullName: Nettify.Localized
+  nameWithType: Nettify.Localized
+- uid: Nettify.Localized.LocalStrings
+  name: LocalStrings
+  href: api/Nettify.Localized.LocalStrings.html
+  commentId: T:Nettify.Localized.LocalStrings
+  fullName: Nettify.Localized.LocalStrings
+  nameWithType: LocalStrings
+- uid: Nettify.Localized.LocalStrings.CheckCulture(System.String,System.String)
+  name: CheckCulture(string, string)
+  href: api/Nettify.Localized.LocalStrings.html#Nettify_Localized_LocalStrings_CheckCulture_System_String_System_String_
+  commentId: M:Nettify.Localized.LocalStrings.CheckCulture(System.String,System.String)
+  name.vb: CheckCulture(String, String)
+  fullName: Nettify.Localized.LocalStrings.CheckCulture(string, string)
+  fullName.vb: Nettify.Localized.LocalStrings.CheckCulture(String, String)
+  nameWithType: LocalStrings.CheckCulture(string, string)
+  nameWithType.vb: LocalStrings.CheckCulture(String, String)
+- uid: Nettify.Localized.LocalStrings.CheckCulture*
+  name: CheckCulture
+  href: api/Nettify.Localized.LocalStrings.html#Nettify_Localized_LocalStrings_CheckCulture_
+  commentId: Overload:Nettify.Localized.LocalStrings.CheckCulture
+  isSpec: "True"
+  fullName: Nettify.Localized.LocalStrings.CheckCulture
+  nameWithType: LocalStrings.CheckCulture
+- uid: Nettify.Localized.LocalStrings.Exists(System.String,System.String)
+  name: Exists(string, string)
+  href: api/Nettify.Localized.LocalStrings.html#Nettify_Localized_LocalStrings_Exists_System_String_System_String_
+  commentId: M:Nettify.Localized.LocalStrings.Exists(System.String,System.String)
+  name.vb: Exists(String, String)
+  fullName: Nettify.Localized.LocalStrings.Exists(string, string)
+  fullName.vb: Nettify.Localized.LocalStrings.Exists(String, String)
+  nameWithType: LocalStrings.Exists(string, string)
+  nameWithType.vb: LocalStrings.Exists(String, String)
+- uid: Nettify.Localized.LocalStrings.Exists*
+  name: Exists
+  href: api/Nettify.Localized.LocalStrings.html#Nettify_Localized_LocalStrings_Exists_
+  commentId: Overload:Nettify.Localized.LocalStrings.Exists
+  isSpec: "True"
+  fullName: Nettify.Localized.LocalStrings.Exists
+  nameWithType: LocalStrings.Exists
+- uid: Nettify.Localized.LocalStrings.Languages
+  name: Languages
+  href: api/Nettify.Localized.LocalStrings.html#Nettify_Localized_LocalStrings_Languages
+  commentId: P:Nettify.Localized.LocalStrings.Languages
+  fullName: Nettify.Localized.LocalStrings.Languages
+  nameWithType: LocalStrings.Languages
+- uid: Nettify.Localized.LocalStrings.Languages*
+  name: Languages
+  href: api/Nettify.Localized.LocalStrings.html#Nettify_Localized_LocalStrings_Languages_
+  commentId: Overload:Nettify.Localized.LocalStrings.Languages
+  isSpec: "True"
+  fullName: Nettify.Localized.LocalStrings.Languages
+  nameWithType: LocalStrings.Languages
+- uid: Nettify.Localized.LocalStrings.ListLanguagesCulture(System.String)
+  name: ListLanguagesCulture(string)
+  href: api/Nettify.Localized.LocalStrings.html#Nettify_Localized_LocalStrings_ListLanguagesCulture_System_String_
+  commentId: M:Nettify.Localized.LocalStrings.ListLanguagesCulture(System.String)
+  name.vb: ListLanguagesCulture(String)
+  fullName: Nettify.Localized.LocalStrings.ListLanguagesCulture(string)
+  fullName.vb: Nettify.Localized.LocalStrings.ListLanguagesCulture(String)
+  nameWithType: LocalStrings.ListLanguagesCulture(string)
+  nameWithType.vb: LocalStrings.ListLanguagesCulture(String)
+- uid: Nettify.Localized.LocalStrings.ListLanguagesCulture*
+  name: ListLanguagesCulture
+  href: api/Nettify.Localized.LocalStrings.html#Nettify_Localized_LocalStrings_ListLanguagesCulture_
+  commentId: Overload:Nettify.Localized.LocalStrings.ListLanguagesCulture
+  isSpec: "True"
+  fullName: Nettify.Localized.LocalStrings.ListLanguagesCulture
+  nameWithType: LocalStrings.ListLanguagesCulture
+- uid: Nettify.Localized.LocalStrings.Localizations
+  name: Localizations
+  href: api/Nettify.Localized.LocalStrings.html#Nettify_Localized_LocalStrings_Localizations
+  commentId: P:Nettify.Localized.LocalStrings.Localizations
+  fullName: Nettify.Localized.LocalStrings.Localizations
+  nameWithType: LocalStrings.Localizations
+- uid: Nettify.Localized.LocalStrings.Localizations*
+  name: Localizations
+  href: api/Nettify.Localized.LocalStrings.html#Nettify_Localized_LocalStrings_Localizations_
+  commentId: Overload:Nettify.Localized.LocalStrings.Localizations
+  isSpec: "True"
+  fullName: Nettify.Localized.LocalStrings.Localizations
+  nameWithType: LocalStrings.Localizations
+- uid: Nettify.Localized.LocalStrings.Translate(System.String,System.String)
+  name: Translate(string, string)
+  href: api/Nettify.Localized.LocalStrings.html#Nettify_Localized_LocalStrings_Translate_System_String_System_String_
+  commentId: M:Nettify.Localized.LocalStrings.Translate(System.String,System.String)
+  name.vb: Translate(String, String)
+  fullName: Nettify.Localized.LocalStrings.Translate(string, string)
+  fullName.vb: Nettify.Localized.LocalStrings.Translate(String, String)
+  nameWithType: LocalStrings.Translate(string, string)
+  nameWithType.vb: LocalStrings.Translate(String, String)
+- uid: Nettify.Localized.LocalStrings.Translate*
+  name: Translate
+  href: api/Nettify.Localized.LocalStrings.html#Nettify_Localized_LocalStrings_Translate_
+  commentId: Overload:Nettify.Localized.LocalStrings.Translate
+  isSpec: "True"
+  fullName: Nettify.Localized.LocalStrings.Translate
+  nameWithType: LocalStrings.Translate
 - uid: Nettify.MailAddress
   name: Nettify.MailAddress
   href: api/Nettify.MailAddress.html
