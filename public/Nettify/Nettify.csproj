@@ -16,9 +16,6 @@
     <PackageIcon>OfficialAppIcon-Nettify-512.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageId>Nettify</PackageId>
-    
-    <!-- For cross platform and .NET 8.0+ support -->
-    <AptLocDisableInvalidCultureWarnings>true</AptLocDisableInvalidCultureWarnings>
   </PropertyGroup>
 
   <ItemGroup>
@@ -32,18 +29,12 @@
 
   <ItemGroup>
     <PackageReference Include="HtmlAgilityPack" Version="1.12.1" />
-    <PackageReference Include="LocaleStation" Version="1.3.2" />
-    <PackageReference Include="LocaleStation.Tools" Version="1.3.2" />
     <PackageReference Include="System.Text.Json" Version="9.0.6" />
-    <PackageReference Include="Textify.Offline" Version="2.13.0" />
+    <PackageReference Include="Textify.Offline" Version="2.13.2" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="..\..\assets\ispdb\*.xml" Visible="false" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <AdditionalFiles Include="Resources\Languages\*.json" AptLocIsLanguagePath="true" />
   </ItemGroup>
 
 </Project>
