@@ -19,6 +19,7 @@
 
 using System;
 using Nettify.MailAddress;
+using Textify.Versioning;
 
 namespace Nettify.Demo.Fixtures.Cases
 {
@@ -29,6 +30,11 @@ namespace Nettify.Demo.Fixtures.Cases
         {
             // Prompt for an e-mail address
             Console.Write("Enter an e-mail address: ");
+            try
+            {
+                var semVer = SemVer.Parse("9.0");
+            }
+            catch { }
             string address = Console.ReadLine() ?? "";
 
             // Query it
