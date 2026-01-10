@@ -32,7 +32,7 @@ build() {
 
     # Now, build.
     echo Building with configuration $releaseconf...
-    "$dotnetpath" build "$ROOTDIR/Nettify.sln" -p:Configuration=$releaseconf ${@:2}
+    "$dotnetpath" build "$ROOTDIR/Nettify.slnx" -p:Configuration=$releaseconf ${@:2}
     checkvendorerror $?
 }
 

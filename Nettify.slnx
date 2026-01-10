@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/Assets/">
+    <File Path="CHANGES" />
+    <File Path="CHANGES.TITLE" />
+    <File Path="Directory.Build.props" />
+  </Folder>
+  <Folder Name="/Private/">
+    <Project Path="private/BuildTargets/BuildTargets.csproj" />
+    <Project Path="private/Nettify.Demo/Nettify.Demo.csproj" />
+    <Project Path="private/Nettify.Tests/Nettify.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Public/">
+    <Project Path="public/Nettify/Nettify.csproj" />
+  </Folder>
+</Solution>
