@@ -36,6 +36,7 @@
 
   <ItemGroup>
     <EmbeddedResource Include="..\..\assets\ispdb\*.xml" Visible="false" />
+    <EmbeddedResource Include="../../assets/quotes/data/quotes.json" Visible="false" />
   </ItemGroup>
 
 </Project>

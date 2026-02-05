@@ -41,6 +41,9 @@ namespace Nettify.Demo.Fixtures
             // RSS
             new RssFeedViewer(),
             new RssFeedSearcher(),
+
+            // Quote
+            new RandomQuotes(),
         ];
 
         internal static IFixture GetFixtureFromName(string name)

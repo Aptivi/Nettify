@@ -1,36 +1,40 @@
 {
-    "profiles": {
-        "WSL": {
-            "commandName": "WSL2",
-            "distributionName": ""
-        },
-        "Nettify.Demo - Addresstigation": {
-            "commandName": "Project",
-            "commandLineArgs": "Addresstigation"
-        },
-        "Nettify.Demo - Dictionary": {
-            "commandName": "Project",
-            "commandLineArgs": "Dictionary"
-        },
-        "Nettify.Demo - Forecast": {
-            "commandName": "Project",
-            "commandLineArgs": "Forecast"
-        },
-        "Nettify.Demo - ForecastOwm": {
-            "commandName": "Project",
-            "commandLineArgs": "ForecastOwm"
-        },
-        "Nettify.Demo - ForecastList": {
-            "commandName": "Project",
-            "commandLineArgs": "ForecastList"
-        },
-        "Nettify.Demo - RssFeedViewer": {
-            "commandName": "Project",
-            "commandLineArgs": "RssFeedViewer"
-        },
-        "Nettify.Demo - RssFeedSearcher": {
-            "commandName": "Project",
-            "commandLineArgs": "RssFeedSearcher"
-        }
+  "profiles": {
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    },
+    "Nettify.Demo - Addresstigation": {
+      "commandName": "Project",
+      "commandLineArgs": "Addresstigation"
+    },
+    "Nettify.Demo - Dictionary": {
+      "commandName": "Project",
+      "commandLineArgs": "Dictionary"
+    },
+    "Nettify.Demo - Forecast": {
+      "commandName": "Project",
+      "commandLineArgs": "Forecast"
+    },
+    "Nettify.Demo - ForecastOwm": {
+      "commandName": "Project",
+      "commandLineArgs": "ForecastOwm"
+    },
+    "Nettify.Demo - ForecastList": {
+      "commandName": "Project",
+      "commandLineArgs": "ForecastList"
+    },
+    "Nettify.Demo - RssFeedViewer": {
+      "commandName": "Project",
+      "commandLineArgs": "RssFeedViewer"
+    },
+    "Nettify.Demo - RssFeedSearcher": {
+      "commandName": "Project",
+      "commandLineArgs": "RssFeedSearcher"
+    },
+    "Nettify.Demo - RandomQuotes": {
+      "commandName": "Project",
+      "commandLineArgs": "RandomQuotes"
     }
+  }
 }
