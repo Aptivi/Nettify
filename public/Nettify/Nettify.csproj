@@ -28,10 +28,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="HtmlAgilityPack" Version="1.12.1" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.12.4" />
     <PackageReference Include="ResourceLab" Version="1.0.0" />
-    <PackageReference Include="System.Text.Json" Version="9.0.6" />
-    <PackageReference Include="Textify.Offline" Version="2.13.4" />
+    <PackageReference Include="System.Text.Json" Version="10.0.2" />
+    <PackageReference Include="Textify.Offline" Version="2.13.5" />
   </ItemGroup>
 
   <ItemGroup>
