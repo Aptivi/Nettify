@@ -5,11 +5,11 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class DictionaryManager | Nettify API - Aptivi </title>
+      <title>Class QuoteTools | Nettify API - Aptivi </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class DictionaryManager | Nettify API - Aptivi ">
+      <meta name="title" content="Class QuoteTools | Nettify API - Aptivi ">
     
-    <meta name="description" content="Dictionary management module">
+    <meta name="description" content="Tools for quotes">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -72,60 +72,43 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Nettify.EnglishDictionary.DictionaryManager">
+            <article class="content wrap" id="_content" data-uid="Nettify.Quotes.QuoteTools">
 
 
 
-  <h1 id="Nettify_EnglishDictionary_DictionaryManager" data-uid="Nettify.EnglishDictionary.DictionaryManager" class="text-break">Class DictionaryManager</h1>
-  <div class="markdown level0 summary"><p>Dictionary management module</p>
+  <h1 id="Nettify_Quotes_QuoteTools" data-uid="Nettify.Quotes.QuoteTools" class="text-break">Class QuoteTools</h1>
+  <div class="markdown level0 summary"><p>Tools for quotes</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">object</span></div>
-    <div class="level1"><span class="xref">DictionaryManager</span></div>
+    <div class="level1"><span class="xref">QuoteTools</span></div>
   </div>
-  <h6>Namespace: <a class="xref" href="Nettify.html">Nettify</a>.<a class="xref" href="Nettify.EnglishDictionary.html">EnglishDictionary</a></h6>
+  <h6>Namespace: <a class="xref" href="Nettify.html">Nettify</a>.<a class="xref" href="Nettify.Quotes.html">Quotes</a></h6>
   <h6>Assembly: Nettify.dll</h6>
-  <h5 id="Nettify_EnglishDictionary_DictionaryManager_syntax">Syntax</h5>
+  <h5 id="Nettify_Quotes_QuoteTools_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class DictionaryManager</code></pre>
+    <pre><code class="lang-csharp hljs">public static class QuoteTools</code></pre>
   </div>
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Aptivi/Nettify/new/main/apiSpec/new?filename=Nettify_EnglishDictionary_DictionaryManager_GetWordInfo_System_String_.md&amp;value=---%0Auid%3A%20Nettify.EnglishDictionary.DictionaryManager.GetWordInfo(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/Aptivi/Nettify/new/main/apiSpec/new?filename=Nettify_Quotes_QuoteTools_GetAllQuotes.md&amp;value=---%0Auid%3A%20Nettify.Quotes.QuoteTools.GetAllQuotes%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/EnglishDictionary/DictionaryManager.cs/#L40">View Source</a>
+    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Quotes/QuoteTools.cs/#L40">View Source</a>
   </span>
-  <a id="Nettify_EnglishDictionary_DictionaryManager_GetWordInfo_" data-uid="Nettify.EnglishDictionary.DictionaryManager.GetWordInfo*"></a>
-  <h4 id="Nettify_EnglishDictionary_DictionaryManager_GetWordInfo_System_String_" data-uid="Nettify.EnglishDictionary.DictionaryManager.GetWordInfo(System.String)">GetWordInfo(string)</h4>
-  <div class="markdown level1 summary"><p>Gets the word information and puts it into an array of dictionary words</p>
+  <a id="Nettify_Quotes_QuoteTools_GetAllQuotes_" data-uid="Nettify.Quotes.QuoteTools.GetAllQuotes*"></a>
+  <h4 id="Nettify_Quotes_QuoteTools_GetAllQuotes" data-uid="Nettify.Quotes.QuoteTools.GetAllQuotes">GetAllQuotes()</h4>
+  <div class="markdown level1 summary"><p>Gets all quotes</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static DictionaryWord[] GetWordInfo(string Word)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Quote[] GetAllQuotes()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">Word</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered">
     <thead>
@@ -136,26 +119,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Nettify.EnglishDictionary.DictionaryWord.html">DictionaryWord</a>[]</td>
-        <td></td>
+        <td><a class="xref" href="Nettify.Quotes.Quote.html">Quote</a>[]</td>
+        <td><p>Array of quotes</p>
+</td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Aptivi/Nettify/new/main/apiSpec/new?filename=Nettify_EnglishDictionary_DictionaryManager_GetWordInfoAsync_System_String_.md&amp;value=---%0Auid%3A%20Nettify.EnglishDictionary.DictionaryManager.GetWordInfoAsync(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/Aptivi/Nettify/new/main/apiSpec/new?filename=Nettify_Quotes_QuoteTools_GetQuote_System_Int32_.md&amp;value=---%0Auid%3A%20Nettify.Quotes.QuoteTools.GetQuote(System.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/EnglishDictionary/DictionaryManager.cs/#L67">View Source</a>
+    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Quotes/QuoteTools.cs/#L75">View Source</a>
   </span>
-  <a id="Nettify_EnglishDictionary_DictionaryManager_GetWordInfoAsync_" data-uid="Nettify.EnglishDictionary.DictionaryManager.GetWordInfoAsync*"></a>
-  <h4 id="Nettify_EnglishDictionary_DictionaryManager_GetWordInfoAsync_System_String_" data-uid="Nettify.EnglishDictionary.DictionaryManager.GetWordInfoAsync(System.String)">GetWordInfoAsync(string)</h4>
-  <div class="markdown level1 summary"><p>Gets the word information and puts it into an array of dictionary words</p>
+  <a id="Nettify_Quotes_QuoteTools_GetQuote_" data-uid="Nettify.Quotes.QuoteTools.GetQuote*"></a>
+  <h4 id="Nettify_Quotes_QuoteTools_GetQuote_System_Int32_" data-uid="Nettify.Quotes.QuoteTools.GetQuote(System.Int32)">GetQuote(int)</h4>
+  <div class="markdown level1 summary"><p>Gets a quote</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;DictionaryWord[]&gt; GetWordInfoAsync(string Word)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Quote? GetQuote(int quoteNumber)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered">
@@ -168,8 +152,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">Word</span></td>
+        <td><span class="xref">int</span></td>
+        <td><span class="parametername">quoteNumber</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -184,8 +168,41 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Nettify.EnglishDictionary.DictionaryWord.html">DictionaryWord</a>[]&gt;</td>
-        <td></td>
+        <td><a class="xref" href="Nettify.Quotes.Quote.html">Quote</a></td>
+        <td><p>Quote instance containing content and author</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Aptivi/Nettify/new/main/apiSpec/new?filename=Nettify_Quotes_QuoteTools_GetRandomQuote.md&amp;value=---%0Auid%3A%20Nettify.Quotes.QuoteTools.GetRandomQuote%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Quotes/QuoteTools.cs/#L61">View Source</a>
+  </span>
+  <a id="Nettify_Quotes_QuoteTools_GetRandomQuote_" data-uid="Nettify.Quotes.QuoteTools.GetRandomQuote*"></a>
+  <h4 id="Nettify_Quotes_QuoteTools_GetRandomQuote" data-uid="Nettify.Quotes.QuoteTools.GetRandomQuote">GetRandomQuote()</h4>
+  <div class="markdown level1 summary"><p>Gets a random quote</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quote? GetRandomQuote()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Nettify.Quotes.Quote.html">Quote</a></td>
+        <td><p>Quote instance containing content and author</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -198,10 +215,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Aptivi/Nettify/new/main/apiSpec/new?filename=Nettify_EnglishDictionary_DictionaryManager.md&amp;value=---%0Auid%3A%20Nettify.EnglishDictionary.DictionaryManager%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/Aptivi/Nettify/new/main/apiSpec/new?filename=Nettify_Quotes_QuoteTools.md&amp;value=---%0Auid%3A%20Nettify.Quotes.QuoteTools%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/EnglishDictionary/DictionaryManager.cs/#L32" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Quotes/QuoteTools.cs/#L31" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

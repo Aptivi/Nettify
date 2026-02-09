@@ -351,6 +351,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Quotes.Quote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Quotes.Quote.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.Quotes.Quote",
+      "Summary": "<p sourcefile=\"api/Nettify.Quotes.Quote.yml\" sourcestartlinenumber=\"1\">Quote class</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Quotes.QuoteTools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Quotes.QuoteTools.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.Quotes.QuoteTools",
+      "Summary": "<p sourcefile=\"api/Nettify.Quotes.QuoteTools.yml\" sourcestartlinenumber=\"1\">Tools for quotes</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Nettify.Quotes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Nettify.Quotes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Nettify.Quotes",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Nettify.Rss.Instance.RSSArticle.yml",
       "output": {
         ".html": {

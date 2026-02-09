@@ -21,13 +21,15 @@
     
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Space Mono:wght@400;500;700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
-      <header class="apt-head">
+      <header class="apt-head translucency-rule-black">
 
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
+          <div class="container-header">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -49,14 +51,6 @@
             </div>
           </div>
         </nav>
-
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
-        </div>
       </header>
       <div class="container body-content">
 
@@ -91,8 +85,8 @@
     <div class="level0"><span class="xref">object</span></div>
     <div class="level1"><span class="xref">RSSFeed</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Nettify.html">Nettify</a>.<a class="xref" href="Nettify.Rss.html">Rss</a>.<a class="xref" href="Nettify.Rss.Instance.html">Instance</a></h6>
-  <h6><strong>Assembly</strong>: Nettify.dll</h6>
+  <h6>Namespace: <a class="xref" href="Nettify.html">Nettify</a>.<a class="xref" href="Nettify.Rss.html">Rss</a>.<a class="xref" href="Nettify.Rss.Instance.html">Instance</a></h6>
+  <h6>Assembly: Nettify.dll</h6>
   <h5 id="Nettify_Rss_Instance_RSSFeed_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class RSSFeed</code></pre>
@@ -104,7 +98,7 @@
     <a href="https://github.com/Aptivi/Nettify/new/main/apiSpec/new?filename=Nettify_Rss_Instance_RSSFeed__ctor_System_String_Nettify_Rss_Instance_RSSFeedType_.md&amp;value=---%0Auid%3A%20Nettify.Rss.Instance.RSSFeed.%23ctor(System.String%2CNettify.Rss.Instance.RSSFeedType)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Rss/Instance/RSSFeed.cs/#L74">View Source</a>
+    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Rss/Instance/RSSFeed.cs/#L75">View Source</a>
   </span>
   <a id="Nettify_Rss_Instance_RSSFeed__ctor_" data-uid="Nettify.Rss.Instance.RSSFeed.#ctor*"></a>
   <h4 id="Nettify_Rss_Instance_RSSFeed__ctor_System_String_Nettify_Rss_Instance_RSSFeedType_" data-uid="Nettify.Rss.Instance.RSSFeed.#ctor(System.String,Nettify.Rss.Instance.RSSFeedType)">RSSFeed(string, RSSFeedType)</h4>
@@ -116,7 +110,7 @@
     <pre><code class="lang-csharp hljs">public RSSFeed(string FeedUrl, RSSFeedType FeedType)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped">
+  <table class="table table-bordered">
     <thead>
       <tr>
         <th>Type</th>
@@ -146,7 +140,7 @@
     <a href="https://github.com/Aptivi/Nettify/new/main/apiSpec/new?filename=Nettify_Rss_Instance_RSSFeed_FeedArticles.md&amp;value=---%0Auid%3A%20Nettify.Rss.Instance.RSSFeed.FeedArticles%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Rss/Instance/RSSFeed.cs/#L66">View Source</a>
+    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Rss/Instance/RSSFeed.cs/#L67">View Source</a>
   </span>
   <a id="Nettify_Rss_Instance_RSSFeed_FeedArticles_" data-uid="Nettify.Rss.Instance.RSSFeed.FeedArticles*"></a>
   <h4 id="Nettify_Rss_Instance_RSSFeed_FeedArticles" data-uid="Nettify.Rss.Instance.RSSFeed.FeedArticles">FeedArticles</h4>
@@ -158,7 +152,7 @@
     <pre><code class="lang-csharp hljs">public RSSArticle[] FeedArticles { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped">
+  <table class="table table-bordered">
     <thead>
       <tr>
         <th>Type</th>
@@ -177,7 +171,7 @@
     <a href="https://github.com/Aptivi/Nettify/new/main/apiSpec/new?filename=Nettify_Rss_Instance_RSSFeed_FeedDescription.md&amp;value=---%0Auid%3A%20Nettify.Rss.Instance.RSSFeed.FeedDescription%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Rss/Instance/RSSFeed.cs/#L60">View Source</a>
+    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Rss/Instance/RSSFeed.cs/#L61">View Source</a>
   </span>
   <a id="Nettify_Rss_Instance_RSSFeed_FeedDescription_" data-uid="Nettify.Rss.Instance.RSSFeed.FeedDescription*"></a>
   <h4 id="Nettify_Rss_Instance_RSSFeed_FeedDescription" data-uid="Nettify.Rss.Instance.RSSFeed.FeedDescription">FeedDescription</h4>
@@ -189,7 +183,7 @@
     <pre><code class="lang-csharp hljs">public string FeedDescription { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped">
+  <table class="table table-bordered">
     <thead>
       <tr>
         <th>Type</th>
@@ -208,7 +202,7 @@
     <a href="https://github.com/Aptivi/Nettify/new/main/apiSpec/new?filename=Nettify_Rss_Instance_RSSFeed_FeedTitle.md&amp;value=---%0Auid%3A%20Nettify.Rss.Instance.RSSFeed.FeedTitle%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Rss/Instance/RSSFeed.cs/#L54">View Source</a>
+    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Rss/Instance/RSSFeed.cs/#L55">View Source</a>
   </span>
   <a id="Nettify_Rss_Instance_RSSFeed_FeedTitle_" data-uid="Nettify.Rss.Instance.RSSFeed.FeedTitle*"></a>
   <h4 id="Nettify_Rss_Instance_RSSFeed_FeedTitle" data-uid="Nettify.Rss.Instance.RSSFeed.FeedTitle">FeedTitle</h4>
@@ -220,7 +214,7 @@
     <pre><code class="lang-csharp hljs">public string FeedTitle { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped">
+  <table class="table table-bordered">
     <thead>
       <tr>
         <th>Type</th>
@@ -239,7 +233,7 @@
     <a href="https://github.com/Aptivi/Nettify/new/main/apiSpec/new?filename=Nettify_Rss_Instance_RSSFeed_FeedType.md&amp;value=---%0Auid%3A%20Nettify.Rss.Instance.RSSFeed.FeedType%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Rss/Instance/RSSFeed.cs/#L48">View Source</a>
+    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Rss/Instance/RSSFeed.cs/#L49">View Source</a>
   </span>
   <a id="Nettify_Rss_Instance_RSSFeed_FeedType_" data-uid="Nettify.Rss.Instance.RSSFeed.FeedType*"></a>
   <h4 id="Nettify_Rss_Instance_RSSFeed_FeedType" data-uid="Nettify.Rss.Instance.RSSFeed.FeedType">FeedType</h4>
@@ -251,7 +245,7 @@
     <pre><code class="lang-csharp hljs">public RSSFeedType FeedType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped">
+  <table class="table table-bordered">
     <thead>
       <tr>
         <th>Type</th>
@@ -270,7 +264,7 @@
     <a href="https://github.com/Aptivi/Nettify/new/main/apiSpec/new?filename=Nettify_Rss_Instance_RSSFeed_FeedUrl.md&amp;value=---%0Auid%3A%20Nettify.Rss.Instance.RSSFeed.FeedUrl%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Rss/Instance/RSSFeed.cs/#L42">View Source</a>
+    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Rss/Instance/RSSFeed.cs/#L43">View Source</a>
   </span>
   <a id="Nettify_Rss_Instance_RSSFeed_FeedUrl_" data-uid="Nettify.Rss.Instance.RSSFeed.FeedUrl*"></a>
   <h4 id="Nettify_Rss_Instance_RSSFeed_FeedUrl" data-uid="Nettify.Rss.Instance.RSSFeed.FeedUrl">FeedUrl</h4>
@@ -282,7 +276,7 @@
     <pre><code class="lang-csharp hljs">public string FeedUrl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped">
+  <table class="table table-bordered">
     <thead>
       <tr>
         <th>Type</th>
@@ -303,7 +297,7 @@
     <a href="https://github.com/Aptivi/Nettify/new/main/apiSpec/new?filename=Nettify_Rss_Instance_RSSFeed_Refresh.md&amp;value=---%0Auid%3A%20Nettify.Rss.Instance.RSSFeed.Refresh%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Rss/Instance/RSSFeed.cs/#L83">View Source</a>
+    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Rss/Instance/RSSFeed.cs/#L84">View Source</a>
   </span>
   <a id="Nettify_Rss_Instance_RSSFeed_Refresh_" data-uid="Nettify.Rss.Instance.RSSFeed.Refresh*"></a>
   <h4 id="Nettify_Rss_Instance_RSSFeed_Refresh" data-uid="Nettify.Rss.Instance.RSSFeed.Refresh">Refresh()</h4>
@@ -319,7 +313,7 @@
     <a href="https://github.com/Aptivi/Nettify/new/main/apiSpec/new?filename=Nettify_Rss_Instance_RSSFeed_Refresh_System_String_Nettify_Rss_Instance_RSSFeedType_.md&amp;value=---%0Auid%3A%20Nettify.Rss.Instance.RSSFeed.Refresh(System.String%2CNettify.Rss.Instance.RSSFeedType)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Rss/Instance/RSSFeed.cs/#L91">View Source</a>
+    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Rss/Instance/RSSFeed.cs/#L92">View Source</a>
   </span>
   <a id="Nettify_Rss_Instance_RSSFeed_Refresh_" data-uid="Nettify.Rss.Instance.RSSFeed.Refresh*"></a>
   <h4 id="Nettify_Rss_Instance_RSSFeed_Refresh_System_String_Nettify_Rss_Instance_RSSFeedType_" data-uid="Nettify.Rss.Instance.RSSFeed.Refresh(System.String,Nettify.Rss.Instance.RSSFeedType)">Refresh(string, RSSFeedType)</h4>
@@ -331,7 +325,7 @@
     <pre><code class="lang-csharp hljs">public void Refresh(string FeedUrl, RSSFeedType FeedType)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped">
+  <table class="table table-bordered">
     <thead>
       <tr>
         <th>Type</th>
@@ -359,7 +353,7 @@
     <a href="https://github.com/Aptivi/Nettify/new/main/apiSpec/new?filename=Nettify_Rss_Instance_RSSFeed_RefreshAsync.md&amp;value=---%0Auid%3A%20Nettify.Rss.Instance.RSSFeed.RefreshAsync%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Rss/Instance/RSSFeed.cs/#L106">View Source</a>
+    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Rss/Instance/RSSFeed.cs/#L107">View Source</a>
   </span>
   <a id="Nettify_Rss_Instance_RSSFeed_RefreshAsync_" data-uid="Nettify.Rss.Instance.RSSFeed.RefreshAsync*"></a>
   <h4 id="Nettify_Rss_Instance_RSSFeed_RefreshAsync" data-uid="Nettify.Rss.Instance.RSSFeed.RefreshAsync">RefreshAsync()</h4>
@@ -371,7 +365,7 @@
     <pre><code class="lang-csharp hljs">public Task RefreshAsync()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped">
+  <table class="table table-bordered">
     <thead>
       <tr>
         <th>Type</th>
@@ -390,7 +384,7 @@
     <a href="https://github.com/Aptivi/Nettify/new/main/apiSpec/new?filename=Nettify_Rss_Instance_RSSFeed_RefreshAsync_System_String_Nettify_Rss_Instance_RSSFeedType_.md&amp;value=---%0Auid%3A%20Nettify.Rss.Instance.RSSFeed.RefreshAsync(System.String%2CNettify.Rss.Instance.RSSFeedType)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Rss/Instance/RSSFeed.cs/#L114">View Source</a>
+    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Rss/Instance/RSSFeed.cs/#L115">View Source</a>
   </span>
   <a id="Nettify_Rss_Instance_RSSFeed_RefreshAsync_" data-uid="Nettify.Rss.Instance.RSSFeed.RefreshAsync*"></a>
   <h4 id="Nettify_Rss_Instance_RSSFeed_RefreshAsync_System_String_Nettify_Rss_Instance_RSSFeedType_" data-uid="Nettify.Rss.Instance.RSSFeed.RefreshAsync(System.String,Nettify.Rss.Instance.RSSFeedType)">RefreshAsync(string, RSSFeedType)</h4>
@@ -402,7 +396,7 @@
     <pre><code class="lang-csharp hljs">public Task RefreshAsync(string FeedUrl, RSSFeedType FeedType)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped">
+  <table class="table table-bordered">
     <thead>
       <tr>
         <th>Type</th>
@@ -426,7 +420,7 @@
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped">
+  <table class="table table-bordered">
     <thead>
       <tr>
         <th>Type</th>
@@ -452,7 +446,7 @@
                     <a href="https://github.com/Aptivi/Nettify/new/main/apiSpec/new?filename=Nettify_Rss_Instance_RSSFeed.md&amp;value=---%0Auid%3A%20Nettify.Rss.Instance.RSSFeed%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Rss/Instance/RSSFeed.cs/#L30" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Aptivi/Nettify/blob/main/public/Nettify/Rss/Instance/RSSFeed.cs/#L31" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
@@ -464,19 +458,6 @@
           </div>
         </div>
       </div>
-
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      
-      <span>Generated by <strong>DocFX</strong></span>
-          </div>
-        </div>
-      </footer>
     </div>
 
     <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>

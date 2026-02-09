@@ -119,6 +119,21 @@
     "title": "Namespace Nettify.MailAddress | Nettify API - Aptivi",
     "summary": "Namespace Nettify.MailAddress Classes IspTools Internet Service Provider server information"
   },
+  "api/Nettify.Quotes.Quote.html": {
+    "href": "api/Nettify.Quotes.Quote.html",
+    "title": "Class Quote | Nettify API - Aptivi",
+    "summary": "Class Quote Quote class Inheritance object Quote Namespace: Nettify.Quotes Assembly: Nettify.dll Syntax public class Quote Properties | Edit this page View Source Author Author of the quote Declaration public string Author { get; } Property Value Type Description string | Edit this page View Source Content Quote content Declaration public string Content { get; } Property Value Type Description string"
+  },
+  "api/Nettify.Quotes.QuoteTools.html": {
+    "href": "api/Nettify.Quotes.QuoteTools.html",
+    "title": "Class QuoteTools | Nettify API - Aptivi",
+    "summary": "Class QuoteTools Tools for quotes Inheritance object QuoteTools Namespace: Nettify.Quotes Assembly: Nettify.dll Syntax public static class QuoteTools Methods | Edit this page View Source GetAllQuotes() Gets all quotes Declaration public static Quote[] GetAllQuotes() Returns Type Description Quote[] Array of quotes | Edit this page View Source GetQuote(int) Gets a quote Declaration public static Quote? GetQuote(int quoteNumber) Parameters Type Name Description int quoteNumber Returns Type Description Quote Quote instance containing content and author | Edit this page View Source GetRandomQuote() Gets a random quote Declaration public static Quote? GetRandomQuote() Returns Type Description Quote Quote instance containing content and author"
+  },
+  "api/Nettify.Quotes.html": {
+    "href": "api/Nettify.Quotes.html",
+    "title": "Namespace Nettify.Quotes | Nettify API - Aptivi",
+    "summary": "Namespace Nettify.Quotes Classes Quote Quote class QuoteTools Tools for quotes"
+  },
   "api/Nettify.Rss.Instance.RSSArticle.html": {
     "href": "api/Nettify.Rss.Instance.RSSArticle.html",
     "title": "Class RSSArticle | Nettify API - Aptivi",
