@@ -31,9 +31,9 @@ jobs:
       - name: Setup Mono (macOS)
         if: matrix.runs-on == 'macos-latest'
         run: brew install mono
-      - name: Setup systemwide Python3 venv (Ubuntu)
+      - name: Setup lxml
         if: matrix.runs-on == 'ubuntu-latest'
-        run: sudo apt install python3-venv
+        run: sudo apt install python3-lxml
       - name: Solution Compilation
         run: python tools/adt.py build -b "-p:Configuration=Release -p:ContinuousIntegrationBuild=true"
       - name: Testing

@@ -27,7 +27,7 @@ jobs:
       - name: Release Asset Preparation
         id: release-asset
         run: |
-          sudo apt install python3-venv
+          sudo apt install python3-lxml
           make rel-ci
           make doc
           python tools/adt.py packdocs

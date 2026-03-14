@@ -28,7 +28,7 @@ jobs:
           dotnet-version: '10.0.x'
       - name: Release Asset Preparation
         run: |
-          sudo apt install python3-venv
+          sudo apt install python3-lxml
           make dbg-ci
       - name: Package Publication
         run: |
