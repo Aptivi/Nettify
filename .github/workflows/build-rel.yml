@@ -31,9 +31,12 @@ jobs:
       - name: Setup Mono (macOS)
         if: matrix.runs-on == 'macos-latest'
         run: brew install mono
-      - name: Setup lxml
+      - name: Setup lxml (Unix)
         if: matrix.runs-on == 'ubuntu-latest'
         run: sudo apt install python3-lxml
+      - name: Setup lxml (Other)
+        if: matrix.runs-on != 'ubuntu-latest'
+        run: pip install lxml
       - name: Solution Compilation
         run: python tools/adt.py build -b "-p:Configuration=Release -p:ContinuousIntegrationBuild=true"
       - name: Testing
