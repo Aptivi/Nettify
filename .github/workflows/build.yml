@@ -34,12 +34,8 @@ jobs:
       - name: Setup systemwide Python3 venv (Ubuntu)
         if: matrix.runs-on == 'ubuntu-latest'
         run: sudo apt install python3-venv
-      - name: Solution Compilation (Windows)
-        if: matrix.runs-on == 'windows-latest'
-        run: ./tools/build.cmd Debug -p:ContinuousIntegrationBuild=true
-      - name: Solution Compilation (Unix)
-        if: matrix.runs-on != 'windows-latest'
-        run: make dbg-ci
+      - name: Solution Compilation
+        run: python tools/adt.py build -b "-p:Configuration=Debug -p:ContinuousIntegrationBuild=true"
       - name: Testing
         run: dotnet test --no-build --configuration Debug
         
