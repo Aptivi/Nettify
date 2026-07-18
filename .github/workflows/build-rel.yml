@@ -38,7 +38,9 @@ jobs:
         if: matrix.runs-on != 'ubuntu-latest'
         run: pip install lxml
       - name: Solution Compilation
-        run: python tools/adt.py build -b "-p:Configuration=Release -p:ContinuousIntegrationBuild=true"
+        run: |
+          pip install aptivi-adt
+          adt build -b "-p:Configuration=Release -p:ContinuousIntegrationBuild=true"
       - name: Testing
-        run: python tools/adt.py test -t="--no-build --configuration Release"
+        run: adt test -t="--no-build --configuration Release"
         
