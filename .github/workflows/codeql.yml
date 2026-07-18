@@ -36,6 +36,7 @@ jobs:
     - name: Build
       run: |
         sudo apt install python3-lxml
+        pip install aptivi-adt
         make rel-ci
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3

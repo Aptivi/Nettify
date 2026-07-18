@@ -35,6 +35,7 @@ jobs:
       - name: Generating Documentation
         run: |
           sudo apt install python3-lxml
+          pip install aptivi-adt
           make rel-ci
           make doc
       - name: Saving changes to gh-pages
