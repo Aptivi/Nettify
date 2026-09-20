@@ -30,6 +30,7 @@ jobs:
           pip install aptivi-adt
           sudo apt install python3-lxml
           make rel-ci
+          adt checklocs
           make doc
           adt packdocs
           echo "SUBJECT=$(cat CHANGES.TITLE)" >> "$GITHUB_OUTPUT"
